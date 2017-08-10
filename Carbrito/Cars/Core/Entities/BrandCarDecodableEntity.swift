@@ -1,4 +1,4 @@
-struct CarModelDecodableEntity: Decodable {
+struct BrandCarDecodableEntity: Decodable {
     let name: String
     let code: String
     let year: String

@@ -1,13 +1,13 @@
 import XCTest
 @testable import Carbrito
 
-class CarModelDecodableEntityTests: XCTestCase {
+class BrandCarDecodableEntityTests: XCTestCase {
 
-    private lazy var carModelsData: Data = { return loadJson(fromFileName: "CarModels") }()
+    private lazy var carModelsData: Data = { return loadJson(fromFileName: "BrandCars") }()
     private let firstCarModelName = "147 C/ CL"
 
     func testDecodeCarModelsEntityFromJsonWhenJsonAreCorrect() {
-        let carModels: [CarModelDecodableEntity] = JSONDecoder().decode(data: carModelsData)
+        let carModels: [BrandCarDecodableEntity] = JSONDecoder().decode(data: carModelsData)
 
         let firstCar = carModels[0]
         let totalCars = carModels.count
