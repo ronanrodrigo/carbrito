@@ -4,7 +4,7 @@ import XCTest
 class BrandDecodableEntityTests: XCTestCase {
 
     private lazy var brandsData: Data = { return loadJson(fromFileName: "Brands") }()
-    private let firstBrandName = "GM - Chevrolet"
+    private let firstBrandName = "Fiat"
 
     func testDecodeBrandEntityFromJsonWhenJsonAreCorrect() {
         let brands: [BrandDecodableEntity] = JSONDecoder().decode(data: brandsData)
@@ -13,7 +13,7 @@ class BrandDecodableEntityTests: XCTestCase {
         let totalBrands = brands.count
 
         XCTAssertEqual(firstBrand.name, firstBrandName)
-        XCTAssertEqual(totalBrands, 87)
+        XCTAssertEqual(totalBrands, 2)
     }
 
 }
