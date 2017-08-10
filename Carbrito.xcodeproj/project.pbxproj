@@ -90,9 +90,17 @@
 		3469A3581F3C004B004A0934 /* CarbritoUnitTests */ = {
 			isa = PBXGroup;
 			children = (
-				3469A35B1F3C004B004A0934 /* Info.plist */,
+				34C893BF1F3C01190023D3E9 /* Essentials */,
 			);
 			path = CarbritoUnitTests;
+			sourceTree = "<group>";
+		};
+		34C893BF1F3C01190023D3E9 /* Essentials */ = {
+			isa = PBXGroup;
+			children = (
+				3469A35B1F3C004B004A0934 /* Info.plist */,
+			);
+			path = Essentials;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -365,7 +373,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = CarbritoUnitTests/Info.plist;
+				INFOPLIST_FILE = CarbritoUnitTests/Essentials/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ronanrodrigo.CarbritoUnitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -379,7 +387,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = CarbritoUnitTests/Info.plist;
+				INFOPLIST_FILE = CarbritoUnitTests/Essentials/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ronanrodrigo.CarbritoUnitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
