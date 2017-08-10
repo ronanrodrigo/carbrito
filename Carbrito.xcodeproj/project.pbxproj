@@ -10,6 +10,9 @@
 		3417A91C1F3C1923009EC015 /* BrandCarDecodableEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3417A91B1F3C1923009EC015 /* BrandCarDecodableEntity.swift */; };
 		3417A91E1F3C19B7009EC015 /* BrandCars.json in Resources */ = {isa = PBXBuildFile; fileRef = 3417A91D1F3C19B7009EC015 /* BrandCars.json */; };
 		3417A9201F3C1A81009EC015 /* BrandCarDecodableEntityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3417A91F1F3C1A81009EC015 /* BrandCarDecodableEntityTests.swift */; };
+		3417A9231F3C1E15009EC015 /* CarDecodableEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3417A9221F3C1E15009EC015 /* CarDecodableEntity.swift */; };
+		3417A9251F3C1E9E009EC015 /* CarDecodableEntityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3417A9241F3C1E9E009EC015 /* CarDecodableEntityTests.swift */; };
+		3417A9271F3C1EE4009EC015 /* Cars.json in Resources */ = {isa = PBXBuildFile; fileRef = 3417A9261F3C1EE4009EC015 /* Cars.json */; };
 		3469A3411F3BFF67004A0934 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3469A3401F3BFF67004A0934 /* AppDelegate.swift */; };
 		3469A3481F3BFF67004A0934 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3469A3471F3BFF67004A0934 /* Assets.xcassets */; };
 		3469A34B1F3BFF67004A0934 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3469A3491F3BFF67004A0934 /* LaunchScreen.storyboard */; };
@@ -35,6 +38,9 @@
 		3417A91B1F3C1923009EC015 /* BrandCarDecodableEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandCarDecodableEntity.swift; sourceTree = "<group>"; };
 		3417A91D1F3C19B7009EC015 /* BrandCars.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = BrandCars.json; sourceTree = "<group>"; };
 		3417A91F1F3C1A81009EC015 /* BrandCarDecodableEntityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandCarDecodableEntityTests.swift; sourceTree = "<group>"; };
+		3417A9221F3C1E15009EC015 /* CarDecodableEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDecodableEntity.swift; sourceTree = "<group>"; };
+		3417A9241F3C1E9E009EC015 /* CarDecodableEntityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDecodableEntityTests.swift; sourceTree = "<group>"; };
+		3417A9261F3C1EE4009EC015 /* Cars.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Cars.json; sourceTree = "<group>"; };
 		3469A33D1F3BFF67004A0934 /* Carbrito.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Carbrito.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3469A3401F3BFF67004A0934 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3469A3471F3BFF67004A0934 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -145,6 +151,7 @@
 			children = (
 				3417A91B1F3C1923009EC015 /* BrandCarDecodableEntity.swift */,
 				34C893C31F3C01750023D3E9 /* BrandDecodableEntity.swift */,
+				3417A9221F3C1E15009EC015 /* CarDecodableEntity.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -181,6 +188,7 @@
 			children = (
 				3417A91F1F3C1A81009EC015 /* BrandCarDecodableEntityTests.swift */,
 				34C893CF1F3C01B10023D3E9 /* BrandDecodableEntityTests.swift */,
+				3417A9241F3C1E9E009EC015 /* CarDecodableEntityTests.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -198,6 +206,7 @@
 			children = (
 				3417A91D1F3C19B7009EC015 /* BrandCars.json */,
 				34C893D21F3C01B10023D3E9 /* Brands.json */,
+				3417A9261F3C1EE4009EC015 /* Cars.json */,
 			);
 			path = Json;
 			sourceTree = "<group>";
@@ -295,6 +304,7 @@
 			files = (
 				3417A91E1F3C19B7009EC015 /* BrandCars.json in Resources */,
 				34C893D41F3C01C70023D3E9 /* Brands.json in Resources */,
+				3417A9271F3C1EE4009EC015 /* Cars.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,6 +333,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				34C893C41F3C01820023D3E9 /* BrandDecodableEntity.swift in Sources */,
+				3417A9231F3C1E15009EC015 /* CarDecodableEntity.swift in Sources */,
 				3469A3411F3BFF67004A0934 /* AppDelegate.swift in Sources */,
 				3417A91C1F3C1923009EC015 /* BrandCarDecodableEntity.swift in Sources */,
 			);
@@ -337,6 +348,7 @@
 				3417A9201F3C1A81009EC015 /* BrandCarDecodableEntityTests.swift in Sources */,
 				34C893CB1F3C01A70023D3E9 /* XCTestCase+LoadJson.swift in Sources */,
 				34C893CA1F3C01A70023D3E9 /* NSManagedObjectContext+InMemory.swift in Sources */,
+				3417A9251F3C1E9E009EC015 /* CarDecodableEntityTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
