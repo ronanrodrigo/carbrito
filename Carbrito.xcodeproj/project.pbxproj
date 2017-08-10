@@ -10,6 +10,12 @@
 		3469A3411F3BFF67004A0934 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3469A3401F3BFF67004A0934 /* AppDelegate.swift */; };
 		3469A3481F3BFF67004A0934 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3469A3471F3BFF67004A0934 /* Assets.xcassets */; };
 		3469A34B1F3BFF67004A0934 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3469A3491F3BFF67004A0934 /* LaunchScreen.storyboard */; };
+		34C893C41F3C01820023D3E9 /* BrandDecodableEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C893C31F3C01750023D3E9 /* BrandDecodableEntity.swift */; };
+		34C893C91F3C01A70023D3E9 /* JSONDecoder+Decode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C893C61F3C01A10023D3E9 /* JSONDecoder+Decode.swift */; };
+		34C893CA1F3C01A70023D3E9 /* NSManagedObjectContext+InMemory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C893C71F3C01A10023D3E9 /* NSManagedObjectContext+InMemory.swift */; };
+		34C893CB1F3C01A70023D3E9 /* XCTestCase+LoadJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C893C81F3C01A10023D3E9 /* XCTestCase+LoadJson.swift */; };
+		34C893D31F3C01B90023D3E9 /* BrandDecodableEntityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C893CF1F3C01B10023D3E9 /* BrandDecodableEntityTests.swift */; };
+		34C893D41F3C01C70023D3E9 /* Brands.json in Resources */ = {isa = PBXBuildFile; fileRef = 34C893D21F3C01B10023D3E9 /* Brands.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +36,12 @@
 		3469A34C1F3BFF67004A0934 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3469A3571F3C004B004A0934 /* CarbritoUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarbritoUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3469A35B1F3C004B004A0934 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		34C893C31F3C01750023D3E9 /* BrandDecodableEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandDecodableEntity.swift; sourceTree = "<group>"; };
+		34C893C61F3C01A10023D3E9 /* JSONDecoder+Decode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+Decode.swift"; sourceTree = "<group>"; };
+		34C893C71F3C01A10023D3E9 /* NSManagedObjectContext+InMemory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectContext+InMemory.swift"; sourceTree = "<group>"; };
+		34C893C81F3C01A10023D3E9 /* XCTestCase+LoadJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+LoadJson.swift"; sourceTree = "<group>"; };
+		34C893CF1F3C01B10023D3E9 /* BrandDecodableEntityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandDecodableEntityTests.swift; sourceTree = "<group>"; };
+		34C893D21F3C01B10023D3E9 /* Brands.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Brands.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +83,7 @@
 		3469A33F1F3BFF67004A0934 /* Carbrito */ = {
 			isa = PBXGroup;
 			children = (
+				34C893C01F3C01750023D3E9 /* Cars */,
 				3469A3521F3BFF81004A0934 /* Essentials */,
 			);
 			path = Carbrito;
@@ -90,6 +103,7 @@
 		3469A3581F3C004B004A0934 /* CarbritoUnitTests */ = {
 			isa = PBXGroup;
 			children = (
+				34C893CC1F3C01B10023D3E9 /* Cars */,
 				34C893BF1F3C01190023D3E9 /* Essentials */,
 			);
 			path = CarbritoUnitTests;
@@ -98,9 +112,85 @@
 		34C893BF1F3C01190023D3E9 /* Essentials */ = {
 			isa = PBXGroup;
 			children = (
+				34C893C51F3C01A10023D3E9 /* Extensions */,
 				3469A35B1F3C004B004A0934 /* Info.plist */,
 			);
 			path = Essentials;
+			sourceTree = "<group>";
+		};
+		34C893C01F3C01750023D3E9 /* Cars */ = {
+			isa = PBXGroup;
+			children = (
+				34C893C11F3C01750023D3E9 /* Core */,
+			);
+			path = Cars;
+			sourceTree = "<group>";
+		};
+		34C893C11F3C01750023D3E9 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				34C893C21F3C01750023D3E9 /* Entities */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		34C893C21F3C01750023D3E9 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				34C893C31F3C01750023D3E9 /* BrandDecodableEntity.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		34C893C51F3C01A10023D3E9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				34C893C61F3C01A10023D3E9 /* JSONDecoder+Decode.swift */,
+				34C893C71F3C01A10023D3E9 /* NSManagedObjectContext+InMemory.swift */,
+				34C893C81F3C01A10023D3E9 /* XCTestCase+LoadJson.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		34C893CC1F3C01B10023D3E9 /* Cars */ = {
+			isa = PBXGroup;
+			children = (
+				34C893CD1F3C01B10023D3E9 /* Core */,
+				34C893D01F3C01B10023D3E9 /* Doubles */,
+			);
+			path = Cars;
+			sourceTree = "<group>";
+		};
+		34C893CD1F3C01B10023D3E9 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				34C893CE1F3C01B10023D3E9 /* Entities */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		34C893CE1F3C01B10023D3E9 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				34C893CF1F3C01B10023D3E9 /* BrandDecodableEntityTests.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		34C893D01F3C01B10023D3E9 /* Doubles */ = {
+			isa = PBXGroup;
+			children = (
+				34C893D11F3C01B10023D3E9 /* Json */,
+			);
+			path = Doubles;
+			sourceTree = "<group>";
+		};
+		34C893D11F3C01B10023D3E9 /* Json */ = {
+			isa = PBXGroup;
+			children = (
+				34C893D21F3C01B10023D3E9 /* Brands.json */,
+			);
+			path = Json;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +283,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34C893D41F3C01C70023D3E9 /* Brands.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,6 +294,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34C893C41F3C01820023D3E9 /* BrandDecodableEntity.swift in Sources */,
 				3469A3411F3BFF67004A0934 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -211,6 +303,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34C893D31F3C01B90023D3E9 /* BrandDecodableEntityTests.swift in Sources */,
+				34C893C91F3C01A70023D3E9 /* JSONDecoder+Decode.swift in Sources */,
+				34C893CB1F3C01A70023D3E9 /* XCTestCase+LoadJson.swift in Sources */,
+				34C893CA1F3C01A70023D3E9 /* NSManagedObjectContext+InMemory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
