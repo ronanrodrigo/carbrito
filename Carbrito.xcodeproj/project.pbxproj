@@ -12,16 +12,35 @@
 		3469A34B1F3BFF67004A0934 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3469A3491F3BFF67004A0934 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		3469A35C1F3C004B004A0934 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3469A3351F3BFF67004A0934 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3469A33C1F3BFF67004A0934;
+			remoteInfo = Carbrito;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		3469A33D1F3BFF67004A0934 /* Carbrito.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Carbrito.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3469A3401F3BFF67004A0934 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3469A3471F3BFF67004A0934 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3469A34A1F3BFF67004A0934 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3469A34C1F3BFF67004A0934 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3469A3571F3C004B004A0934 /* CarbritoUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarbritoUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3469A35B1F3C004B004A0934 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		3469A33A1F3BFF67004A0934 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3469A3541F3C004B004A0934 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -35,6 +54,7 @@
 			isa = PBXGroup;
 			children = (
 				3469A33F1F3BFF67004A0934 /* Carbrito */,
+				3469A3581F3C004B004A0934 /* CarbritoUnitTests */,
 				3469A33E1F3BFF67004A0934 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +63,7 @@
 			isa = PBXGroup;
 			children = (
 				3469A33D1F3BFF67004A0934 /* Carbrito.app */,
+				3469A3571F3C004B004A0934 /* CarbritoUnitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -66,6 +87,14 @@
 			path = Essentials;
 			sourceTree = "<group>";
 		};
+		3469A3581F3C004B004A0934 /* CarbritoUnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				3469A35B1F3C004B004A0934 /* Info.plist */,
+			);
+			path = CarbritoUnitTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,6 +115,24 @@
 			productReference = 3469A33D1F3BFF67004A0934 /* Carbrito.app */;
 			productType = "com.apple.product-type.application";
 		};
+		3469A3561F3C004B004A0934 /* CarbritoUnitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3469A35E1F3C004B004A0934 /* Build configuration list for PBXNativeTarget "CarbritoUnitTests" */;
+			buildPhases = (
+				3469A3531F3C004B004A0934 /* Sources */,
+				3469A3541F3C004B004A0934 /* Frameworks */,
+				3469A3551F3C004B004A0934 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3469A35D1F3C004B004A0934 /* PBXTargetDependency */,
+			);
+			name = CarbritoUnitTests;
+			productName = CarbritoUnitTests;
+			productReference = 3469A3571F3C004B004A0934 /* CarbritoUnitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -98,6 +145,10 @@
 				TargetAttributes = {
 					3469A33C1F3BFF67004A0934 = {
 						CreatedOnToolsVersion = 9.0;
+					};
+					3469A3561F3C004B004A0934 = {
+						CreatedOnToolsVersion = 9.0;
+						TestTargetID = 3469A33C1F3BFF67004A0934;
 					};
 				};
 			};
@@ -115,6 +166,7 @@
 			projectRoot = "";
 			targets = (
 				3469A33C1F3BFF67004A0934 /* Carbrito */,
+				3469A3561F3C004B004A0934 /* CarbritoUnitTests */,
 			);
 		};
 /* End PBXProject section */
@@ -129,6 +181,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3469A3551F3C004B004A0934 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -140,7 +199,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3469A3531F3C004B004A0934 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3469A35D1F3C004B004A0934 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3469A33C1F3BFF67004A0934 /* Carbrito */;
+			targetProxy = 3469A35C1F3C004B004A0934 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		3469A3491F3BFF67004A0934 /* LaunchScreen.storyboard */ = {
@@ -287,6 +361,34 @@
 			};
 			name = Release;
 		};
+		3469A35F1F3C004B004A0934 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = CarbritoUnitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ronanrodrigo.CarbritoUnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Carbrito.app/Carbrito";
+			};
+			name = Debug;
+		};
+		3469A3601F3C004B004A0934 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = CarbritoUnitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ronanrodrigo.CarbritoUnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Carbrito.app/Carbrito";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -304,6 +406,15 @@
 			buildConfigurations = (
 				3469A3501F3BFF67004A0934 /* Debug */,
 				3469A3511F3BFF67004A0934 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3469A35E1F3C004B004A0934 /* Build configuration list for PBXNativeTarget "CarbritoUnitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3469A35F1F3C004B004A0934 /* Debug */,
+				3469A3601F3C004B004A0934 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
