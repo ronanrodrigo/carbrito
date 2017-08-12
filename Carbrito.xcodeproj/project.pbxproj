@@ -17,6 +17,14 @@
 		3405D3D41F3F787F0030F30C /* ListBrandsUsecaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3405D3D31F3F787F0030F30C /* ListBrandsUsecaseTests.swift */; };
 		3405D3D81F3F78B60030F30C /* ListBrandStubGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3405D3D71F3F78B60030F30C /* ListBrandStubGateway.swift */; };
 		3405D3DA1F3F79620030F30C /* ListBrandStubPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3405D3D91F3F79620030F30C /* ListBrandStubPresenter.swift */; };
+		3405D3DF1F3F7E1D0030F30C /* ListCarsByBrandUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3405D3DE1F3F7E1D0030F30C /* ListCarsByBrandUsecase.swift */; };
+		3405D3E31F3F7FF60030F30C /* ListCarsByBrandGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3405D3E21F3F7FF60030F30C /* ListCarsByBrandGateway.swift */; };
+		3405D3E51F3F80000030F30C /* ListCarsByBrandPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3405D3E41F3F80000030F30C /* ListCarsByBrandPresenter.swift */; };
+		3405D3E71F3F80480030F30C /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3405D3E61F3F80480030F30C /* Car.swift */; };
+		3405D3E91F3F809A0030F30C /* CarError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3405D3E81F3F809A0030F30C /* CarError.swift */; };
+		3405D3EE1F3F82EC0030F30C /* ListCarsByBrandUsecaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3405D3ED1F3F82EC0030F30C /* ListCarsByBrandUsecaseTests.swift */; };
+		3405D3F11F3F83580030F30C /* ListCarsByBrandStubGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3405D3F01F3F83580030F30C /* ListCarsByBrandStubGateway.swift */; };
+		3405D3F51F3F84FF0030F30C /* ListCarsByBrandStubPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3405D3F41F3F84FF0030F30C /* ListCarsByBrandStubPresenter.swift */; };
 		3417A91C1F3C1923009EC015 /* BrandCarDecodableEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3417A91B1F3C1923009EC015 /* BrandCarDecodableEntity.swift */; };
 		3417A91E1F3C19B7009EC015 /* BrandCars.json in Resources */ = {isa = PBXBuildFile; fileRef = 3417A91D1F3C19B7009EC015 /* BrandCars.json */; };
 		3417A9201F3C1A81009EC015 /* BrandCarDecodableEntityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3417A91F1F3C1A81009EC015 /* BrandCarDecodableEntityTests.swift */; };
@@ -55,6 +63,14 @@
 		3405D3D31F3F787F0030F30C /* ListBrandsUsecaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListBrandsUsecaseTests.swift; sourceTree = "<group>"; };
 		3405D3D71F3F78B60030F30C /* ListBrandStubGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListBrandStubGateway.swift; sourceTree = "<group>"; };
 		3405D3D91F3F79620030F30C /* ListBrandStubPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListBrandStubPresenter.swift; sourceTree = "<group>"; };
+		3405D3DE1F3F7E1D0030F30C /* ListCarsByBrandUsecase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCarsByBrandUsecase.swift; sourceTree = "<group>"; };
+		3405D3E21F3F7FF60030F30C /* ListCarsByBrandGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCarsByBrandGateway.swift; sourceTree = "<group>"; };
+		3405D3E41F3F80000030F30C /* ListCarsByBrandPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCarsByBrandPresenter.swift; sourceTree = "<group>"; };
+		3405D3E61F3F80480030F30C /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
+		3405D3E81F3F809A0030F30C /* CarError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarError.swift; sourceTree = "<group>"; };
+		3405D3ED1F3F82EC0030F30C /* ListCarsByBrandUsecaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCarsByBrandUsecaseTests.swift; sourceTree = "<group>"; };
+		3405D3F01F3F83580030F30C /* ListCarsByBrandStubGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCarsByBrandStubGateway.swift; sourceTree = "<group>"; };
+		3405D3F41F3F84FF0030F30C /* ListCarsByBrandStubPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCarsByBrandStubPresenter.swift; sourceTree = "<group>"; };
 		3417A91B1F3C1923009EC015 /* BrandCarDecodableEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandCarDecodableEntity.swift; sourceTree = "<group>"; };
 		3417A91D1F3C19B7009EC015 /* BrandCars.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = BrandCars.json; sourceTree = "<group>"; };
 		3417A91F1F3C1A81009EC015 /* BrandCarDecodableEntityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandCarDecodableEntityTests.swift; sourceTree = "<group>"; };
@@ -130,6 +146,9 @@
 			isa = PBXGroup;
 			children = (
 				3405D3C61F3F753B0030F30C /* Entities */,
+				3405D3E11F3F7F440030F30C /* Gateways */,
+				3405D3E01F3F7F3F0030F30C /* Presenters */,
+				3405D3DD1F3F7E030030F30C /* Usecases */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -138,6 +157,8 @@
 			isa = PBXGroup;
 			children = (
 				3417A91B1F3C1923009EC015 /* BrandCarDecodableEntity.swift */,
+				3405D3E61F3F80480030F30C /* Car.swift */,
+				3405D3E81F3F809A0030F30C /* CarError.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -177,6 +198,8 @@
 		3405D3CC1F3F758A0030F30C /* BrandCars */ = {
 			isa = PBXGroup;
 			children = (
+				3405D3EF1F3F834B0030F30C /* Doubles */,
+				3405D3EC1F3F82110030F30C /* Usecases */,
 				3405D3CF1F3F759F0030F30C /* Core */,
 			);
 			path = BrandCars;
@@ -245,6 +268,63 @@
 				3405D3D71F3F78B60030F30C /* ListBrandStubGateway.swift */,
 			);
 			path = Gateways;
+			sourceTree = "<group>";
+		};
+		3405D3DD1F3F7E030030F30C /* Usecases */ = {
+			isa = PBXGroup;
+			children = (
+				3405D3DE1F3F7E1D0030F30C /* ListCarsByBrandUsecase.swift */,
+			);
+			path = Usecases;
+			sourceTree = "<group>";
+		};
+		3405D3E01F3F7F3F0030F30C /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				3405D3E41F3F80000030F30C /* ListCarsByBrandPresenter.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		3405D3E11F3F7F440030F30C /* Gateways */ = {
+			isa = PBXGroup;
+			children = (
+				3405D3E21F3F7FF60030F30C /* ListCarsByBrandGateway.swift */,
+			);
+			path = Gateways;
+			sourceTree = "<group>";
+		};
+		3405D3EC1F3F82110030F30C /* Usecases */ = {
+			isa = PBXGroup;
+			children = (
+				3405D3ED1F3F82EC0030F30C /* ListCarsByBrandUsecaseTests.swift */,
+			);
+			path = Usecases;
+			sourceTree = "<group>";
+		};
+		3405D3EF1F3F834B0030F30C /* Doubles */ = {
+			isa = PBXGroup;
+			children = (
+				3405D3F31F3F84F60030F30C /* Presenters */,
+				3405D3F21F3F84F10030F30C /* Gateways */,
+			);
+			path = Doubles;
+			sourceTree = "<group>";
+		};
+		3405D3F21F3F84F10030F30C /* Gateways */ = {
+			isa = PBXGroup;
+			children = (
+				3405D3F01F3F83580030F30C /* ListCarsByBrandStubGateway.swift */,
+			);
+			path = Gateways;
+			sourceTree = "<group>";
+		};
+		3405D3F31F3F84F60030F30C /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				3405D3F41F3F84FF0030F30C /* ListCarsByBrandStubPresenter.swift */,
+			);
+			path = Presenters;
 			sourceTree = "<group>";
 		};
 		3469A3341F3BFF67004A0934 = {
@@ -516,12 +596,17 @@
 			files = (
 				3405D3B41F3E7E650030F30C /* Result.swift in Sources */,
 				3405D3BD1F3E7F970030F30C /* ListBrandsUsecase.swift in Sources */,
+				3405D3E71F3F80480030F30C /* Car.swift in Sources */,
 				3405D3C01F3E80C80030F30C /* ListBrandPresenter.swift in Sources */,
+				3405D3E31F3F7FF60030F30C /* ListCarsByBrandGateway.swift in Sources */,
 				34C893C41F3C01820023D3E9 /* BrandDecodableEntity.swift in Sources */,
 				3405D3B91F3E7EEB0030F30C /* CompletionHandler.swift in Sources */,
 				3405D3BB1F3E7F340030F30C /* ListBrandGateway.swift in Sources */,
 				3417A9231F3C1E15009EC015 /* CarDecodableEntity.swift in Sources */,
+				3405D3E91F3F809A0030F30C /* CarError.swift in Sources */,
+				3405D3DF1F3F7E1D0030F30C /* ListCarsByBrandUsecase.swift in Sources */,
 				3405D3B61F3E7E910030F30C /* Brand.swift in Sources */,
+				3405D3E51F3F80000030F30C /* ListCarsByBrandPresenter.swift in Sources */,
 				3469A3411F3BFF67004A0934 /* AppDelegate.swift in Sources */,
 				3417A91C1F3C1923009EC015 /* BrandCarDecodableEntity.swift in Sources */,
 				3405D3C31F3F74EC0030F30C /* BrandError.swift in Sources */,
@@ -533,14 +618,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				3405D3D81F3F78B60030F30C /* ListBrandStubGateway.swift in Sources */,
+				3405D3EE1F3F82EC0030F30C /* ListCarsByBrandUsecaseTests.swift in Sources */,
 				3405D3DA1F3F79620030F30C /* ListBrandStubPresenter.swift in Sources */,
 				34C893D31F3C01B90023D3E9 /* BrandDecodableEntityTests.swift in Sources */,
 				34C893C91F3C01A70023D3E9 /* JSONDecoder+Decode.swift in Sources */,
 				3417A9201F3C1A81009EC015 /* BrandCarDecodableEntityTests.swift in Sources */,
+				3405D3F51F3F84FF0030F30C /* ListCarsByBrandStubPresenter.swift in Sources */,
 				3405D3D41F3F787F0030F30C /* ListBrandsUsecaseTests.swift in Sources */,
 				34C893CB1F3C01A70023D3E9 /* XCTestCase+LoadJson.swift in Sources */,
 				34C893CA1F3C01A70023D3E9 /* NSManagedObjectContext+InMemory.swift in Sources */,
 				3417A9251F3C1E9E009EC015 /* CarDecodableEntityTests.swift in Sources */,
+				3405D3F11F3F83580030F30C /* ListCarsByBrandStubGateway.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
