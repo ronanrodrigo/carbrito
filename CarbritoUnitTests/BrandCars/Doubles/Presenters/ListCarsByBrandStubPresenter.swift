@@ -5,11 +5,11 @@ final class ListCarsByBrandStubPresenter: ListCarsByBrandPresenter {
     var didPresentCars = false
     var didPresentError = false
 
-    func present(cars: [Car]) {
+    func present(cars: [BrandCar]) {
         didPresentCars = true
     }
 
-    func present(error: CarError) {
+    func present(error: BrandCarError) {
         didPresentError = true
     }
 

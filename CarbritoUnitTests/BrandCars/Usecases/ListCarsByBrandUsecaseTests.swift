@@ -26,7 +26,7 @@ final class ListCarsByBrandUsecaseTests: XCTestCase {
     }
 
     func testListCarsByBrandNameWhenFailThenPresentCars() {
-        gateway.setupCompletionHandlerResult = .fail(CarError.invalidRequest)
+        gateway.setupCompletionHandlerResult = .fail(BrandCarError.invalidRequest)
 
         usecase.list(byBrandName: brandName)
 
