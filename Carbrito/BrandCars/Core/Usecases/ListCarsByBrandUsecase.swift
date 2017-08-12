@@ -15,16 +15,18 @@ struct ListCarsByBrandUsecase {
     private func carsByBrandNameOnComplete() -> CompletionHandler<[BrandCar], BrandCarError> {
         let carsByBrandCompletion: CompletionHandler<[BrandCar], BrandCarError> = { result in
             switch result {
-            case .success(let brandCars):
-                if brandCars.isEmpty {
-                    self.listCarsByBrandPresenter.presentEmpty()
-                } else {
-                    self.listCarsByBrandPresenter.present(brandCars: brandCars)
-                }
+            case .success(let brandCars): self.present(brandCars: brandCars)
             case .fail(let error): self.listCarsByBrandPresenter.present(error: error)
             }
         }
         return carsByBrandCompletion
     }
 
+    private func present(brandCars: [BrandCar]) {
+        if brandCars.isEmpty {
+            self.listCarsByBrandPresenter.presentEmpty()
+        } else {
+            self.listCarsByBrandPresenter.present(brandCars: brandCars)
+        }
+    }
 }
