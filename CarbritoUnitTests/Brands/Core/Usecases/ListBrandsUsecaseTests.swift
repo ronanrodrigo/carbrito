@@ -15,7 +15,7 @@ class ListBrandsUsecaseTests: XCTestCase {
     }
 
     func testListBrandsWhenSuccessThenPresentBrands() {
-        gateway.setupCompletionHandlerResult = Result<[Brand], BrandError>.success([])
+        gateway.setupCompletionHandlerResult = .success([])
 
         usecase.list()
 
@@ -25,12 +25,12 @@ class ListBrandsUsecaseTests: XCTestCase {
     }
 
     func testListBrandsWhenFailThenPresentError() {
-        gateway.setupCompletionHandlerResult = Result<[Brand], BrandError>.fail(BrandError.invalidRequest)
+        gateway.setupCompletionHandlerResult = .fail(BrandError.invalidRequest)
 
         usecase.list()
 
         XCTAssertTrue(gateway.didCallBrands)
-        XCTAssertFalse(presenter.didCallPresentBrands)
         XCTAssertTrue(presenter.didCallPresentError)
+        XCTAssertFalse(presenter.didCallPresentBrands)
     }
 }
