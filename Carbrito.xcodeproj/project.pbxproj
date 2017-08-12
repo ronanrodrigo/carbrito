@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3405D3B41F3E7E650030F30C /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3405D3B31F3E7E650030F30C /* Result.swift */; };
+		3405D3B61F3E7E910030F30C /* Brand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3405D3B51F3E7E910030F30C /* Brand.swift */; };
+		3405D3B91F3E7EEB0030F30C /* CompletionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3405D3B81F3E7EEB0030F30C /* CompletionHandler.swift */; };
+		3405D3BB1F3E7F340030F30C /* ListBrandGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3405D3BA1F3E7F340030F30C /* ListBrandGateway.swift */; };
+		3405D3BD1F3E7F970030F30C /* ListBrandsUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3405D3BC1F3E7F960030F30C /* ListBrandsUsecase.swift */; };
+		3405D3C01F3E80C80030F30C /* ListBrandPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3405D3BF1F3E80C80030F30C /* ListBrandPresenter.swift */; };
+		3405D3C31F3F74EC0030F30C /* BrandError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3405D3C21F3F74EC0030F30C /* BrandError.swift */; };
+		3405D3D41F3F787F0030F30C /* ListBrandsUsecaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3405D3D31F3F787F0030F30C /* ListBrandsUsecaseTests.swift */; };
+		3405D3D81F3F78B60030F30C /* ListBrandStubGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3405D3D71F3F78B60030F30C /* ListBrandStubGateway.swift */; };
+		3405D3DA1F3F79620030F30C /* ListBrandStubPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3405D3D91F3F79620030F30C /* ListBrandStubPresenter.swift */; };
 		3417A91C1F3C1923009EC015 /* BrandCarDecodableEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3417A91B1F3C1923009EC015 /* BrandCarDecodableEntity.swift */; };
 		3417A91E1F3C19B7009EC015 /* BrandCars.json in Resources */ = {isa = PBXBuildFile; fileRef = 3417A91D1F3C19B7009EC015 /* BrandCars.json */; };
 		3417A9201F3C1A81009EC015 /* BrandCarDecodableEntityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3417A91F1F3C1A81009EC015 /* BrandCarDecodableEntityTests.swift */; };
@@ -35,6 +45,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3405D3B31F3E7E650030F30C /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		3405D3B51F3E7E910030F30C /* Brand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brand.swift; sourceTree = "<group>"; };
+		3405D3B81F3E7EEB0030F30C /* CompletionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletionHandler.swift; sourceTree = "<group>"; };
+		3405D3BA1F3E7F340030F30C /* ListBrandGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListBrandGateway.swift; sourceTree = "<group>"; };
+		3405D3BC1F3E7F960030F30C /* ListBrandsUsecase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListBrandsUsecase.swift; sourceTree = "<group>"; };
+		3405D3BF1F3E80C80030F30C /* ListBrandPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListBrandPresenter.swift; sourceTree = "<group>"; };
+		3405D3C21F3F74EC0030F30C /* BrandError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandError.swift; sourceTree = "<group>"; };
+		3405D3D31F3F787F0030F30C /* ListBrandsUsecaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListBrandsUsecaseTests.swift; sourceTree = "<group>"; };
+		3405D3D71F3F78B60030F30C /* ListBrandStubGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListBrandStubGateway.swift; sourceTree = "<group>"; };
+		3405D3D91F3F79620030F30C /* ListBrandStubPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListBrandStubPresenter.swift; sourceTree = "<group>"; };
 		3417A91B1F3C1923009EC015 /* BrandCarDecodableEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandCarDecodableEntity.swift; sourceTree = "<group>"; };
 		3417A91D1F3C19B7009EC015 /* BrandCars.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = BrandCars.json; sourceTree = "<group>"; };
 		3417A91F1F3C1A81009EC015 /* BrandCarDecodableEntityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandCarDecodableEntityTests.swift; sourceTree = "<group>"; };
@@ -74,6 +94,167 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3405D3B01F3E7BBE0030F30C /* Usecases */ = {
+			isa = PBXGroup;
+			children = (
+				3405D3BC1F3E7F960030F30C /* ListBrandsUsecase.swift */,
+			);
+			path = Usecases;
+			sourceTree = "<group>";
+		};
+		3405D3B71F3E7ED10030F30C /* Gateways */ = {
+			isa = PBXGroup;
+			children = (
+				3405D3BA1F3E7F340030F30C /* ListBrandGateway.swift */,
+			);
+			path = Gateways;
+			sourceTree = "<group>";
+		};
+		3405D3BE1F3E80AE0030F30C /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				3405D3BF1F3E80C80030F30C /* ListBrandPresenter.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		3405D3C11F3F74CF0030F30C /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				3405D3C21F3F74EC0030F30C /* BrandError.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
+		3405D3C41F3F75260030F30C /* BrandCars */ = {
+			isa = PBXGroup;
+			children = (
+				3405D3C51F3F75370030F30C /* Core */,
+			);
+			path = BrandCars;
+			sourceTree = "<group>";
+		};
+		3405D3C51F3F75370030F30C /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				3405D3C61F3F753B0030F30C /* Entities */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		3405D3C61F3F753B0030F30C /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				3417A91B1F3C1923009EC015 /* BrandCarDecodableEntity.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		3405D3C71F3F754F0030F30C /* Cars */ = {
+			isa = PBXGroup;
+			children = (
+				3405D3C81F3F75520030F30C /* Core */,
+			);
+			path = Cars;
+			sourceTree = "<group>";
+		};
+		3405D3C81F3F75520030F30C /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				3405D3CA1F3F755B0030F30C /* Entities */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		3405D3CA1F3F755B0030F30C /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				3417A9221F3C1E15009EC015 /* CarDecodableEntity.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		3405D3CB1F3F75840030F30C /* Cars */ = {
+			isa = PBXGroup;
+			children = (
+				3405D3CD1F3F75920030F30C /* Core */,
+			);
+			path = Cars;
+			sourceTree = "<group>";
+		};
+		3405D3CC1F3F758A0030F30C /* BrandCars */ = {
+			isa = PBXGroup;
+			children = (
+				3405D3CF1F3F759F0030F30C /* Core */,
+			);
+			path = BrandCars;
+			sourceTree = "<group>";
+		};
+		3405D3CD1F3F75920030F30C /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				3405D3CE1F3F75950030F30C /* Entities */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		3405D3CE1F3F75950030F30C /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				3417A9241F3C1E9E009EC015 /* CarDecodableEntityTests.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		3405D3CF1F3F759F0030F30C /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				3405D3D01F3F75A30030F30C /* Entities */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		3405D3D01F3F75A30030F30C /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				3417A91F1F3C1A81009EC015 /* BrandCarDecodableEntityTests.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		3405D3D11F3F76040030F30C /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				3405D3B81F3E7EEB0030F30C /* CompletionHandler.swift */,
+				3405D3B31F3E7E650030F30C /* Result.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		3405D3D21F3F786D0030F30C /* Usecases */ = {
+			isa = PBXGroup;
+			children = (
+				3405D3D31F3F787F0030F30C /* ListBrandsUsecaseTests.swift */,
+			);
+			path = Usecases;
+			sourceTree = "<group>";
+		};
+		3405D3D51F3F789E0030F30C /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				3405D3D91F3F79620030F30C /* ListBrandStubPresenter.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		3405D3D61F3F78A20030F30C /* Gateways */ = {
+			isa = PBXGroup;
+			children = (
+				3405D3D71F3F78B60030F30C /* ListBrandStubGateway.swift */,
+			);
+			path = Gateways;
+			sourceTree = "<group>";
+		};
 		3469A3341F3BFF67004A0934 = {
 			isa = PBXGroup;
 			children = (
@@ -95,8 +276,11 @@
 		3469A33F1F3BFF67004A0934 /* Carbrito */ = {
 			isa = PBXGroup;
 			children = (
-				34C893C01F3C01750023D3E9 /* Cars */,
+				3405D3C41F3F75260030F30C /* BrandCars */,
+				34C893C01F3C01750023D3E9 /* Brands */,
+				3405D3C71F3F754F0030F30C /* Cars */,
 				3469A3521F3BFF81004A0934 /* Essentials */,
+				3405D3D11F3F76040030F30C /* Common */,
 			);
 			path = Carbrito;
 			sourceTree = "<group>";
@@ -115,7 +299,9 @@
 		3469A3581F3C004B004A0934 /* CarbritoUnitTests */ = {
 			isa = PBXGroup;
 			children = (
-				34C893CC1F3C01B10023D3E9 /* Cars */,
+				3405D3CC1F3F758A0030F30C /* BrandCars */,
+				34C893CC1F3C01B10023D3E9 /* Brands */,
+				3405D3CB1F3F75840030F30C /* Cars */,
 				34C893BF1F3C01190023D3E9 /* Essentials */,
 			);
 			path = CarbritoUnitTests;
@@ -130,18 +316,22 @@
 			path = Essentials;
 			sourceTree = "<group>";
 		};
-		34C893C01F3C01750023D3E9 /* Cars */ = {
+		34C893C01F3C01750023D3E9 /* Brands */ = {
 			isa = PBXGroup;
 			children = (
 				34C893C11F3C01750023D3E9 /* Core */,
 			);
-			path = Cars;
+			path = Brands;
 			sourceTree = "<group>";
 		};
 		34C893C11F3C01750023D3E9 /* Core */ = {
 			isa = PBXGroup;
 			children = (
 				34C893C21F3C01750023D3E9 /* Entities */,
+				3405D3C11F3F74CF0030F30C /* Errors */,
+				3405D3B71F3E7ED10030F30C /* Gateways */,
+				3405D3BE1F3E80AE0030F30C /* Presenters */,
+				3405D3B01F3E7BBE0030F30C /* Usecases */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -149,9 +339,8 @@
 		34C893C21F3C01750023D3E9 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				3417A91B1F3C1923009EC015 /* BrandCarDecodableEntity.swift */,
+				3405D3B51F3E7E910030F30C /* Brand.swift */,
 				34C893C31F3C01750023D3E9 /* BrandDecodableEntity.swift */,
-				3417A9221F3C1E15009EC015 /* CarDecodableEntity.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -166,18 +355,19 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		34C893CC1F3C01B10023D3E9 /* Cars */ = {
+		34C893CC1F3C01B10023D3E9 /* Brands */ = {
 			isa = PBXGroup;
 			children = (
 				34C893CD1F3C01B10023D3E9 /* Core */,
 				34C893D01F3C01B10023D3E9 /* Doubles */,
 			);
-			path = Cars;
+			path = Brands;
 			sourceTree = "<group>";
 		};
 		34C893CD1F3C01B10023D3E9 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				3405D3D21F3F786D0030F30C /* Usecases */,
 				34C893CE1F3C01B10023D3E9 /* Entities */,
 			);
 			path = Core;
@@ -186,9 +376,7 @@
 		34C893CE1F3C01B10023D3E9 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				3417A91F1F3C1A81009EC015 /* BrandCarDecodableEntityTests.swift */,
 				34C893CF1F3C01B10023D3E9 /* BrandDecodableEntityTests.swift */,
-				3417A9241F3C1E9E009EC015 /* CarDecodableEntityTests.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -196,7 +384,9 @@
 		34C893D01F3C01B10023D3E9 /* Doubles */ = {
 			isa = PBXGroup;
 			children = (
+				3405D3D61F3F78A20030F30C /* Gateways */,
 				34C893D11F3C01B10023D3E9 /* Json */,
+				3405D3D51F3F789E0030F30C /* Presenters */,
 			);
 			path = Doubles;
 			sourceTree = "<group>";
@@ -332,10 +522,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3405D3B41F3E7E650030F30C /* Result.swift in Sources */,
+				3405D3BD1F3E7F970030F30C /* ListBrandsUsecase.swift in Sources */,
+				3405D3C01F3E80C80030F30C /* ListBrandPresenter.swift in Sources */,
 				34C893C41F3C01820023D3E9 /* BrandDecodableEntity.swift in Sources */,
+				3405D3B91F3E7EEB0030F30C /* CompletionHandler.swift in Sources */,
+				3405D3BB1F3E7F340030F30C /* ListBrandGateway.swift in Sources */,
 				3417A9231F3C1E15009EC015 /* CarDecodableEntity.swift in Sources */,
+				3405D3B61F3E7E910030F30C /* Brand.swift in Sources */,
 				3469A3411F3BFF67004A0934 /* AppDelegate.swift in Sources */,
 				3417A91C1F3C1923009EC015 /* BrandCarDecodableEntity.swift in Sources */,
+				3405D3C31F3F74EC0030F30C /* BrandError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,9 +540,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3405D3D81F3F78B60030F30C /* ListBrandStubGateway.swift in Sources */,
+				3405D3DA1F3F79620030F30C /* ListBrandStubPresenter.swift in Sources */,
 				34C893D31F3C01B90023D3E9 /* BrandDecodableEntityTests.swift in Sources */,
 				34C893C91F3C01A70023D3E9 /* JSONDecoder+Decode.swift in Sources */,
 				3417A9201F3C1A81009EC015 /* BrandCarDecodableEntityTests.swift in Sources */,
+				3405D3D41F3F787F0030F30C /* ListBrandsUsecaseTests.swift in Sources */,
 				34C893CB1F3C01A70023D3E9 /* XCTestCase+LoadJson.swift in Sources */,
 				34C893CA1F3C01A70023D3E9 /* NSManagedObjectContext+InMemory.swift in Sources */,
 				3417A9251F3C1E9E009EC015 /* CarDecodableEntityTests.swift in Sources */,
