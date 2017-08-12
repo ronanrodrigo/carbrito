@@ -118,14 +118,6 @@
 			path = Presenters;
 			sourceTree = "<group>";
 		};
-		3405D3C11F3F74CF0030F30C /* Errors */ = {
-			isa = PBXGroup;
-			children = (
-				3405D3C21F3F74EC0030F30C /* BrandError.swift */,
-			);
-			path = Errors;
-			sourceTree = "<group>";
-		};
 		3405D3C41F3F75260030F30C /* BrandCars */ = {
 			isa = PBXGroup;
 			children = (
@@ -328,7 +320,6 @@
 			isa = PBXGroup;
 			children = (
 				34C893C21F3C01750023D3E9 /* Entities */,
-				3405D3C11F3F74CF0030F30C /* Errors */,
 				3405D3B71F3E7ED10030F30C /* Gateways */,
 				3405D3BE1F3E80AE0030F30C /* Presenters */,
 				3405D3B01F3E7BBE0030F30C /* Usecases */,
@@ -341,6 +332,7 @@
 			children = (
 				3405D3B51F3E7E910030F30C /* Brand.swift */,
 				34C893C31F3C01750023D3E9 /* BrandDecodableEntity.swift */,
+				3405D3C21F3F74EC0030F30C /* BrandError.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
