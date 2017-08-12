@@ -34,6 +34,7 @@
 		3469A3411F3BFF67004A0934 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3469A3401F3BFF67004A0934 /* AppDelegate.swift */; };
 		3469A3481F3BFF67004A0934 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3469A3471F3BFF67004A0934 /* Assets.xcassets */; };
 		3469A34B1F3BFF67004A0934 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3469A3491F3BFF67004A0934 /* LaunchScreen.storyboard */; };
+		34B2E5941F3F91E30059E597 /* EmptyPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B2E5931F3F91E30059E597 /* EmptyPresenter.swift */; };
 		34B3F5021F3F8BC40067A5B3 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B3F5011F3F8BC40067A5B3 /* Car.swift */; };
 		34B3F5081F3F8C110067A5B3 /* CarError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B3F5071F3F8C110067A5B3 /* CarError.swift */; };
 		34B3F50A1F3F8C4F0067A5B3 /* DetailCarUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B3F5091F3F8C4F0067A5B3 /* DetailCarUsecase.swift */; };
@@ -92,6 +93,7 @@
 		3469A34C1F3BFF67004A0934 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3469A3571F3C004B004A0934 /* CarbritoUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarbritoUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3469A35B1F3C004B004A0934 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		34B2E5931F3F91E30059E597 /* EmptyPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyPresenter.swift; sourceTree = "<group>"; };
 		34B3F5011F3F8BC40067A5B3 /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
 		34B3F5071F3F8C110067A5B3 /* CarError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarError.swift; sourceTree = "<group>"; };
 		34B3F5091F3F8C4F0067A5B3 /* DetailCarUsecase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCarUsecase.swift; sourceTree = "<group>"; };
@@ -190,10 +192,10 @@
 		3405D3C81F3F75520030F30C /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				34B3F5061F3F8C010067A5B3 /* Presenters */,
-				34B3F5051F3F8BFC0067A5B3 /* Gateways */,
-				34B3F5041F3F8BF80067A5B3 /* Usecases */,
 				3405D3CA1F3F755B0030F30C /* Entities */,
+				34B3F5051F3F8BFC0067A5B3 /* Gateways */,
+				34B3F5061F3F8C010067A5B3 /* Presenters */,
+				34B3F5041F3F8BF80067A5B3 /* Usecases */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -265,6 +267,7 @@
 			children = (
 				3405D3B81F3E7EEB0030F30C /* CompletionHandler.swift */,
 				3405D3B31F3E7E650030F30C /* Result.swift */,
+				34B2E5931F3F91E30059E597 /* EmptyPresenter.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -690,6 +693,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34B2E5941F3F91E30059E597 /* EmptyPresenter.swift in Sources */,
 				3405D3B41F3E7E650030F30C /* Result.swift in Sources */,
 				3405D3BD1F3E7F970030F30C /* ListBrandsUsecase.swift in Sources */,
 				3405D3E71F3F80480030F30C /* BrandCar.swift in Sources */,

@@ -16,7 +16,7 @@ final class DetailCarUsecaseTests: XCTestCase {
     }
 
     func testDetailByCodeAndYearWhenSuccessThenPresentCar() {
-        detailCarGateway.setupCompletionHandlerResult = Result.success(car)
+        detailCarGateway.setupCompletionHandlerResult = Result.success([car])
 
         usecase.detail(byCode: car.code, andYear: car.year)
 
@@ -25,13 +25,24 @@ final class DetailCarUsecaseTests: XCTestCase {
         XCTAssertFalse(detailCarPresenter.didCallPresentError)
     }
 
-    func testDetailByCodeAndYearWhenSuccessThenPresentCarWithCorrectCar() {
-        detailCarGateway.setupCompletionHandlerResult = Result.success(car)
+    func testDetailByCodeAndYearWhenSuccessWithEmptyListThenPresentEmpty() {
+        detailCarGateway.setupCompletionHandlerResult = Result.success([])
 
         usecase.detail(byCode: car.code, andYear: car.year)
 
-        XCTAssertNotNil(detailCarPresenter.didCallPresentWithCar)
-        XCTAssertEqual(detailCarPresenter.didCallPresentWithCar!.code, car.code)
+        XCTAssertTrue(detailCarGateway.didCallDetailByCodeAndYear)
+        XCTAssertTrue(detailCarPresenter.didCallPresentEmpty)
+        XCTAssertFalse(detailCarPresenter.didCallPresentCar)
+        XCTAssertFalse(detailCarPresenter.didCallPresentError)
+    }
+
+    func testDetailByCodeAndYearWhenSuccessThenPresentCarWithCorrectCar() {
+        detailCarGateway.setupCompletionHandlerResult = Result.success([car])
+
+        usecase.detail(byCode: car.code, andYear: car.year)
+
+        XCTAssertNotNil(detailCarPresenter.didCallPresentWithCars)
+        XCTAssertEqual(detailCarPresenter.didCallPresentWithCars![0].code, car.code)
     }
 
     func testDetailByCodeAndYearWhenFailThenPresentError() {

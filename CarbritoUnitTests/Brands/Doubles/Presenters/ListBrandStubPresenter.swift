@@ -4,6 +4,7 @@ class ListBrandStubPresenter: ListBrandPresenter {
 
     var didCallPresentBrands = false
     var didCallPresentError = false
+    var didCallPresentEmpty = false
 
     func present(brands: [Brand]) {
         didCallPresentBrands = true
@@ -13,4 +14,7 @@ class ListBrandStubPresenter: ListBrandPresenter {
         didCallPresentError = true
     }
 
+    func presentEmpty() {
+        didCallPresentEmpty = true
+    }
 }

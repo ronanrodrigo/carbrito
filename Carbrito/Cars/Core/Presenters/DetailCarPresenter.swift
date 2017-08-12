@@ -1,4 +1,4 @@
-protocol DetailCarPresenter {
-    func present(car: Car)
+protocol DetailCarPresenter: EmptyPresenter {
+    func present(cars: [Car])
     func present(error: CarError)
 }

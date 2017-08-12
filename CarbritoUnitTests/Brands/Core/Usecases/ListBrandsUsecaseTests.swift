@@ -15,12 +15,25 @@ class ListBrandsUsecaseTests: XCTestCase {
     }
 
     func testListBrandsWhenSuccessThenPresentBrands() {
-        gateway.setupCompletionHandlerResult = .success([])
+        let brand = Brand(name: "Fiat")
+        gateway.setupCompletionHandlerResult = .success([brand])
 
         usecase.list()
 
         XCTAssertTrue(gateway.didCallBrands)
         XCTAssertTrue(presenter.didCallPresentBrands)
+        XCTAssertFalse(presenter.didCallPresentError)
+        XCTAssertFalse(presenter.didCallPresentEmpty)
+    }
+
+    func testListBrandsWhenSuccessWithEmptyListThenPresentBrands() {
+        gateway.setupCompletionHandlerResult = .success([])
+
+        usecase.list()
+
+        XCTAssertTrue(gateway.didCallBrands)
+        XCTAssertTrue(presenter.didCallPresentEmpty)
+        XCTAssertFalse(presenter.didCallPresentBrands)
         XCTAssertFalse(presenter.didCallPresentError)
     }
 

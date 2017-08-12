@@ -12,10 +12,15 @@ struct DetailCarUsecase {
         detailCarGateway.detail(byCode: code, andYear: year, detailCarOnComplete())
     }
 
-    private func detailCarOnComplete() -> CompletionHandler<Car, CarError> {
-        let carsByBrandCompletion: CompletionHandler<Car, CarError> = { result in
+    private func detailCarOnComplete() -> CompletionHandler<[Car], CarError> {
+        let carsByBrandCompletion: CompletionHandler<[Car], CarError> = { result in
             switch result {
-            case .success(let car): self.detailCarPresenter.present(car: car)
+            case .success(let cars):
+                if cars.isEmpty {
+                    self.detailCarPresenter.presentEmpty()
+                } else {
+                    self.detailCarPresenter.present(cars: cars)
+                }
             case .fail(let error): self.detailCarPresenter.present(error: error)
             }
         }

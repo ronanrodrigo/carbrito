@@ -3,16 +3,21 @@
 final class DetailCarStubPresenter: DetailCarPresenter {
 
     var didCallPresentCar = false
-    var didCallPresentWithCar: Car?
+    var didCallPresentWithCars: [Car]?
     var didCallPresentError = false
+    var didCallPresentEmpty = false
 
-    func present(car: Car) {
-        didCallPresentWithCar = car
+    func present(cars: [Car]) {
+        didCallPresentWithCars = cars
         didCallPresentCar = true
     }
 
     func present(error: CarError) {
         didCallPresentError = true
+    }
+
+    func presentEmpty() {
+        didCallPresentEmpty = true
     }
 
 }

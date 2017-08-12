@@ -15,7 +15,12 @@ struct ListBrandsUsecase {
     private func allBrandsOnComplete() -> CompletionHandler<[Brand], BrandError> {
         let allBrandsCompletion: CompletionHandler<[Brand], BrandError> = { result in
             switch result {
-            case .success(let brands): self.listBrandPresenter.present(brands: brands)
+            case .success(let brands):
+                if brands.isEmpty {
+                    self.listBrandPresenter.presentEmpty()
+                } else {
+                    self.listBrandPresenter.present(brands: brands)
+                }
             case .fail(let error): self.listBrandPresenter.present(error: error)
             }
         }

@@ -4,6 +4,7 @@ final class ListCarsByBrandStubPresenter: ListCarsByBrandPresenter {
 
     var didPresentCars = false
     var didPresentError = false
+    var didCallPresentEmpty = false
 
     func present(cars: [BrandCar]) {
         didPresentCars = true
@@ -11,6 +12,10 @@ final class ListCarsByBrandStubPresenter: ListCarsByBrandPresenter {
 
     func present(error: BrandCarError) {
         didPresentError = true
+    }
+
+    func presentEmpty() {
+        didCallPresentEmpty = true
     }
 
 }
