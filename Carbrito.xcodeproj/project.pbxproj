@@ -190,6 +190,7 @@
 		3405D3CB1F3F75840030F30C /* Cars */ = {
 			isa = PBXGroup;
 			children = (
+				3405D3F71F3F870C0030F30C /* Doubles */,
 				3405D3CD1F3F75920030F30C /* Core */,
 			);
 			path = Cars;
@@ -305,6 +306,7 @@
 		3405D3EF1F3F834B0030F30C /* Doubles */ = {
 			isa = PBXGroup;
 			children = (
+				3405D3F61F3F86F90030F30C /* Json */,
 				3405D3F31F3F84F60030F30C /* Presenters */,
 				3405D3F21F3F84F10030F30C /* Gateways */,
 			);
@@ -325,6 +327,30 @@
 				3405D3F41F3F84FF0030F30C /* ListCarsByBrandStubPresenter.swift */,
 			);
 			path = Presenters;
+			sourceTree = "<group>";
+		};
+		3405D3F61F3F86F90030F30C /* Json */ = {
+			isa = PBXGroup;
+			children = (
+				3417A91D1F3C19B7009EC015 /* BrandCars.json */,
+			);
+			path = Json;
+			sourceTree = "<group>";
+		};
+		3405D3F71F3F870C0030F30C /* Doubles */ = {
+			isa = PBXGroup;
+			children = (
+				3405D3F81F3F87240030F30C /* Json */,
+			);
+			path = Doubles;
+			sourceTree = "<group>";
+		};
+		3405D3F81F3F87240030F30C /* Json */ = {
+			isa = PBXGroup;
+			children = (
+				3417A9261F3C1EE4009EC015 /* Cars.json */,
+			);
+			path = Json;
 			sourceTree = "<group>";
 		};
 		3469A3341F3BFF67004A0934 = {
@@ -466,9 +492,7 @@
 		34C893D11F3C01B10023D3E9 /* Json */ = {
 			isa = PBXGroup;
 			children = (
-				3417A91D1F3C19B7009EC015 /* BrandCars.json */,
 				34C893D21F3C01B10023D3E9 /* Brands.json */,
-				3417A9261F3C1EE4009EC015 /* Cars.json */,
 			);
 			path = Json;
 			sourceTree = "<group>";
