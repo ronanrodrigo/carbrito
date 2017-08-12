@@ -1,4 +1,4 @@
 protocol ListCarsByBrandPresenter: EmptyPresenter {
-    func present(cars: [BrandCar])
+    func present(brandCars: [BrandCar])
     func present(error: BrandCarError)
 }
