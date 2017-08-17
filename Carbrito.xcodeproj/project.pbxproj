@@ -128,59 +128,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3405D3B01F3E7BBE0030F30C /* Usecases */ = {
-			isa = PBXGroup;
-			children = (
-				3405D3BC1F3E7F960030F30C /* ListBrandsUsecase.swift */,
-			);
-			path = Usecases;
-			sourceTree = "<group>";
-		};
-		3405D3B71F3E7ED10030F30C /* Gateways */ = {
-			isa = PBXGroup;
-			children = (
-				3405D3BA1F3E7F340030F30C /* ListBrandGateway.swift */,
-			);
-			path = Gateways;
-			sourceTree = "<group>";
-		};
-		3405D3BE1F3E80AE0030F30C /* Presenters */ = {
-			isa = PBXGroup;
-			children = (
-				3405D3BF1F3E80C80030F30C /* ListBrandPresenter.swift */,
-			);
-			path = Presenters;
-			sourceTree = "<group>";
-		};
-		3405D3C41F3F75260030F30C /* BrandCars */ = {
-			isa = PBXGroup;
-			children = (
-				3405D3C51F3F75370030F30C /* Core */,
-			);
-			path = BrandCars;
-			sourceTree = "<group>";
-		};
-		3405D3C51F3F75370030F30C /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				3405D3C61F3F753B0030F30C /* Entities */,
-				3405D3E11F3F7F440030F30C /* Gateways */,
-				3405D3E01F3F7F3F0030F30C /* Presenters */,
-				3405D3DD1F3F7E030030F30C /* Usecases */,
-			);
-			path = Core;
-			sourceTree = "<group>";
-		};
-		3405D3C61F3F753B0030F30C /* Entities */ = {
-			isa = PBXGroup;
-			children = (
-				3417A91B1F3C1923009EC015 /* BrandCarDecodableEntity.swift */,
-				3405D3E61F3F80480030F30C /* BrandCar.swift */,
-				3405D3E81F3F809A0030F30C /* BrandCarError.swift */,
-			);
-			path = Entities;
-			sourceTree = "<group>";
-		};
 		3405D3C71F3F754F0030F30C /* Cars */ = {
 			isa = PBXGroup;
 			children = (
@@ -203,8 +150,14 @@
 		3405D3CA1F3F755B0030F30C /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				3417A9221F3C1E15009EC015 /* CarDecodableEntity.swift */,
+				3405D3B51F3E7E910030F30C /* Brand.swift */,
+				3405D3E61F3F80480030F30C /* BrandCar.swift */,
+				3417A91B1F3C1923009EC015 /* BrandCarDecodableEntity.swift */,
+				3405D3E81F3F809A0030F30C /* BrandCarError.swift */,
+				34C893C31F3C01750023D3E9 /* BrandDecodableEntity.swift */,
+				3405D3C21F3F74EC0030F30C /* BrandError.swift */,
 				34B3F5011F3F8BC40067A5B3 /* Car.swift */,
+				3417A9221F3C1E15009EC015 /* CarDecodableEntity.swift */,
 				34B3F5071F3F8C110067A5B3 /* CarError.swift */,
 			);
 			path = Entities;
@@ -219,16 +172,6 @@
 			path = Cars;
 			sourceTree = "<group>";
 		};
-		3405D3CC1F3F758A0030F30C /* BrandCars */ = {
-			isa = PBXGroup;
-			children = (
-				3405D3EF1F3F834B0030F30C /* Doubles */,
-				3405D3EC1F3F82110030F30C /* Usecases */,
-				3405D3CF1F3F759F0030F30C /* Core */,
-			);
-			path = BrandCars;
-			sourceTree = "<group>";
-		};
 		3405D3CD1F3F75920030F30C /* Core */ = {
 			isa = PBXGroup;
 			children = (
@@ -241,23 +184,9 @@
 		3405D3CE1F3F75950030F30C /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				3417A9241F3C1E9E009EC015 /* CarDecodableEntityTests.swift */,
-			);
-			path = Entities;
-			sourceTree = "<group>";
-		};
-		3405D3CF1F3F759F0030F30C /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				3405D3D01F3F75A30030F30C /* Entities */,
-			);
-			path = Core;
-			sourceTree = "<group>";
-		};
-		3405D3D01F3F75A30030F30C /* Entities */ = {
-			isa = PBXGroup;
-			children = (
 				3417A91F1F3C1A81009EC015 /* BrandCarDecodableEntityTests.swift */,
+				34C893CF1F3C01B10023D3E9 /* BrandDecodableEntityTests.swift */,
+				3417A9241F3C1E9E009EC015 /* CarDecodableEntityTests.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -272,102 +201,12 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
-		3405D3D21F3F786D0030F30C /* Usecases */ = {
-			isa = PBXGroup;
-			children = (
-				3405D3D31F3F787F0030F30C /* ListBrandsUsecaseTests.swift */,
-			);
-			path = Usecases;
-			sourceTree = "<group>";
-		};
-		3405D3D51F3F789E0030F30C /* Presenters */ = {
-			isa = PBXGroup;
-			children = (
-				3405D3D91F3F79620030F30C /* ListBrandStubPresenter.swift */,
-			);
-			path = Presenters;
-			sourceTree = "<group>";
-		};
-		3405D3D61F3F78A20030F30C /* Gateways */ = {
-			isa = PBXGroup;
-			children = (
-				3405D3D71F3F78B60030F30C /* ListBrandStubGateway.swift */,
-			);
-			path = Gateways;
-			sourceTree = "<group>";
-		};
-		3405D3DD1F3F7E030030F30C /* Usecases */ = {
-			isa = PBXGroup;
-			children = (
-				3405D3DE1F3F7E1D0030F30C /* ListCarsByBrandUsecase.swift */,
-			);
-			path = Usecases;
-			sourceTree = "<group>";
-		};
-		3405D3E01F3F7F3F0030F30C /* Presenters */ = {
-			isa = PBXGroup;
-			children = (
-				3405D3E41F3F80000030F30C /* ListCarsByBrandPresenter.swift */,
-			);
-			path = Presenters;
-			sourceTree = "<group>";
-		};
-		3405D3E11F3F7F440030F30C /* Gateways */ = {
-			isa = PBXGroup;
-			children = (
-				3405D3E21F3F7FF60030F30C /* ListCarsByBrandGateway.swift */,
-			);
-			path = Gateways;
-			sourceTree = "<group>";
-		};
-		3405D3EC1F3F82110030F30C /* Usecases */ = {
-			isa = PBXGroup;
-			children = (
-				3405D3ED1F3F82EC0030F30C /* ListCarsByBrandUsecaseTests.swift */,
-			);
-			path = Usecases;
-			sourceTree = "<group>";
-		};
-		3405D3EF1F3F834B0030F30C /* Doubles */ = {
-			isa = PBXGroup;
-			children = (
-				3405D3F61F3F86F90030F30C /* Json */,
-				3405D3F31F3F84F60030F30C /* Presenters */,
-				3405D3F21F3F84F10030F30C /* Gateways */,
-			);
-			path = Doubles;
-			sourceTree = "<group>";
-		};
-		3405D3F21F3F84F10030F30C /* Gateways */ = {
-			isa = PBXGroup;
-			children = (
-				3405D3F01F3F83580030F30C /* ListCarsByBrandStubGateway.swift */,
-			);
-			path = Gateways;
-			sourceTree = "<group>";
-		};
-		3405D3F31F3F84F60030F30C /* Presenters */ = {
-			isa = PBXGroup;
-			children = (
-				3405D3F41F3F84FF0030F30C /* ListCarsByBrandStubPresenter.swift */,
-			);
-			path = Presenters;
-			sourceTree = "<group>";
-		};
-		3405D3F61F3F86F90030F30C /* Json */ = {
-			isa = PBXGroup;
-			children = (
-				3417A91D1F3C19B7009EC015 /* BrandCars.json */,
-			);
-			path = Json;
-			sourceTree = "<group>";
-		};
 		3405D3F71F3F870C0030F30C /* Doubles */ = {
 			isa = PBXGroup;
 			children = (
 				34B3F5131F3F8E160067A5B3 /* Gateways */,
-				34B3F5121F3F8E120067A5B3 /* Presenters */,
 				3405D3F81F3F87240030F30C /* Json */,
+				34B3F5121F3F8E120067A5B3 /* Presenters */,
 			);
 			path = Doubles;
 			sourceTree = "<group>";
@@ -375,6 +214,8 @@
 		3405D3F81F3F87240030F30C /* Json */ = {
 			isa = PBXGroup;
 			children = (
+				3417A91D1F3C19B7009EC015 /* BrandCars.json */,
+				34C893D21F3C01B10023D3E9 /* Brands.json */,
 				3417A9261F3C1EE4009EC015 /* Cars.json */,
 			);
 			path = Json;
@@ -401,8 +242,6 @@
 		3469A33F1F3BFF67004A0934 /* Carbrito */ = {
 			isa = PBXGroup;
 			children = (
-				3405D3C41F3F75260030F30C /* BrandCars */,
-				34C893C01F3C01750023D3E9 /* Brands */,
 				3405D3C71F3F754F0030F30C /* Cars */,
 				3469A3521F3BFF81004A0934 /* Essentials */,
 				3405D3D11F3F76040030F30C /* Common */,
@@ -424,8 +263,6 @@
 		3469A3581F3C004B004A0934 /* CarbritoUnitTests */ = {
 			isa = PBXGroup;
 			children = (
-				3405D3CC1F3F758A0030F30C /* BrandCars */,
-				34C893CC1F3C01B10023D3E9 /* Brands */,
 				3405D3CB1F3F75840030F30C /* Cars */,
 				34C893BF1F3C01190023D3E9 /* Essentials */,
 			);
@@ -436,6 +273,8 @@
 			isa = PBXGroup;
 			children = (
 				34B3F5091F3F8C4F0067A5B3 /* DetailCarUsecase.swift */,
+				3405D3BC1F3E7F960030F30C /* ListBrandsUsecase.swift */,
+				3405D3DE1F3F7E1D0030F30C /* ListCarsByBrandUsecase.swift */,
 			);
 			path = Usecases;
 			sourceTree = "<group>";
@@ -444,6 +283,8 @@
 			isa = PBXGroup;
 			children = (
 				34B3F50B1F3F8CEB0067A5B3 /* DetailCarGateway.swift */,
+				3405D3BA1F3E7F340030F30C /* ListBrandGateway.swift */,
+				3405D3E21F3F7FF60030F30C /* ListCarsByBrandGateway.swift */,
 			);
 			path = Gateways;
 			sourceTree = "<group>";
@@ -452,6 +293,8 @@
 			isa = PBXGroup;
 			children = (
 				34B3F50D1F3F8D430067A5B3 /* DetailCarPresenter.swift */,
+				3405D3BF1F3E80C80030F30C /* ListBrandPresenter.swift */,
+				3405D3E41F3F80000030F30C /* ListCarsByBrandPresenter.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -460,6 +303,8 @@
 			isa = PBXGroup;
 			children = (
 				34B3F5101F3F8E050067A5B3 /* DetailCarUsecaseTests.swift */,
+				3405D3D31F3F787F0030F30C /* ListBrandsUsecaseTests.swift */,
+				3405D3ED1F3F82EC0030F30C /* ListCarsByBrandUsecaseTests.swift */,
 			);
 			path = Usecases;
 			sourceTree = "<group>";
@@ -468,6 +313,8 @@
 			isa = PBXGroup;
 			children = (
 				34B3F5171F3F8E7D0067A5B3 /* DetailCarStubPresenter.swift */,
+				3405D3D91F3F79620030F30C /* ListBrandStubPresenter.swift */,
+				3405D3F41F3F84FF0030F30C /* ListCarsByBrandStubPresenter.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -476,6 +323,8 @@
 			isa = PBXGroup;
 			children = (
 				34B3F5151F3F8E2D0067A5B3 /* DetailCarStubGateway.swift */,
+				3405D3D71F3F78B60030F30C /* ListBrandStubGateway.swift */,
+				3405D3F01F3F83580030F30C /* ListCarsByBrandStubGateway.swift */,
 			);
 			path = Gateways;
 			sourceTree = "<group>";
@@ -489,35 +338,6 @@
 			path = Essentials;
 			sourceTree = "<group>";
 		};
-		34C893C01F3C01750023D3E9 /* Brands */ = {
-			isa = PBXGroup;
-			children = (
-				34C893C11F3C01750023D3E9 /* Core */,
-			);
-			path = Brands;
-			sourceTree = "<group>";
-		};
-		34C893C11F3C01750023D3E9 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				34C893C21F3C01750023D3E9 /* Entities */,
-				3405D3B71F3E7ED10030F30C /* Gateways */,
-				3405D3BE1F3E80AE0030F30C /* Presenters */,
-				3405D3B01F3E7BBE0030F30C /* Usecases */,
-			);
-			path = Core;
-			sourceTree = "<group>";
-		};
-		34C893C21F3C01750023D3E9 /* Entities */ = {
-			isa = PBXGroup;
-			children = (
-				3405D3B51F3E7E910030F30C /* Brand.swift */,
-				34C893C31F3C01750023D3E9 /* BrandDecodableEntity.swift */,
-				3405D3C21F3F74EC0030F30C /* BrandError.swift */,
-			);
-			path = Entities;
-			sourceTree = "<group>";
-		};
 		34C893C51F3C01A10023D3E9 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -526,50 +346,6 @@
 				34C893C81F3C01A10023D3E9 /* XCTestCase+LoadJson.swift */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		34C893CC1F3C01B10023D3E9 /* Brands */ = {
-			isa = PBXGroup;
-			children = (
-				34C893CD1F3C01B10023D3E9 /* Core */,
-				34C893D01F3C01B10023D3E9 /* Doubles */,
-			);
-			path = Brands;
-			sourceTree = "<group>";
-		};
-		34C893CD1F3C01B10023D3E9 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				3405D3D21F3F786D0030F30C /* Usecases */,
-				34C893CE1F3C01B10023D3E9 /* Entities */,
-			);
-			path = Core;
-			sourceTree = "<group>";
-		};
-		34C893CE1F3C01B10023D3E9 /* Entities */ = {
-			isa = PBXGroup;
-			children = (
-				34C893CF1F3C01B10023D3E9 /* BrandDecodableEntityTests.swift */,
-			);
-			path = Entities;
-			sourceTree = "<group>";
-		};
-		34C893D01F3C01B10023D3E9 /* Doubles */ = {
-			isa = PBXGroup;
-			children = (
-				3405D3D61F3F78A20030F30C /* Gateways */,
-				34C893D11F3C01B10023D3E9 /* Json */,
-				3405D3D51F3F789E0030F30C /* Presenters */,
-			);
-			path = Doubles;
-			sourceTree = "<group>";
-		};
-		34C893D11F3C01B10023D3E9 /* Json */ = {
-			isa = PBXGroup;
-			children = (
-				34C893D21F3C01B10023D3E9 /* Brands.json */,
-			);
-			path = Json;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
