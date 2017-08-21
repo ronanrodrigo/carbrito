@@ -99,6 +99,11 @@ final class CarFormView: UIView {
     @objc fileprivate func didTouchAtShowCarButton() {
         execute(action: .showCar)
     }
+
+    func didChoose(brand: Brand) {
+        chooseBrandButton.setTitle("Marca escolhida: \(brand.name)", for: .normal)
+    }
+
 }
 
 fileprivate extension Selector {
