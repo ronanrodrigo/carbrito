@@ -46,6 +46,9 @@
 		3457FA271F4B01D200E4747F /* ListCarsByBrandFakeGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3457FA261F4B01D200E4747F /* ListCarsByBrandFakeGateway.swift */; };
 		3457FA291F4B0ACF00E4747F /* ShowCarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3457FA281F4B0ACF00E4747F /* ShowCarController.swift */; };
 		3457FA2B1F4B0C9D00E4747F /* ShowCarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3457FA2A1F4B0C9D00E4747F /* ShowCarView.swift */; };
+		3457FA2D1F4B169000E4747F /* DetailCarUsecaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3457FA2C1F4B169000E4747F /* DetailCarUsecaseFactory.swift */; };
+		3457FA2F1F4B16AE00E4747F /* DetailCarGatewayFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3457FA2E1F4B16AE00E4747F /* DetailCarGatewayFactory.swift */; };
+		3457FA311F4B16BD00E4747F /* DetailCarFakeGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3457FA301F4B16BD00E4747F /* DetailCarFakeGateway.swift */; };
 		34663DB31F4629AA00715D01 /* CreateCarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34663DB21F4629AA00715D01 /* CreateCarController.swift */; };
 		34663DB61F462A3600715D01 /* CarFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34663DB51F462A3600715D01 /* CarFormView.swift */; };
 		3469A3411F3BFF67004A0934 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3469A3401F3BFF67004A0934 /* AppDelegate.swift */; };
@@ -125,6 +128,9 @@
 		3457FA261F4B01D200E4747F /* ListCarsByBrandFakeGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCarsByBrandFakeGateway.swift; sourceTree = "<group>"; };
 		3457FA281F4B0ACF00E4747F /* ShowCarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowCarController.swift; sourceTree = "<group>"; };
 		3457FA2A1F4B0C9D00E4747F /* ShowCarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowCarView.swift; sourceTree = "<group>"; };
+		3457FA2C1F4B169000E4747F /* DetailCarUsecaseFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCarUsecaseFactory.swift; sourceTree = "<group>"; };
+		3457FA2E1F4B16AE00E4747F /* DetailCarGatewayFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCarGatewayFactory.swift; sourceTree = "<group>"; };
+		3457FA301F4B16BD00E4747F /* DetailCarFakeGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCarFakeGateway.swift; sourceTree = "<group>"; };
 		34663DB21F4629AA00715D01 /* CreateCarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCarController.swift; sourceTree = "<group>"; };
 		34663DB51F462A3600715D01 /* CarFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarFormView.swift; sourceTree = "<group>"; };
 		3469A33D1F3BFF67004A0934 /* Carbrito.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Carbrito.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -415,6 +421,7 @@
 			children = (
 				34A5C9BD1F4AF8D0001185B8 /* ListBrandFakeGateway.swift */,
 				3457FA261F4B01D200E4747F /* ListCarsByBrandFakeGateway.swift */,
+				3457FA301F4B16BD00E4747F /* DetailCarFakeGateway.swift */,
 			);
 			path = Fakes;
 			sourceTree = "<group>";
@@ -424,6 +431,7 @@
 			children = (
 				34A5C9C01F4AFA4B001185B8 /* ListBrandGatewayFactory.swift */,
 				3457FA241F4B01C700E4747F /* ListCarsByBrandGatewayFactory.swift */,
+				3457FA2E1F4B16AE00E4747F /* DetailCarGatewayFactory.swift */,
 			);
 			path = Gateways;
 			sourceTree = "<group>";
@@ -433,6 +441,7 @@
 			children = (
 				34A5C9C31F4AFA82001185B8 /* ListBrandsUsecaseFactory.swift */,
 				3457FA221F4B01AE00E4747F /* ListCarsByBrandUsecaseFactory.swift */,
+				3457FA2C1F4B169000E4747F /* DetailCarUsecaseFactory.swift */,
 			);
 			path = Usecases;
 			sourceTree = "<group>";
@@ -658,6 +667,7 @@
 				349D05FC1F49FB4500526ABC /* RootNavigationViewControllerRouterFactory.swift in Sources */,
 				3405D3B91F3E7EEB0030F30C /* CompletionHandler.swift in Sources */,
 				3457FA2B1F4B0C9D00E4747F /* ShowCarView.swift in Sources */,
+				3457FA2D1F4B169000E4747F /* DetailCarUsecaseFactory.swift in Sources */,
 				3457FA231F4B01AE00E4747F /* ListCarsByBrandUsecaseFactory.swift in Sources */,
 				3457FA251F4B01C700E4747F /* ListCarsByBrandGatewayFactory.swift in Sources */,
 				3404AE141F48A60E00AFCF62 /* String+Constant.swift in Sources */,
@@ -667,6 +677,7 @@
 				3405D3DF1F3F7E1D0030F30C /* ListCarsByBrandUsecase.swift in Sources */,
 				3404AE1E1F48B50A00AFCF62 /* UIColor+Constant.swift in Sources */,
 				3405D3B61F3E7E910030F30C /* Brand.swift in Sources */,
+				3457FA311F4B16BD00E4747F /* DetailCarFakeGateway.swift in Sources */,
 				34B3F5021F3F8BC40067A5B3 /* Car.swift in Sources */,
 				3404AE1C1F48B1EE00AFCF62 /* CarsNavigationViewControllerRouter.swift in Sources */,
 				34663DB61F462A3600715D01 /* CarFormView.swift in Sources */,
@@ -679,6 +690,7 @@
 				349D06041F49FC1400526ABC /* CreateCarControllerFactory.swift in Sources */,
 				3437C30F1F4A03D3005F4537 /* CellDescriptor.swift in Sources */,
 				3457FA291F4B0ACF00E4747F /* ShowCarController.swift in Sources */,
+				3457FA2F1F4B16AE00E4747F /* DetailCarGatewayFactory.swift in Sources */,
 				349D06081F49FDD700526ABC /* ChooseBrandView.swift in Sources */,
 				3417A91C1F3C1923009EC015 /* BrandCarDecodableEntity.swift in Sources */,
 				3457FA271F4B01D200E4747F /* ListCarsByBrandFakeGateway.swift in Sources */,
