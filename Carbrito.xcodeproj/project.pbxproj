@@ -181,10 +181,10 @@
 		3404AE1F1F48BA5C00AFCF62 /* Factories */ = {
 			isa = PBXGroup;
 			children = (
-				34A5C9C21F4AFA75001185B8 /* Usecases */,
-				34A5C9BF1F4AFA2F001185B8 /* Gateways */,
 				349D06021F49FC0700526ABC /* Controllers */,
+				34A5C9BF1F4AFA2F001185B8 /* Gateways */,
 				349D05FF1F49FBF500526ABC /* Routers */,
+				34A5C9C21F4AFA75001185B8 /* Usecases */,
 				349D06011F49FBFF00526ABC /* Views */,
 			);
 			path = Factories;
