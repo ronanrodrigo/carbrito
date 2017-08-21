@@ -4,9 +4,6 @@ final class CreateCarController: UIViewController {
 
     private var mainView: CarFormView!
     var carsRouter: CarsRouter!
-    var brand: Brand? {
-        didSet { didSelect(brand: brand) }
-    }
 
     init() {
         super.init(nibName: nil, bundle: nil)
@@ -22,8 +19,7 @@ final class CreateCarController: UIViewController {
         carsRouter.brandList()
     }
 
-    private func didSelect(brand: Brand?) {
-        guard let brand = brand else { return }
+    func didSelect(brand: Brand) {
         mainView.didChoose(brand: brand)
     }
 

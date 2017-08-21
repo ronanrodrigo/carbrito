@@ -26,7 +26,7 @@ final class CarsNavigationViewControllerRouter: CarsRouter {
     }
 
     func carForm(withBrand brand: Brand) {
-        rootViewController?.brand = brand
+        rootViewController?.didSelect(brand: brand)
         navigationController.popViewController(animated: true)
     }
 
