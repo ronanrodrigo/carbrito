@@ -2,14 +2,14 @@ import UIKit
 
 final class ChooseBrandController: UIViewController {
 
-    private var chooseBrandView: ChooseBrandView!
+    private var mainView: ChooseBrandView!
     private var carsRouter: CarsRouter!
-    private lazy var listBrandUsecase: ListBrandsUsecase = ListBrandsUsecaseFactory.make(presenter: chooseBrandView)
+    private lazy var listBrandUsecase: ListBrandsUsecase = ListBrandsUsecaseFactory.make(presenter: mainView)
 
     init(carsRouter: CarsRouter) {
         self.carsRouter = carsRouter
         super.init(nibName: nil, bundle: nil)
-        chooseBrandView = ChooseBrandView(parentView: view, actions: [.didSelectBrand: didSelectBrand])
+        mainView = ChooseBrandView(parentView: view, actions: [.didSelectBrand: didSelectBrand])
         listBrandUsecase.list()
     }
 
