@@ -1,3 +1,4 @@
 protocol ListCarsByBrandGateway {
-    func brands(byBrandName brandName: String, _ completionHandler: CompletionHandler<[BrandCar], BrandCarError>)
+    func brands(byBrandName brandName: String,
+                _ completionHandler: @escaping CompletionHandler<[BrandCar], BrandCarError>)
 }
