@@ -3,17 +3,17 @@ import UIKit
 final class CarsNavigationViewControllerRouter: CarsRouter {
 
     private let window: UIWindow
-    private weak var rootViewController: CreateCarController?
+    private weak var createCarController: CreateCarController?
     private let navigationController: UINavigationController
 
     init(window: UIWindow) {
         self.window = window
-        rootViewController = CreateCarControllerFactory.make()
-        navigationController = UINavigationController(rootViewController: rootViewController!)
+        createCarController = CreateCarControllerFactory.make()
+        navigationController = UINavigationController(rootViewController: createCarController!)
     }
 
     func root() {
-        rootViewController?.carsRouter = self
+        createCarController?.carsRouter = self
         navigationController.navigationBar.tintColor = .primary
         window.backgroundColor = .white
         window.rootViewController = navigationController
@@ -25,8 +25,19 @@ final class CarsNavigationViewControllerRouter: CarsRouter {
         navigationController.pushViewController(chooseBrandViewController, animated: true)
     }
 
+    func brandCarList() {
+        guard let brand = createCarController?.selectedBrand else { return }
+        let chooseBrandCarController = ChooseCarByBrandController(carsRouter: self, brand: brand)
+        navigationController.pushViewController(chooseBrandCarController, animated: true)
+    }
+
     func carForm(withBrand brand: Brand) {
-        rootViewController?.didSelect(brand: brand)
+        createCarController?.didSelect(brand: brand)
+        navigationController.popViewController(animated: true)
+    }
+
+    func carForm(withBrandCar brandCar: BrandCar) {
+        createCarController?.didSelect(brandCar: brandCar)
         navigationController.popViewController(animated: true)
     }
 

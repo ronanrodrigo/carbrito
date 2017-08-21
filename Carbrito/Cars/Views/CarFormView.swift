@@ -105,6 +105,11 @@ final class CarFormView: UIView {
         chooseCarButton.isEnabled = true
     }
 
+    func didChoose(brandCar: BrandCar) {
+        chooseCarButton.setTitle(brandCar.name.uppercased(), for: .normal)
+        showCarButton.isEnabled = true
+    }
+
 }
 
 fileprivate extension Selector {
