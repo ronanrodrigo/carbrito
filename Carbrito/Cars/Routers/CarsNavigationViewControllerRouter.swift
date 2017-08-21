@@ -1,6 +1,6 @@
 import UIKit
 
-class CarsNavigationViewControllerRouter: CarsRouter {
+final class CarsNavigationViewControllerRouter: CarsRouter {
 
     private let window: UIWindow
     private weak var rootViewController: CreateCarController?
