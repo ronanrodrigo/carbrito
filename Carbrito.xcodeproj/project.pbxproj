@@ -253,14 +253,13 @@
 		3405D3D11F3F76040030F30C /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				3437C30C1F4A006B005F4537 /* GenericDataProvider.swift */,
+				34A5C9BB1F4AF837001185B8 /* Constants */,
+				3437C30E1F4A03D3005F4537 /* CellDescriptor.swift */,
 				3405D3B81F3E7EEB0030F30C /* CompletionHandler.swift */,
 				34B2E5931F3F91E30059E597 /* EmptyPresenter.swift */,
+				3437C30C1F4A006B005F4537 /* GenericDataProvider.swift */,
 				3404AE0E1F489A8F00AFCF62 /* Log.swift */,
 				3405D3B31F3E7E650030F30C /* Result.swift */,
-				3404AE131F48A60E00AFCF62 /* String+Constant.swift */,
-				3404AE1D1F48B50A00AFCF62 /* UIColor+Constant.swift */,
-				3437C30E1F4A03D3005F4537 /* CellDescriptor.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -373,6 +372,15 @@
 				349D06031F49FC1400526ABC /* CreateCarControllerFactory.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		34A5C9BB1F4AF837001185B8 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				3404AE131F48A60E00AFCF62 /* String+Constant.swift */,
+				3404AE1D1F48B50A00AFCF62 /* UIColor+Constant.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 		34B3F5041F3F8BF80067A5B3 /* Usecases */ = {
