@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F57A15A632331BBEE6FC307 /* Pods_Carbrito.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8A3F1A050E43A3E6488C375 /* Pods_Carbrito.framework */; };
 		3404AE0F1F489A8F00AFCF62 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3404AE0E1F489A8F00AFCF62 /* Log.swift */; };
 		3404AE141F48A60E00AFCF62 /* String+Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3404AE131F48A60E00AFCF62 /* String+Constant.swift */; };
 		3404AE191F48B18D00AFCF62 /* CarsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3404AE181F48B18D00AFCF62 /* CarsRouter.swift */; };
@@ -77,6 +78,7 @@
 		34C893D31F3C01B90023D3E9 /* BrandDecodableEntityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C893CF1F3C01B10023D3E9 /* BrandDecodableEntityTests.swift */; };
 		34C893D41F3C01C70023D3E9 /* Brands.json in Resources */ = {isa = PBXBuildFile; fileRef = 34C893D21F3C01B10023D3E9 /* Brands.json */; };
 		34FC49D51F4B1A6D00A8AA27 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FC49D41F4B1A6D00A8AA27 /* EmptyView.swift */; };
+		432A8A54054AF77EB88EDD29 /* Pods_CarbritoUnitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC4F19906DA209116A9A0FD1 /* Pods_CarbritoUnitTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +92,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		11B73B5841C200D509A097DE /* Pods-CarbritoUnitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarbritoUnitTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CarbritoUnitTests/Pods-CarbritoUnitTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3404AE0E1F489A8F00AFCF62 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		3404AE131F48A60E00AFCF62 /* String+Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Constant.swift"; sourceTree = "<group>"; };
 		3404AE181F48B18D00AFCF62 /* CarsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsRouter.swift; sourceTree = "<group>"; };
@@ -164,6 +167,11 @@
 		34C893CF1F3C01B10023D3E9 /* BrandDecodableEntityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandDecodableEntityTests.swift; sourceTree = "<group>"; };
 		34C893D21F3C01B10023D3E9 /* Brands.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Brands.json; sourceTree = "<group>"; };
 		34FC49D41F4B1A6D00A8AA27 /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
+		8470C6C26B910419FBA40EE7 /* Pods-CarbritoUnitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarbritoUnitTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CarbritoUnitTests/Pods-CarbritoUnitTests.release.xcconfig"; sourceTree = "<group>"; };
+		8D0426DA525E0F404022473B /* Pods-Carbrito.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Carbrito.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Carbrito/Pods-Carbrito.debug.xcconfig"; sourceTree = "<group>"; };
+		B8A3F1A050E43A3E6488C375 /* Pods_Carbrito.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Carbrito.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC4F19906DA209116A9A0FD1 /* Pods_CarbritoUnitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarbritoUnitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA7D1E417CAEAC305EB01BCF /* Pods-Carbrito.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Carbrito.release.xcconfig"; path = "Pods/Target Support Files/Pods-Carbrito/Pods-Carbrito.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +179,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F57A15A632331BBEE6FC307 /* Pods_Carbrito.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,6 +187,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				432A8A54054AF77EB88EDD29 /* Pods_CarbritoUnitTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,6 +354,8 @@
 				3469A33F1F3BFF67004A0934 /* Carbrito */,
 				3469A3581F3C004B004A0934 /* CarbritoUnitTests */,
 				3469A33E1F3BFF67004A0934 /* Products */,
+				7CCF1B5F292DCF4104FC36DF /* Pods */,
+				D56DA22B0F7372087BD363A8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -536,6 +548,26 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		7CCF1B5F292DCF4104FC36DF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8D0426DA525E0F404022473B /* Pods-Carbrito.debug.xcconfig */,
+				EA7D1E417CAEAC305EB01BCF /* Pods-Carbrito.release.xcconfig */,
+				11B73B5841C200D509A097DE /* Pods-CarbritoUnitTests.debug.xcconfig */,
+				8470C6C26B910419FBA40EE7 /* Pods-CarbritoUnitTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D56DA22B0F7372087BD363A8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B8A3F1A050E43A3E6488C375 /* Pods_Carbrito.framework */,
+				CC4F19906DA209116A9A0FD1 /* Pods_CarbritoUnitTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -543,10 +575,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3469A34F1F3BFF67004A0934 /* Build configuration list for PBXNativeTarget "Carbrito" */;
 			buildPhases = (
+				F1C8BF7BE8A74F3AC3E6B7CC /* [CP] Check Pods Manifest.lock */,
 				3469A3391F3BFF67004A0934 /* Sources */,
 				3469A33A1F3BFF67004A0934 /* Frameworks */,
 				3469A33B1F3BFF67004A0934 /* Resources */,
 				3417A9211F3C1BC1009EC015 /* Swift Lint */,
+				85B07D4AB767ABBB6887BBB6 /* [CP] Embed Pods Frameworks */,
+				DD038B3F24FEEF0AFBC6C716 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -561,9 +596,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3469A35E1F3C004B004A0934 /* Build configuration list for PBXNativeTarget "CarbritoUnitTests" */;
 			buildPhases = (
+				AC59834B8C51428CE733626D /* [CP] Check Pods Manifest.lock */,
 				3469A3531F3C004B004A0934 /* Sources */,
 				3469A3541F3C004B004A0934 /* Frameworks */,
 				3469A3551F3C004B004A0934 /* Resources */,
+				BE06863B35DE8C02DB0F92B3 /* [CP] Embed Pods Frameworks */,
+				490F9F26F525E09658844DB8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -649,6 +687,96 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"Install SwiftLint: https://github.com/realm/SwiftLint\"\nfi";
+		};
+		490F9F26F525E09658844DB8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CarbritoUnitTests/Pods-CarbritoUnitTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		85B07D4AB767ABBB6887BBB6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Carbrito/Pods-Carbrito-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AC59834B8C51428CE733626D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BE06863B35DE8C02DB0F92B3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CarbritoUnitTests/Pods-CarbritoUnitTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DD038B3F24FEEF0AFBC6C716 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Carbrito/Pods-Carbrito-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F1C8BF7BE8A74F3AC3E6B7CC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -863,6 +991,7 @@
 		};
 		3469A3501F3BFF67004A0934 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D0426DA525E0F404022473B /* Pods-Carbrito.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "$(SRCROOT)/Carbrito/Essentials/Info.plist";
@@ -876,6 +1005,7 @@
 		};
 		3469A3511F3BFF67004A0934 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA7D1E417CAEAC305EB01BCF /* Pods-Carbrito.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "$(SRCROOT)/Carbrito/Essentials/Info.plist";
@@ -889,6 +1019,7 @@
 		};
 		3469A35F1F3C004B004A0934 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 11B73B5841C200D509A097DE /* Pods-CarbritoUnitTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = CarbritoUnitTests/Essentials/Info.plist;
@@ -903,6 +1034,7 @@
 		};
 		3469A3601F3C004B004A0934 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8470C6C26B910419FBA40EE7 /* Pods-CarbritoUnitTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = CarbritoUnitTests/Essentials/Info.plist;
