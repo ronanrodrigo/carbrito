@@ -3,11 +3,10 @@ import UIKit
 final class CreateCarController: UIViewController {
 
     private var mainView: CarFormView!
-    private var createCarRouter: CreateCarRouter!
+    var carsRouter: CarsRouter!
 
-    init(createCarRouter: CreateCarRouter) {
+    init() {
         super.init(nibName: nil, bundle: nil)
-        self.createCarRouter = createCarRouter
         title = String.Carbrito.title
         mainView = CarFormView(parentView: view, actions: [.selectBrand: selectBrand])
     }
@@ -17,7 +16,7 @@ final class CreateCarController: UIViewController {
     }
 
     private func selectBrand() {
-        createCarRouter.selectBrand()
+        carsRouter.brandList()
     }
 
 }

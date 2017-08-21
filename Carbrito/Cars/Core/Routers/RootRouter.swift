@@ -1,3 +1,0 @@
-protocol RootRouter {
-    func root()
-}
