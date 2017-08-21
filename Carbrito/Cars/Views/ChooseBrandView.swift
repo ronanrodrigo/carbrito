@@ -7,6 +7,7 @@ final class ChooseBrandView: UITableView {
     }
 
     private let actions: [ActionName: ((Brand) -> Void)]
+    private var emptyView: EmptyView!
 
     private lazy var dataProvider: GenericDataProvider<Brand> = {
         let dataProvider = GenericDataProvider<Brand>(items: [], cellDescriptor: { item -> CellDescriptor in
@@ -23,6 +24,7 @@ final class ChooseBrandView: UITableView {
         self.actions = actions
         super.init(frame: .zero, style: .plain)
         setupView(parentView: parentView)
+        emptyView = EmptyView(parentView: parentView)
         delegate = dataProvider
         dataSource = dataProvider
     }
@@ -56,6 +58,10 @@ extension ChooseBrandView: ListBrandPresenter {
     }
 
     func present(error: BrandError) {}
-    func presentEmpty() {}
+
+    func presentEmpty() {
+        emptyView.update(messageText: String.ChooseBrandView.empty)
+        emptyView.isHidden = false
+    }
 
 }

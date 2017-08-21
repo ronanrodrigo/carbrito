@@ -10,4 +10,16 @@ extension String {
         static let showCar = "Veja o carro"
     }
 
+    struct ChooseBrandView {
+        static let empty = "Não foi possível mostrar nenhuma marca"
+    }
+
+    struct ChooseCarByBrandView {
+        static let empty = "Não foi possível mostrar nenhum carro"
+    }
+
+    struct ShowCarView {
+        static let empty = "Não foi possível mostrar o carro"
+    }
+
 }

@@ -1,20 +1,20 @@
 import UIKit
 
-final class ShowCarView: UIView {
+final class EmptyView: UIView {
 
-    private var emptyView: EmptyView!
-
-    private let carNameLabel: UILabel = {
+    private let message: UILabel = {
         let label = UILabel(frame: .zero)
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.textAlignment = .center
+        label.textColor = .text
+        label.font = UIFont.systemFont(ofSize: 12, weight: .medium)
         return label
     }()
 
     init(parentView: UIView) {
         super.init(frame: .zero)
         setupView(parentView: parentView)
-        emptyView = EmptyView(parentView: parentView)
-        setupCarNameLabel()
+        setupMessageLabel()
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -22,6 +22,8 @@ final class ShowCarView: UIView {
     }
 
     private func setupView(parentView: UIView) {
+        parentView.bringSubview(toFront: self)
+        isHidden = true
         backgroundColor = .background
         parentView.addSubview(self)
         translatesAutoresizingMaskIntoConstraints = false
@@ -32,26 +34,16 @@ final class ShowCarView: UIView {
         leadingAnchor.constraint(equalTo: parentView.leadingAnchor).isActive = true
     }
 
-    private func setupCarNameLabel() {
-        addSubview(carNameLabel)
-        carNameLabel.topAnchor.constraint(equalTo: topAnchor).isActive = true
-        carNameLabel.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
-        carNameLabel.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
-        carNameLabel.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
+    private func setupMessageLabel() {
+        addSubview(message)
+        message.topAnchor.constraint(equalTo: topAnchor).isActive = true
+        message.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
+        message.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+        message.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
     }
 
-}
-
-extension ShowCarView: DetailCarPresenter {
-
-    func present(cars: [Car]) {
-        carNameLabel.text = cars[0].name
+    func update(messageText: String) {
+        message.text = messageText.uppercased()
     }
-
-    func present(error: CarError) { }
-
-    func presentEmpty() {
-        emptyView.update(messageText: String.ShowCarView.empty)
-        emptyView.isHidden = false}
 
 }

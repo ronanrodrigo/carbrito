@@ -76,6 +76,7 @@
 		34C893CB1F3C01A70023D3E9 /* XCTestCase+LoadJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C893C81F3C01A10023D3E9 /* XCTestCase+LoadJson.swift */; };
 		34C893D31F3C01B90023D3E9 /* BrandDecodableEntityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C893CF1F3C01B10023D3E9 /* BrandDecodableEntityTests.swift */; };
 		34C893D41F3C01C70023D3E9 /* Brands.json in Resources */ = {isa = PBXBuildFile; fileRef = 34C893D21F3C01B10023D3E9 /* Brands.json */; };
+		34FC49D51F4B1A6D00A8AA27 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FC49D41F4B1A6D00A8AA27 /* EmptyView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -162,6 +163,7 @@
 		34C893C81F3C01A10023D3E9 /* XCTestCase+LoadJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+LoadJson.swift"; sourceTree = "<group>"; };
 		34C893CF1F3C01B10023D3E9 /* BrandDecodableEntityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandDecodableEntityTests.swift; sourceTree = "<group>"; };
 		34C893D21F3C01B10023D3E9 /* Brands.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Brands.json; sourceTree = "<group>"; };
+		34FC49D41F4B1A6D00A8AA27 /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -282,6 +284,7 @@
 		3405D3D11F3F76040030F30C /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				34FC49D31F4B1A5A00A8AA27 /* Views */,
 				34A5C9BB1F4AF837001185B8 /* Constants */,
 				3437C30E1F4A03D3005F4537 /* CellDescriptor.swift */,
 				3405D3B81F3E7EEB0030F30C /* CompletionHandler.swift */,
@@ -525,6 +528,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		34FC49D31F4B1A5A00A8AA27 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				34FC49D41F4B1A6D00A8AA27 /* EmptyView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -692,6 +703,7 @@
 				3457FA291F4B0ACF00E4747F /* ShowCarController.swift in Sources */,
 				3457FA2F1F4B16AE00E4747F /* DetailCarGatewayFactory.swift in Sources */,
 				349D06081F49FDD700526ABC /* ChooseBrandView.swift in Sources */,
+				34FC49D51F4B1A6D00A8AA27 /* EmptyView.swift in Sources */,
 				3417A91C1F3C1923009EC015 /* BrandCarDecodableEntity.swift in Sources */,
 				3457FA271F4B01D200E4747F /* ListCarsByBrandFakeGateway.swift in Sources */,
 				3405D3C31F3F74EC0030F30C /* BrandError.swift in Sources */,
