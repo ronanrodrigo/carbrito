@@ -48,7 +48,10 @@ extension ShowCarView: DetailCarPresenter {
         carNameLabel.text = cars[0].name
     }
 
-    func present(error: CarError) { }
+    func present(error: CarError) {
+        emptyView.update(messageText: error.localizedDescription)
+        emptyView.isHidden = false
+    }
 
     func presentEmpty() {
         emptyView.update(messageText: String.ShowCarView.empty)

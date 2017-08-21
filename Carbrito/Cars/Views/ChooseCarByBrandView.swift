@@ -58,6 +58,8 @@ extension ChooseCarByBrandView: ListCarsByBrandPresenter {
     }
 
     func present(error: BrandCarError) {
+        emptyView.update(messageText: error.localizedDescription)
+        emptyView.isHidden = false
     }
 
     func presentEmpty() {
