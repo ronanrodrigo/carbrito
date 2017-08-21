@@ -27,7 +27,7 @@ final class CreateCarController: UIViewController {
     }
 
     private func showCar() {
-        print("showCar")
+        carsRouter.carShow()
     }
 
     func didSelect(brand: Brand) {

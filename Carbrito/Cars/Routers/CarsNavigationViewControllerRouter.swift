@@ -31,6 +31,12 @@ final class CarsNavigationViewControllerRouter: CarsRouter {
         navigationController.pushViewController(chooseBrandCarController, animated: true)
     }
 
+    func carShow() {
+        guard let brandCar = createCarController?.selectedBrandCar else { return }
+        let showCarController = ShowCarController(brandCar: brandCar)
+        navigationController.pushViewController(showCarController, animated: true)
+    }
+
     func carForm(withBrand brand: Brand) {
         createCarController?.didSelect(brand: brand)
         navigationController.popViewController(animated: true)
