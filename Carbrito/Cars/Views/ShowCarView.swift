@@ -41,10 +41,7 @@ class ShowCarView: UIView {
 
 extension ShowCarView: DetailCarPresenter {
     func present(cars: [Car]) {
-        guard let car = cars.first else {
-            return presentEmpty()
-        }
-        carNameLabel.text = car.name
+        carNameLabel.text = cars[0].name
     }
 
     func present(error: CarError) { }
