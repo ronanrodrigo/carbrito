@@ -49,6 +49,8 @@
 		349D06061F49FD8200526ABC /* ChooseBrandController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349D06051F49FD8200526ABC /* ChooseBrandController.swift */; };
 		349D06081F49FDD700526ABC /* ChooseBrandView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349D06071F49FDD700526ABC /* ChooseBrandView.swift */; };
 		34A5C9BE1F4AF8D0001185B8 /* ListBrandFakeGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A5C9BD1F4AF8D0001185B8 /* ListBrandFakeGateway.swift */; };
+		34A5C9C11F4AFA4B001185B8 /* ListBrandGatewayFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A5C9C01F4AFA4B001185B8 /* ListBrandGatewayFactory.swift */; };
+		34A5C9C41F4AFA82001185B8 /* ListBrandsUsecaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A5C9C31F4AFA82001185B8 /* ListBrandsUsecaseFactory.swift */; };
 		34B2E5941F3F91E30059E597 /* EmptyPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B2E5931F3F91E30059E597 /* EmptyPresenter.swift */; };
 		34B3F5021F3F8BC40067A5B3 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B3F5011F3F8BC40067A5B3 /* Car.swift */; };
 		34B3F5081F3F8C110067A5B3 /* CarError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B3F5071F3F8C110067A5B3 /* CarError.swift */; };
@@ -123,6 +125,8 @@
 		349D06051F49FD8200526ABC /* ChooseBrandController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseBrandController.swift; sourceTree = "<group>"; };
 		349D06071F49FDD700526ABC /* ChooseBrandView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseBrandView.swift; sourceTree = "<group>"; };
 		34A5C9BD1F4AF8D0001185B8 /* ListBrandFakeGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListBrandFakeGateway.swift; sourceTree = "<group>"; };
+		34A5C9C01F4AFA4B001185B8 /* ListBrandGatewayFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListBrandGatewayFactory.swift; sourceTree = "<group>"; };
+		34A5C9C31F4AFA82001185B8 /* ListBrandsUsecaseFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListBrandsUsecaseFactory.swift; sourceTree = "<group>"; };
 		34B2E5931F3F91E30059E597 /* EmptyPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyPresenter.swift; sourceTree = "<group>"; };
 		34B3F5011F3F8BC40067A5B3 /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
 		34B3F5071F3F8C110067A5B3 /* CarError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarError.swift; sourceTree = "<group>"; };
@@ -177,6 +181,8 @@
 		3404AE1F1F48BA5C00AFCF62 /* Factories */ = {
 			isa = PBXGroup;
 			children = (
+				34A5C9C21F4AFA75001185B8 /* Usecases */,
+				34A5C9BF1F4AFA2F001185B8 /* Gateways */,
 				349D06021F49FC0700526ABC /* Controllers */,
 				349D05FF1F49FBF500526ABC /* Routers */,
 				349D06011F49FBFF00526ABC /* Views */,
@@ -392,6 +398,22 @@
 				34A5C9BD1F4AF8D0001185B8 /* ListBrandFakeGateway.swift */,
 			);
 			path = Fakes;
+			sourceTree = "<group>";
+		};
+		34A5C9BF1F4AFA2F001185B8 /* Gateways */ = {
+			isa = PBXGroup;
+			children = (
+				34A5C9C01F4AFA4B001185B8 /* ListBrandGatewayFactory.swift */,
+			);
+			path = Gateways;
+			sourceTree = "<group>";
+		};
+		34A5C9C21F4AFA75001185B8 /* Usecases */ = {
+			isa = PBXGroup;
+			children = (
+				34A5C9C31F4AFA82001185B8 /* ListBrandsUsecaseFactory.swift */,
+			);
+			path = Usecases;
 			sourceTree = "<group>";
 		};
 		34B3F5041F3F8BF80067A5B3 /* Usecases */ = {
@@ -624,6 +646,8 @@
 				34663DB61F462A3600715D01 /* CarFormView.swift in Sources */,
 				3405D3E51F3F80000030F30C /* ListCarsByBrandPresenter.swift in Sources */,
 				34B3F50C1F3F8CEB0067A5B3 /* DetailCarGateway.swift in Sources */,
+				34A5C9C41F4AFA82001185B8 /* ListBrandsUsecaseFactory.swift in Sources */,
+				34A5C9C11F4AFA4B001185B8 /* ListBrandGatewayFactory.swift in Sources */,
 				34663DB31F4629AA00715D01 /* CreateCarController.swift in Sources */,
 				3469A3411F3BFF67004A0934 /* AppDelegate.swift in Sources */,
 				349D06041F49FC1400526ABC /* CreateCarControllerFactory.swift in Sources */,
