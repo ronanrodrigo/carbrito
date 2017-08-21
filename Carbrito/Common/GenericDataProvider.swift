@@ -44,7 +44,7 @@ final class GenericDataProvider<Item>: NSObject, UITableViewDataSource, UITableV
 
     func tableView(_ tableView: UITableView, updateItems items: [Item]) {
         self.items = items
-        tableView.reloadData()
+        DispatchQueue.main.async { tableView.reloadData() }
     }
 
     private func register(identifier: String, cellClass: UITableViewCell.Type, tableView: UITableView) {

@@ -8,6 +8,7 @@ final class EmptyView: UIView {
         label.textAlignment = .center
         label.textColor = .text
         label.font = UIFont.systemFont(ofSize: 12, weight: .medium)
+        label.numberOfLines = 0
         return label
     }()
 
@@ -37,13 +38,15 @@ final class EmptyView: UIView {
     private func setupMessageLabel() {
         addSubview(message)
         message.topAnchor.constraint(equalTo: topAnchor).isActive = true
-        message.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
+        message.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16).isActive = true
         message.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
-        message.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
+        message.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16).isActive = true
     }
 
     func update(messageText: String) {
-        message.text = messageText.uppercased()
+        DispatchQueue.main.async {
+            self.message.text = messageText.uppercased()
+        }
     }
 
 }
