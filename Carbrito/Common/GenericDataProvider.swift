@@ -5,10 +5,17 @@ final class GenericDataProvider<Item>: NSObject, UITableViewDataSource, UITableV
     private var items: [Item]
     private var reuseIdentifiers: Set<String> = []
     private let cellDescriptor: (Item) -> CellDescriptor
+    private var didSelectItem: ((Item) -> Void)?
 
     init(items: [Item], cellDescriptor: @escaping (Item) -> CellDescriptor) {
         self.items = items
         self.cellDescriptor = cellDescriptor
+    }
+
+    init(items: [Item], cellDescriptor: @escaping (Item) -> CellDescriptor, didSelectItem: @escaping (Item) -> Void) {
+        self.items = items
+        self.cellDescriptor = cellDescriptor
+        self.didSelectItem = didSelectItem
     }
 
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -28,6 +35,11 @@ final class GenericDataProvider<Item>: NSObject, UITableViewDataSource, UITableV
         descriptor.configure(cell)
 
         return cell
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let item = items[indexPath.row]
+        didSelectItem?(item)
     }
 
     func tableView(_ tableView: UITableView, updateItems items: [Item]) {

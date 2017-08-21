@@ -24,7 +24,8 @@ class CarsNavigationViewControllerRouter: CarsRouter {
         navigationController.pushViewController(chooseBrandViewController, animated: true)
     }
 
-    func carForm() {
+    func carForm(withBrand brand: Brand) {
+        rootViewController?.brand = brand
         navigationController.popViewController(animated: true)
     }
 

@@ -1,5 +1,5 @@
 protocol CarsRouter: class {
     func root()
     func brandList()
-    func carForm()
+    func carForm(withBrand brand: Brand)
 }

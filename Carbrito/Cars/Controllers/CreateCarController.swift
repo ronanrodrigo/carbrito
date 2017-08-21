@@ -4,6 +4,7 @@ final class CreateCarController: UIViewController {
 
     private var mainView: CarFormView!
     var carsRouter: CarsRouter!
+    var brand: Brand?
 
     init() {
         super.init(nibName: nil, bundle: nil)

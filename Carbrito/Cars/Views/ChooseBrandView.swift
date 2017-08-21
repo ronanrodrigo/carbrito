@@ -2,16 +2,25 @@ import UIKit
 
 final class ChooseBrandView: UITableView {
 
+    enum ActionName: String {
+        case didSelectBrand
+    }
+
+    private let actions: [ActionName: ((Brand) -> Void)]
+
     private lazy var dataProvider: GenericDataProvider<Brand> = {
-        let dataProvider = GenericDataProvider<Brand>(items: []) { item -> CellDescriptor in
+        let dataProvider = GenericDataProvider<Brand>(items: [], cellDescriptor: { item -> CellDescriptor in
             return CellDescriptor(identifier: String(describing: UITableViewCell.self)) { (cell: UITableViewCell) in
                 cell.textLabel?.text = item.name
             }
-        }
+        }, didSelectItem: { brand in
+            self.execute(action: .didSelectBrand, brand: brand)
+        })
         return dataProvider
     }()
 
-    init(parentView: UIView) {
+    init(parentView: UIView, actions: [ActionName: ((Brand) -> Void)]) {
+        self.actions = actions
         super.init(frame: .zero, style: .plain)
         setupView(parentView: parentView)
         delegate = dataProvider
@@ -31,6 +40,11 @@ final class ChooseBrandView: UITableView {
         trailingAnchor.constraint(equalTo: parentView.trailingAnchor).isActive = true
         bottomAnchor.constraint(equalTo: safeArea.bottomAnchor).isActive = true
         leadingAnchor.constraint(equalTo: parentView.leadingAnchor).isActive = true
+    }
+
+    private func execute(action: ActionName, brand: Brand) {
+        guard let actionCallback = actions[action] else { return Log.notLinked(action: action.rawValue) }
+        actionCallback(brand)
     }
 
 }

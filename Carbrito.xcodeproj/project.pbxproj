@@ -185,8 +185,8 @@
 		3405D3C71F3F754F0030F30C /* Cars */ = {
 			isa = PBXGroup;
 			children = (
-				34663DB11F46294100715D01 /* Controllers */,
 				3405D3C81F3F75520030F30C /* Core */,
+				34663DB11F46294100715D01 /* Controllers */,
 				3404AE1F1F48BA5C00AFCF62 /* Factories */,
 				3404AE1A1F48B1B900AFCF62 /* Routers */,
 				34663DB41F4629C500715D01 /* Views */,
