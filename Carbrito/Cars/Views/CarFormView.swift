@@ -101,7 +101,8 @@ final class CarFormView: UIView {
     }
 
     func didChoose(brand: Brand) {
-        chooseBrandButton.setTitle("Marca escolhida: \(brand.name)", for: .normal)
+        chooseBrandButton.setTitle(brand.name.uppercased(), for: .normal)
+        chooseCarButton.isEnabled = true
     }
 
 }
