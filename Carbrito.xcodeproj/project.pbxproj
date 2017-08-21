@@ -48,6 +48,7 @@
 		349D06041F49FC1400526ABC /* CreateCarControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349D06031F49FC1400526ABC /* CreateCarControllerFactory.swift */; };
 		349D06061F49FD8200526ABC /* ChooseBrandController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349D06051F49FD8200526ABC /* ChooseBrandController.swift */; };
 		349D06081F49FDD700526ABC /* ChooseBrandView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349D06071F49FDD700526ABC /* ChooseBrandView.swift */; };
+		34A5C9BE1F4AF8D0001185B8 /* ListBrandFakeGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A5C9BD1F4AF8D0001185B8 /* ListBrandFakeGateway.swift */; };
 		34B2E5941F3F91E30059E597 /* EmptyPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B2E5931F3F91E30059E597 /* EmptyPresenter.swift */; };
 		34B3F5021F3F8BC40067A5B3 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B3F5011F3F8BC40067A5B3 /* Car.swift */; };
 		34B3F5081F3F8C110067A5B3 /* CarError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B3F5071F3F8C110067A5B3 /* CarError.swift */; };
@@ -121,6 +122,7 @@
 		349D06031F49FC1400526ABC /* CreateCarControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCarControllerFactory.swift; sourceTree = "<group>"; };
 		349D06051F49FD8200526ABC /* ChooseBrandController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseBrandController.swift; sourceTree = "<group>"; };
 		349D06071F49FDD700526ABC /* ChooseBrandView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseBrandView.swift; sourceTree = "<group>"; };
+		34A5C9BD1F4AF8D0001185B8 /* ListBrandFakeGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListBrandFakeGateway.swift; sourceTree = "<group>"; };
 		34B2E5931F3F91E30059E597 /* EmptyPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyPresenter.swift; sourceTree = "<group>"; };
 		34B3F5011F3F8BC40067A5B3 /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
 		34B3F5071F3F8C110067A5B3 /* CarError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarError.swift; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 		3405D3C81F3F75520030F30C /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				34A5C9BC1F4AF8C0001185B8 /* Fakes */,
 				3405D3CA1F3F755B0030F30C /* Entities */,
 				34B3F5051F3F8BFC0067A5B3 /* Gateways */,
 				34B3F5061F3F8C010067A5B3 /* Presenters */,
@@ -381,6 +384,14 @@
 				3404AE1D1F48B50A00AFCF62 /* UIColor+Constant.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		34A5C9BC1F4AF8C0001185B8 /* Fakes */ = {
+			isa = PBXGroup;
+			children = (
+				34A5C9BD1F4AF8D0001185B8 /* ListBrandFakeGateway.swift */,
+			);
+			path = Fakes;
 			sourceTree = "<group>";
 		};
 		34B3F5041F3F8BF80067A5B3 /* Usecases */ = {
@@ -584,6 +595,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3404AE211F48BA6F00AFCF62 /* FormButtonFactory.swift in Sources */,
+				34A5C9BE1F4AF8D0001185B8 /* ListBrandFakeGateway.swift in Sources */,
 				34B2E5941F3F91E30059E597 /* EmptyPresenter.swift in Sources */,
 				3405D3B41F3E7E650030F30C /* Result.swift in Sources */,
 				3405D3BD1F3E7F970030F30C /* ListBrandsUsecase.swift in Sources */,

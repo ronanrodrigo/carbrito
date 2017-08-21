@@ -1,12 +1,5 @@
 import UIKit
 
-class ListBrandFakeGateway: ListBrandGateway {
-    func allBrands(_ completionHandler: (Result<[Brand], BrandError>) -> Void) {
-        let result = Result<[Brand], BrandError>.success([Brand(name: "Fiat")])
-        return completionHandler(result)
-    }
-}
-
 final class ChooseBrandController: UIViewController {
 
     private var chooseBrandView: ChooseBrandView!
