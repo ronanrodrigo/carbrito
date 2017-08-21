@@ -32,7 +32,7 @@ final class ChooseBrandView: UITableView {
     }
 
     private func setupView(parentView: UIView) {
-        backgroundColor = .divider
+        backgroundColor = .white
         parentView.addSubview(self)
         translatesAutoresizingMaskIntoConstraints = false
         let safeArea = parentView.safeAreaLayoutGuide

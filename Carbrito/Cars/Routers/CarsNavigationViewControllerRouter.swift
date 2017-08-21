@@ -14,6 +14,7 @@ class CarsNavigationViewControllerRouter: CarsRouter {
 
     func root() {
         rootViewController?.carsRouter = self
+        navigationController.navigationBar.tintColor = .primary
         window.backgroundColor = .white
         window.rootViewController = navigationController
         window.makeKeyAndVisible()
