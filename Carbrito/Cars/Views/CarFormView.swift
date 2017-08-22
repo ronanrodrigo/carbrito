@@ -6,6 +6,10 @@ final class CarFormView: UIView {
         case selectBrand, selectCar, showCar
     }
 
+    enum FormState {
+        case nothingSelected, brandSelected(Brand), brandAndCarSelected(Brand, BrandCar)
+    }
+
     private let actions: [ActionName: (() -> Void)]
 
     private let formItemsStackView: UIStackView = {
@@ -100,14 +104,22 @@ final class CarFormView: UIView {
         execute(action: .showCar)
     }
 
-    func didChoose(brand: Brand) {
-        chooseBrandButton.setTitle(brand.name.uppercased(), for: .normal)
-        chooseCarButton.isEnabled = true
-    }
-
-    func didChoose(brandCar: BrandCar) {
-        chooseCarButton.setTitle(brandCar.name.uppercased(), for: .normal)
-        showCarButton.isEnabled = true
+    func update(state: FormState) {
+        switch state {
+        case .nothingSelected:
+            chooseBrandButton.setTitle(String.CarForm.chooseBrand.uppercased(), for: .normal)
+            chooseCarButton.isEnabled = false
+            chooseCarButton.setTitle(String.CarForm.chooseCar.uppercased(), for: .normal)
+        case .brandSelected(let brand):
+            chooseBrandButton.setTitle(brand.name.uppercased(), for: .normal)
+            chooseCarButton.setTitle(String.CarForm.chooseCar.uppercased(), for: .normal)
+            chooseCarButton.isEnabled = true
+            showCarButton.isEnabled = false
+        case .brandAndCarSelected(let brand, let brandCar):
+            chooseBrandButton.setTitle(brand.name.uppercased(), for: .normal)
+            chooseCarButton.setTitle(brandCar.name.uppercased(), for: .normal)
+            showCarButton.isEnabled = true
+        }
     }
 
 }
