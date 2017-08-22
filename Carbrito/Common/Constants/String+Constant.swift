@@ -22,4 +22,11 @@ extension String {
         static let empty = "Não foi possível mostrar o carro"
     }
 
+    struct Navigation {
+        struct Title { //swiftlint:disable:this nesting
+            static let chooseBrand = "Escolha uma marca"
+            static let chooseCarBrand = "Escolha um carro"
+        }
+    }
+
 }

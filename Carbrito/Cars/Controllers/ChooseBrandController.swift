@@ -11,6 +11,7 @@ final class ChooseBrandController: UIViewController {
         super.init(nibName: nil, bundle: nil)
         mainView = ChooseBrandView(parentView: view, actions: [.didSelectBrand: didSelectBrand])
         listBrandUsecase.list()
+        title = String.Navigation.Title.chooseBrand
     }
 
     required init?(coder aDecoder: NSCoder) {

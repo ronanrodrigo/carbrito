@@ -12,6 +12,7 @@ final class ChooseCarByBrandController: UIViewController {
         super.init(nibName: nil, bundle: nil)
         mainView = ChooseCarByBrandView(parentView: view, actions: [.didSelectBrandCar: didSelectBrandCar])
         listCarByBrandUsecase.list(byBrandName: brand.name)
+        title = String.Navigation.Title.chooseCarBrand
     }
 
     required init?(coder aDecoder: NSCoder) {

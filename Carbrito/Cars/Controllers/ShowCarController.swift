@@ -9,6 +9,7 @@ class ShowCarController: UIViewController {
         super.init(nibName: nil, bundle: nil)
         mainView = ShowCarView(parentView: view)
         detailCarUsecase.detail(byCode: brandCar.code, andYear: brandCar.year)
+        title = brandCar.name
     }
 
     required init?(coder aDecoder: NSCoder) {
