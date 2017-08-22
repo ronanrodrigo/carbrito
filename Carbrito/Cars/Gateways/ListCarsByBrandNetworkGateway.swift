@@ -6,6 +6,7 @@ struct ListCarsByBrandNetworkGateway: ListCarsByBrandGateway {
 
     func brands(byBrandName brandName: String,
                 _ completionHandler: @escaping CompletionHandler<[BrandCar], BrandCarError>) {
+        let brandName = brandName.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
         GetRequest.get(url: "\(url)/\(brandName)") { data, _, error in
             if let data = data {
                 let result = self.generateResult(data: data)

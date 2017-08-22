@@ -45,12 +45,16 @@ final class ShowCarView: UIView {
 extension ShowCarView: DetailCarPresenter {
 
     func present(cars: [Car]) {
-        carNameLabel.text = cars[0].name
+        DispatchQueue.main.async {
+            self.carNameLabel.text = cars[0].name
+        }
     }
 
     func present(error: CarError) {
         emptyView.update(messageText: error.localizedDescription)
-        emptyView.isHidden = false
+        DispatchQueue.main.async {
+            self.emptyView.isHidden = false
+        }
     }
 
     func presentEmpty() {

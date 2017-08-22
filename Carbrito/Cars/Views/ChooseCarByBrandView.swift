@@ -64,6 +64,8 @@ extension ChooseCarByBrandView: ListCarsByBrandPresenter {
 
     func presentEmpty() {
         emptyView.update(messageText: String.ChooseCarByBrandView.empty)
-        emptyView.isHidden = false}
+        DispatchQueue.main.async {
+            self.emptyView.isHidden = false}
+        }
 
 }

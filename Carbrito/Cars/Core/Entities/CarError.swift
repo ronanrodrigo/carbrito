@@ -1,3 +1,4 @@
 enum CarError: Error {
-    case invalidRequest
+    case invalidRequest(Error?)
+    case castFail
 }
