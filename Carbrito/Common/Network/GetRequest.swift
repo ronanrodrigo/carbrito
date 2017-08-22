@@ -1,9 +1,14 @@
 import Foundation
 
-struct GetRequest {
+protocol GetRequestable {
+    func get(url: String, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void)
+}
 
-    static func get(url: String, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) {
-        guard let url = URL(string: url) else { return }
+struct GetRequest: GetRequestable {
+
+    func get(url: String, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) {
+        let fullUrl = url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
+        guard let url = URL(string: fullUrl) else { return }
         let sessionConfig = URLSessionConfiguration.default
         let session = URLSession(configuration: sessionConfig, delegate: nil, delegateQueue: nil)
         var request = URLRequest(url: url)

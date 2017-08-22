@@ -3,11 +3,15 @@ import Foundation
 struct ListCarsByBrandNetworkGateway: ListCarsByBrandGateway {
 
     private var url = "http://fipe-api.herokuapp.com/cars/brand"
+    private let getRequest: GetRequestable
+
+    init(getRequest: GetRequestable) {
+        self.getRequest = getRequest
+    }
 
     func brands(byBrandName brandName: String,
                 _ completionHandler: @escaping CompletionHandler<[BrandCar], BrandCarError>) {
-        let brandName = brandName.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
-        GetRequest.get(url: "\(url)/\(brandName)") { data, _, error in
+        getRequest.get(url: "\(url)/\(brandName)") { data, _, error in
             if let data = data {
                 let result = self.generateResult(data: data)
                 completionHandler(result)

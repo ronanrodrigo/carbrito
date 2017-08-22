@@ -3,10 +3,15 @@ import Foundation
 struct DetailCarNetworkGateway: DetailCarGateway {
 
     private var url = "http://fipe-api.herokuapp.com/cars"
+    private let getRequest: GetRequestable
+
+    init(getRequest: GetRequestable) {
+        self.getRequest = getRequest
+    }
 
     func detail(byCode code: String, andYear year: String,
                 _ completionHandler: @escaping CompletionHandler<[Car], CarError>) {
-        GetRequest.get(url: "\(url)/\(code)/\(year)") { data, _, error in
+        getRequest.get(url: "\(url)/\(code)/\(year)") { data, _, error in
             if let data = data {
                 let result = self.generateResult(data: data)
                 completionHandler(result)

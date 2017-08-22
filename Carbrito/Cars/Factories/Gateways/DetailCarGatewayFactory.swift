@@ -1,7 +1,7 @@
 struct DetailCarGatewayFactory {
 
     static func make() -> DetailCarGateway {
-        return DetailCarNetworkGateway()
+        return DetailCarNetworkGateway(getRequest: GetRequestFactory.make())
     }
 
 }

@@ -81,6 +81,7 @@
 		34C893D31F3C01B90023D3E9 /* BrandDecodableEntityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C893CF1F3C01B10023D3E9 /* BrandDecodableEntityTests.swift */; };
 		34C893D41F3C01C70023D3E9 /* Brands.json in Resources */ = {isa = PBXBuildFile; fileRef = 34C893D21F3C01B10023D3E9 /* Brands.json */; };
 		34E774851F4BA8F700C1ADFB /* DetailCarNetworkGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E774841F4BA8F700C1ADFB /* DetailCarNetworkGateway.swift */; };
+		34E774881F4BAEC800C1ADFB /* GetRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E774871F4BAEC800C1ADFB /* GetRequestFactory.swift */; };
 		34FC49D51F4B1A6D00A8AA27 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FC49D41F4B1A6D00A8AA27 /* EmptyView.swift */; };
 		432A8A54054AF77EB88EDD29 /* Pods_CarbritoUnitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC4F19906DA209116A9A0FD1 /* Pods_CarbritoUnitTests.framework */; };
 /* End PBXBuildFile section */
@@ -174,6 +175,7 @@
 		34C893CF1F3C01B10023D3E9 /* BrandDecodableEntityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandDecodableEntityTests.swift; sourceTree = "<group>"; };
 		34C893D21F3C01B10023D3E9 /* Brands.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Brands.json; sourceTree = "<group>"; };
 		34E774841F4BA8F700C1ADFB /* DetailCarNetworkGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCarNetworkGateway.swift; sourceTree = "<group>"; };
+		34E774871F4BAEC800C1ADFB /* GetRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRequestFactory.swift; sourceTree = "<group>"; };
 		34FC49D41F4B1A6D00A8AA27 /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
 		8470C6C26B910419FBA40EE7 /* Pods-CarbritoUnitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarbritoUnitTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CarbritoUnitTests/Pods-CarbritoUnitTests.release.xcconfig"; sourceTree = "<group>"; };
 		8D0426DA525E0F404022473B /* Pods-Carbrito.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Carbrito.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Carbrito/Pods-Carbrito.debug.xcconfig"; sourceTree = "<group>"; };
@@ -221,6 +223,7 @@
 		3404AE1F1F48BA5C00AFCF62 /* Factories */ = {
 			isa = PBXGroup;
 			children = (
+				34E774861F4BAEAF00C1ADFB /* Network */,
 				349D06021F49FC0700526ABC /* Controllers */,
 				34A5C9BF1F4AFA2F001185B8 /* Gateways */,
 				349D05FF1F49FBF500526ABC /* Routers */,
@@ -568,6 +571,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		34E774861F4BAEAF00C1ADFB /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				34E774871F4BAEC800C1ADFB /* GetRequestFactory.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		34FC49D31F4B1A5A00A8AA27 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -846,6 +857,7 @@
 				3405D3E91F3F809A0030F30C /* BrandCarError.swift in Sources */,
 				3405D3DF1F3F7E1D0030F30C /* ListCarsByBrandUsecase.swift in Sources */,
 				3404AE1E1F48B50A00AFCF62 /* UIColor+Constant.swift in Sources */,
+				34E774881F4BAEC800C1ADFB /* GetRequestFactory.swift in Sources */,
 				34E774851F4BA8F700C1ADFB /* DetailCarNetworkGateway.swift in Sources */,
 				3405D3B61F3E7E910030F30C /* Brand.swift in Sources */,
 				3457FA311F4B16BD00E4747F /* DetailCarFakeGateway.swift in Sources */,

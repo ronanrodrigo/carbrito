@@ -3,9 +3,14 @@ import Foundation
 struct ListBrandNetworkGateway: ListBrandGateway {
 
     private var url = "http://fipe-api.herokuapp.com/cars/brand"
+    private let getRequest: GetRequestable
+
+    init(getRequest: GetRequestable) {
+        self.getRequest = getRequest
+    }
 
     func allBrands(_ completionHandler: @escaping CompletionHandler<[Brand], BrandError>) {
-        GetRequest.get(url: url) { data, _, error in
+        getRequest.get(url: url) { data, _, error in
             if let data = data {
                 let result = self.generateResult(data: data)
                 completionHandler(result)

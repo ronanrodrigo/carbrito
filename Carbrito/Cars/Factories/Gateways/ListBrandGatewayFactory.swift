@@ -1,7 +1,7 @@
 struct ListBrandGatewayFactory {
 
     static func make() -> ListBrandGateway {
-        return ListBrandNetworkGateway()
+        return ListBrandNetworkGateway(getRequest: GetRequestFactory.make())
     }
 
 }
