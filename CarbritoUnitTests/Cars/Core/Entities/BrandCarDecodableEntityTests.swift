@@ -3,7 +3,7 @@ import XCTest
 
 class BrandCarDecodableEntityTests: XCTestCase {
 
-    private lazy var carModelsData: Data = { return loadJson(fromFileName: "BrandCars") }()
+    private lazy var carModelsData: Data = loadJson(fromFileName: "BrandCars")
     private let firstCarModelName = "147 C/ CL"
 
     func testDecodeCarModelsEntityFromJsonWhenJsonAreCorrect() {
