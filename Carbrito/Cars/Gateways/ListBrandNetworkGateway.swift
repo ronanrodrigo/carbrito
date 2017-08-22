@@ -10,7 +10,7 @@ struct ListBrandNetworkGateway: ListBrandGateway {
     }
 
     func allBrands(_ completionHandler: @escaping CompletionHandler<[Brand], BrandError>) {
-        getRequest.get(url: url) { data, _, error in
+        getRequest.get(url: url) { data, error in
             if let data = data {
                 let result = self.generateResult(data: data)
                 completionHandler(result)

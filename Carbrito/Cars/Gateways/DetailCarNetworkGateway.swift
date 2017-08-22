@@ -11,7 +11,7 @@ struct DetailCarNetworkGateway: DetailCarGateway {
 
     func detail(byCode code: String, andYear year: String,
                 _ completionHandler: @escaping CompletionHandler<[Car], CarError>) {
-        getRequest.get(url: "\(url)/\(code)/\(year)") { data, _, error in
+        getRequest.get(url: "\(url)/\(code)/\(year)") { data, error in
             if let data = data {
                 let result = self.generateResult(data: data)
                 completionHandler(result)

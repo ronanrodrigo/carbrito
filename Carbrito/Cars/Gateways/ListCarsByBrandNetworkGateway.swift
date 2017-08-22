@@ -11,7 +11,7 @@ struct ListCarsByBrandNetworkGateway: ListCarsByBrandGateway {
 
     func brands(byBrandName brandName: String,
                 _ completionHandler: @escaping CompletionHandler<[BrandCar], BrandCarError>) {
-        getRequest.get(url: "\(url)/\(brandName)") { data, _, error in
+        getRequest.get(url: "\(url)/\(brandName)") { data, error in
             if let data = data {
                 let result = self.generateResult(data: data)
                 completionHandler(result)
