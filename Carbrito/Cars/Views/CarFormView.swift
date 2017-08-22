@@ -104,7 +104,7 @@ final class CarFormView: UIView {
         execute(action: .showCar)
     }
 
-    func update(state: FormState) {
+    func update(toState state: FormState) {
         switch state {
         case .nothingSelected:
             chooseBrandButton.setTitle(String.CarForm.chooseBrand.uppercased(), for: .normal)

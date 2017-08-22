@@ -32,15 +32,15 @@ final class CreateCarController: UIViewController {
 
     func didSelect(brand: Brand) {
         self.selectedBrand = brand
-        mainView.update(state: .brandSelected(brand))
+        mainView.update(toState: .brandSelected(brand))
     }
 
     func didSelect(brandCar: BrandCar) {
         guard let selectedBrand = selectedBrand else {
-            return mainView.update(state: .nothingSelected)
+            return mainView.update(toState: .nothingSelected)
         }
         self.selectedBrandCar = brandCar
-        mainView.update(state: CarFormView.FormState.brandAndCarSelected(selectedBrand, brandCar))
+        mainView.update(toState: .brandAndCarSelected(selectedBrand, brandCar))
     }
 
 }
