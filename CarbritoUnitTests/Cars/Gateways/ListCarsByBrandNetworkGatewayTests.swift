@@ -8,7 +8,7 @@ final class ListCarsByBrandNetworkGatewayTests: XCTestCase {
 
     private lazy var data = loadJson(fromFileName: "BrandCars")
     private lazy var decodables: [BrandCarDecodableEntity] = JSONDecoder().decode(data: data)
-    private lazy var brandCars = decodables.map({ Brand(name: $0.name) })
+    private lazy var brandCars = decodables.map({ BrandCar(name: $0.name, code: $0.code, year: $0.year) })
 
     override func setUp() {
         super.setUp()
