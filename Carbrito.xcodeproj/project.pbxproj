@@ -85,6 +85,8 @@
 		34D37AE21F4DC33200DB87A1 /* Invalid.json in Resources */ = {isa = PBXBuildFile; fileRef = 34D37AE11F4DC33200DB87A1 /* Invalid.json */; };
 		34D37AE41F4DC3D400DB87A1 /* AnyError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D37AE31F4DC3D400DB87A1 /* AnyError.swift */; };
 		34D37AE71F4DC3F000DB87A1 /* BrandError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D37AE61F4DC3F000DB87A1 /* BrandError.swift */; };
+		34D37AE91F4DC48E00DB87A1 /* ListCarsByBrandNetworkGatewayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D37AE81F4DC48E00DB87A1 /* ListCarsByBrandNetworkGatewayTests.swift */; };
+		34D37AEB1F4DC52500DB87A1 /* BrandCarError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D37AEA1F4DC52500DB87A1 /* BrandCarError.swift */; };
 		34E774851F4BA8F700C1ADFB /* DetailCarNetworkGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E774841F4BA8F700C1ADFB /* DetailCarNetworkGateway.swift */; };
 		34E774881F4BAEC800C1ADFB /* GetRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E774871F4BAEC800C1ADFB /* GetRequestFactory.swift */; };
 		34FC49D51F4B1A6D00A8AA27 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FC49D41F4B1A6D00A8AA27 /* EmptyView.swift */; };
@@ -184,6 +186,8 @@
 		34D37AE11F4DC33200DB87A1 /* Invalid.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Invalid.json; sourceTree = "<group>"; };
 		34D37AE31F4DC3D400DB87A1 /* AnyError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyError.swift; sourceTree = "<group>"; };
 		34D37AE61F4DC3F000DB87A1 /* BrandError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandError.swift; sourceTree = "<group>"; };
+		34D37AE81F4DC48E00DB87A1 /* ListCarsByBrandNetworkGatewayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCarsByBrandNetworkGatewayTests.swift; sourceTree = "<group>"; };
+		34D37AEA1F4DC52500DB87A1 /* BrandCarError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandCarError.swift; sourceTree = "<group>"; };
 		34E774841F4BA8F700C1ADFB /* DetailCarNetworkGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCarNetworkGateway.swift; sourceTree = "<group>"; };
 		34E774871F4BAEC800C1ADFB /* GetRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRequestFactory.swift; sourceTree = "<group>"; };
 		34FC49D41F4B1A6D00A8AA27 /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
@@ -510,6 +514,7 @@
 			isa = PBXGroup;
 			children = (
 				34AECA621F4C9AF6005FDCFF /* ListBrandNetworkGatewayTests.swift */,
+				34D37AE81F4DC48E00DB87A1 /* ListCarsByBrandNetworkGatewayTests.swift */,
 			);
 			path = Gateways;
 			sourceTree = "<group>";
@@ -606,6 +611,7 @@
 			isa = PBXGroup;
 			children = (
 				34D37AE61F4DC3F000DB87A1 /* BrandError.swift */,
+				34D37AEA1F4DC52500DB87A1 /* BrandCarError.swift */,
 			);
 			path = Errors;
 			sourceTree = "<group>";
@@ -939,9 +945,11 @@
 				3417A9201F3C1A81009EC015 /* BrandCarDecodableEntityTests.swift in Sources */,
 				3405D3F51F3F84FF0030F30C /* ListCarsByBrandStubPresenter.swift in Sources */,
 				3405D3D41F3F787F0030F30C /* ListBrandsUsecaseTests.swift in Sources */,
+				34D37AE91F4DC48E00DB87A1 /* ListCarsByBrandNetworkGatewayTests.swift in Sources */,
 				34C893CB1F3C01A70023D3E9 /* XCTestCase+LoadJson.swift in Sources */,
 				34AECA631F4C9AF6005FDCFF /* ListBrandNetworkGatewayTests.swift in Sources */,
 				34B3F5111F3F8E050067A5B3 /* DetailCarUsecaseTests.swift in Sources */,
+				34D37AEB1F4DC52500DB87A1 /* BrandCarError.swift in Sources */,
 				34C893CA1F3C01A70023D3E9 /* NSManagedObjectContext+InMemory.swift in Sources */,
 				3417A9251F3C1E9E009EC015 /* CarDecodableEntityTests.swift in Sources */,
 				3405D3F11F3F83580030F30C /* ListCarsByBrandStubGateway.swift in Sources */,
