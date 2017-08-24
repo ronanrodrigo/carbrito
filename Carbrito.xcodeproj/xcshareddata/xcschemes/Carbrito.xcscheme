@@ -40,6 +40,16 @@
                ReferencedContainer = "container:Carbrito.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "34D37AF31F4DC71700DB87A1"
+               BuildableName = "CarbritoUITests.xctest"
+               BlueprintName = "CarbritoUITests"
+               ReferencedContainer = "container:Carbrito.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
