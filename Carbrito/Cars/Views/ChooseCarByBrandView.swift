@@ -11,9 +11,11 @@ final class ChooseCarByBrandView: UITableView {
 
     private lazy var dataProvider: GenericDataProvider<BrandCar> = {
         let dataProvider = GenericDataProvider<BrandCar>(items: [], cellDescriptor: { item -> CellDescriptor in
-            return CellDescriptor(identifier: String(describing: UITableViewCell.self)) { (cell: UITableViewCell) in
+            let setupCell: (SubtitleTableViewCell) -> Void = { cell in
                 cell.textLabel?.text = item.name
+                cell.detailTextLabel?.text = "\(item.year) / \(item.code)"
             }
+            return CellDescriptor(identifier: String(describing: SubtitleTableViewCell.self), configure: setupCell)
         }, didSelectItem: { brandCar in
             self.execute(action: .didSelectBrandCar, brandCar: brandCar)
         })
