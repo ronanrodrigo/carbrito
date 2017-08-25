@@ -1,4 +1,4 @@
 protocol DetailCarPresenter: EmptyPresenter {
     func present(cars: [Car])
-    func present(error: CarsError)
+    func present(error: CarbritoError)
 }

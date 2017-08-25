@@ -9,7 +9,7 @@ struct ListBrandNetworkGateway: ListBrandGateway {
         self.getRequest = getRequest
     }
 
-    func allBrands(_ completionHandler: @escaping CompletionHandler<[Brand], CarsError>) {
+    func allBrands(_ completionHandler: @escaping CompletionHandler<[Brand], CarbritoError>) {
         getRequest.get(url: url) { data, error in
             if let data = data {
                 let result = self.generateResult(data: data)
@@ -17,12 +17,12 @@ struct ListBrandNetworkGateway: ListBrandGateway {
             } else if let error = error {
                 completionHandler(Result.fail(error))
             } else {
-                completionHandler(Result.fail(CarsError.other(nil)))
+                completionHandler(Result.fail(CarbritoError.other(nil)))
             }
         }
     }
 
-    private func generateResult(data: Data) -> Result<[Brand], CarsError> {
+    private func generateResult(data: Data) -> Result<[Brand], CarbritoError> {
         do {
             let brandsDecodable = try JSONDecoder().decode([BrandDecodableEntity].self, from: data)
             let brands = self.generateStruct(brandsDecodable: brandsDecodable)

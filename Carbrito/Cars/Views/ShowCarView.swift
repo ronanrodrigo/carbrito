@@ -123,7 +123,7 @@ extension ShowCarView: DetailCarPresenter {
         return formatter.string(from: price) ?? ""
     }
 
-    func present(error: CarsError) {
+    func present(error: CarbritoError) {
         emptyView.update(messageText: error.localizedDescription)
         DispatchQueue.main.async {
             self.emptyView.isHidden = false

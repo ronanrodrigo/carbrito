@@ -34,8 +34,8 @@ final class DetailCarNetworkGatewayTests: XCTestCase {
     }
 
     func testAllBrandsWhenFailResponseWithDataThenGenerateFailResult() {
-        var returnedError: CarsError?
-        getRequest.setupCompletionHandlerError = CarsError.other(nil)
+        var returnedError: CarbritoError?
+        getRequest.setupCompletionHandlerError = CarbritoError.other(nil)
 
         gateway.detail(byCode: "", andYear: "0") { result in
             switch result {
@@ -45,11 +45,11 @@ final class DetailCarNetworkGatewayTests: XCTestCase {
         }
 
         XCTAssertNotNil(returnedError)
-        XCTAssertEqual(returnedError!.rawValue, CarsError.other(nil).rawValue)
+        XCTAssertEqual(returnedError!.rawValue, CarbritoError.other(nil).rawValue)
     }
 
     func testAllBrandsWhenSuccessResponseWithInvalidDataThenGenerateFailResult() {
-        var returnedError: CarsError?
+        var returnedError: CarbritoError?
         getRequest.setupCompletionHandlerData = loadJson(fromFileName: "Invalid")
 
         gateway.detail(byCode: "", andYear: "0") { result in
@@ -60,7 +60,7 @@ final class DetailCarNetworkGatewayTests: XCTestCase {
         }
 
         XCTAssertNotNil(returnedError)
-        XCTAssertEqual(returnedError!.rawValue, CarsError.cast.rawValue)
+        XCTAssertEqual(returnedError!.rawValue, CarbritoError.cast.rawValue)
     }
 
 }

@@ -59,7 +59,7 @@ extension ChooseCarByBrandView: ListCarsByBrandPresenter {
         dataProvider.tableView(self, updateItems: brandCars)
     }
 
-    func present(error: CarsError) {
+    func present(error: CarbritoError) {
         emptyView.update(messageText: error.localizedDescription)
         emptyView.isHidden = false
     }

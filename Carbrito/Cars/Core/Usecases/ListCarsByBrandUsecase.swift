@@ -12,8 +12,8 @@ struct ListCarsByBrandUsecase {
         listCarsByBrandGateway.brands(byBrandName: brandName, carsByBrandNameOnComplete())
     }
 
-    private func carsByBrandNameOnComplete() -> CompletionHandler<[BrandCar], CarsError> {
-        let carsByBrandCompletion: CompletionHandler<[BrandCar], CarsError> = { result in
+    private func carsByBrandNameOnComplete() -> CompletionHandler<[BrandCar], CarbritoError> {
+        let carsByBrandCompletion: CompletionHandler<[BrandCar], CarbritoError> = { result in
             switch result {
             case .success(let brandCars): self.present(brandCars: brandCars)
             case .fail(let error): self.listCarsByBrandPresenter.present(error: error)

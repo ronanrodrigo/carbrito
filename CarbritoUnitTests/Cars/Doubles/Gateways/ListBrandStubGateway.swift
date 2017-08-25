@@ -3,9 +3,9 @@
 class ListBrandStubGateway: ListBrandGateway {
 
     var didCallBrands = false
-    var setupCompletionHandlerResult: Result<[Brand], CarsError>!
+    var setupCompletionHandlerResult: Result<[Brand], CarbritoError>!
 
-    func allBrands(_ completionHandler: @escaping CompletionHandler<[Brand], CarsError>) {
+    func allBrands(_ completionHandler: @escaping CompletionHandler<[Brand], CarbritoError>) {
         didCallBrands = true
         completionHandler(setupCompletionHandlerResult)
     }

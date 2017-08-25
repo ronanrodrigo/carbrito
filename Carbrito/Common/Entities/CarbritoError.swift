@@ -1,4 +1,4 @@
-enum CarsError: Error {
+enum CarbritoError: Error {
     case cast
     case offline
     case other(Error?)

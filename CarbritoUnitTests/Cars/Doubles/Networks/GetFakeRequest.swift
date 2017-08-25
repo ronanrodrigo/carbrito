@@ -4,9 +4,9 @@ import Foundation
 class GetFakeRequest: GetRequestable {
 
     var setupCompletionHandlerData: Data?
-    var setupCompletionHandlerError: CarsError?
+    var setupCompletionHandlerError: CarbritoError?
 
-    func get(url: String, completionHandler: @escaping (Data?, CarsError?) -> Void) {
+    func get(url: String, completionHandler: @escaping (Data?, CarbritoError?) -> Void) {
         completionHandler(setupCompletionHandlerData, setupCompletionHandlerError)
     }
 

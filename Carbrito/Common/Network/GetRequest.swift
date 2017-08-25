@@ -3,17 +3,17 @@ import UIKit
 import ReachabilitySwift
 
 protocol GetRequestable {
-    func get(url: String, completionHandler: @escaping (Data?, CarsError?) -> Void)
+    func get(url: String, completionHandler: @escaping (Data?, CarbritoError?) -> Void)
 }
 
 struct GetRequest: GetRequestable {
 
     private static let reachability = Reachability()
 
-    func get(url: String, completionHandler: @escaping (Data?, CarsError?) -> Void) {
+    func get(url: String, completionHandler: @escaping (Data?, CarbritoError?) -> Void) {
 
         if GetRequest.reachability?.currentReachabilityStatus == .notReachable {
-            completionHandler(nil, CarsError.offline)
+            completionHandler(nil, CarbritoError.offline)
             return
         }
 
@@ -27,7 +27,7 @@ struct GetRequest: GetRequestable {
 
         let task = session.dataTask(with: request) { data, _, error in
             DispatchQueue.main.async { UIApplication.shared.isNetworkActivityIndicatorVisible = false }
-            completionHandler(data, CarsError.other(error))
+            completionHandler(data, CarbritoError.other(error))
         }
 
         task.resume()

@@ -10,7 +10,7 @@ struct DetailCarNetworkGateway: DetailCarGateway {
     }
 
     func detail(byCode code: String, andYear year: String,
-                _ completionHandler: @escaping CompletionHandler<[Car], CarsError>) {
+                _ completionHandler: @escaping CompletionHandler<[Car], CarbritoError>) {
         getRequest.get(url: "\(url)/\(code)/\(year)") { data, error in
             if let data = data {
                 let result = self.generateResult(data: data)
@@ -18,12 +18,12 @@ struct DetailCarNetworkGateway: DetailCarGateway {
             } else if let error = error {
                 completionHandler(Result.fail(error))
             } else {
-                completionHandler(Result.fail(CarsError.other(nil)))
+                completionHandler(Result.fail(CarbritoError.other(nil)))
             }
         }
     }
 
-    private func generateResult(data: Data) -> Result<[Car], CarsError> {
+    private func generateResult(data: Data) -> Result<[Car], CarbritoError> {
         do {
             let carsDecodable = try JSONDecoder().decode([CarDecodableEntity].self, from: data)
             let cars = self.generateStruct(carsDecodable: carsDecodable)

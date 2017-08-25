@@ -3,10 +3,10 @@
 final class ListCarsByBrandStubGateway: ListCarsByBrandGateway {
 
     var didCallBrandsByName = false
-    var setupCompletionHandlerResult: Result<[BrandCar], CarsError>!
+    var setupCompletionHandlerResult: Result<[BrandCar], CarbritoError>!
 
     func brands(byBrandName brandName: String,
-                _ completionHandler: @escaping (Result<[BrandCar], CarsError>) -> Void) {
+                _ completionHandler: @escaping (Result<[BrandCar], CarbritoError>) -> Void) {
         didCallBrandsByName = true
         completionHandler(setupCompletionHandlerResult)
     }
