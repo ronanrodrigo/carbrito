@@ -29,4 +29,9 @@ extension String {
         }
     }
 
+    struct CarsError {
+        static let cast = "Erro ao receber os dados 😯"
+        static let offline = "Você está offline 😢"
+        static let other = "Shiiiii! Moio ☹️"
+    }
 }

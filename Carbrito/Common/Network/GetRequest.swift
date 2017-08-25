@@ -1,13 +1,22 @@
 import Foundation
 import UIKit
+import ReachabilitySwift
 
 protocol GetRequestable {
-    func get(url: String, completionHandler: @escaping (Data?, Error?) -> Void)
+    func get(url: String, completionHandler: @escaping (Data?, CarsError?) -> Void)
 }
 
 struct GetRequest: GetRequestable {
 
-    func get(url: String, completionHandler: @escaping (Data?, Error?) -> Void) {
+    private static let reachability = Reachability()
+
+    func get(url: String, completionHandler: @escaping (Data?, CarsError?) -> Void) {
+
+        if GetRequest.reachability?.currentReachabilityStatus == .notReachable {
+            completionHandler(nil, CarsError.offline)
+            return
+        }
+
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
         let fullUrl = url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
         guard let url = URL(string: fullUrl) else { return }
@@ -18,7 +27,7 @@ struct GetRequest: GetRequestable {
 
         let task = session.dataTask(with: request) { data, _, error in
             DispatchQueue.main.async { UIApplication.shared.isNetworkActivityIndicatorVisible = false }
-            completionHandler(data, error)
+            completionHandler(data, CarsError.other(error))
         }
 
         task.resume()

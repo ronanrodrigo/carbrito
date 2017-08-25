@@ -12,7 +12,7 @@ final class DetailCarStubPresenter: DetailCarPresenter {
         didCallPresentCar = true
     }
 
-    func present(error: CarError) {
+    func present(error: CarsError) {
         didCallPresentError = true
     }
 

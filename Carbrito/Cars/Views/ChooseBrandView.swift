@@ -57,8 +57,9 @@ extension ChooseBrandView: ListBrandPresenter {
         dataProvider.tableView(self, updateItems: brands)
     }
 
-    func present(error: BrandError) {
-        emptyView.update(messageText: error.localizedDescription)
+    func present(error: CarsError) {
+        let errorText = error.localizedDescription
+        emptyView.update(messageText: errorText)
         emptyView.isHidden = false
     }
 

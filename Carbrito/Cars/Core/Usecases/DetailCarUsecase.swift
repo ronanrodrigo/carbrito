@@ -12,8 +12,8 @@ struct DetailCarUsecase {
         detailCarGateway.detail(byCode: code, andYear: year, detailCarOnComplete())
     }
 
-    private func detailCarOnComplete() -> CompletionHandler<[Car], CarError> {
-        let carsByBrandCompletion: CompletionHandler<[Car], CarError> = { result in
+    private func detailCarOnComplete() -> CompletionHandler<[Car], CarsError> {
+        let carsByBrandCompletion: CompletionHandler<[Car], CarsError> = { result in
             switch result {
             case .success(let cars): self.present(cars: cars)
             case .fail(let error): self.detailCarPresenter.present(error: error)

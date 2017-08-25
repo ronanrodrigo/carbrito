@@ -10,7 +10,7 @@ final class ListCarsByBrandStubPresenter: ListCarsByBrandPresenter {
         didPresentCars = true
     }
 
-    func present(error: BrandCarError) {
+    func present(error: CarsError) {
         didPresentError = true
     }
 

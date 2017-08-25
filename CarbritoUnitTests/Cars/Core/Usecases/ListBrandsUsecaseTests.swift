@@ -38,8 +38,8 @@ class ListBrandsUsecaseTests: XCTestCase {
     }
 
     func testListBrandsWhenFailThenPresentError() {
-        let error = BrandError.castFail
-        gateway.setupCompletionHandlerResult = .fail(BrandError.invalidRequest(error))
+        let error = CarsError.cast
+        gateway.setupCompletionHandlerResult = .fail(CarsError.other(error))
 
         usecase.list()
 

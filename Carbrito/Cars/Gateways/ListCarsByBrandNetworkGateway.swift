@@ -10,24 +10,26 @@ struct ListCarsByBrandNetworkGateway: ListCarsByBrandGateway {
     }
 
     func brands(byBrandName brandName: String,
-                _ completionHandler: @escaping CompletionHandler<[BrandCar], BrandCarError>) {
+                _ completionHandler: @escaping CompletionHandler<[BrandCar], CarsError>) {
         getRequest.get(url: "\(url)/\(brandName)") { data, error in
             if let data = data {
                 let result = self.generateResult(data: data)
                 completionHandler(result)
+            } else if let error = error {
+                completionHandler(Result.fail(error))
             } else {
-                completionHandler(Result.fail(.invalidRequest(error)))
+                completionHandler(Result.fail(CarsError.other(nil)))
             }
         }
     }
 
-    private func generateResult(data: Data) -> Result<[BrandCar], BrandCarError> {
+    private func generateResult(data: Data) -> Result<[BrandCar], CarsError> {
         do {
             let brandCarsDecodable = try JSONDecoder().decode([BrandCarDecodableEntity].self, from: data)
             let brandCars = self.generateStruct(brandCarsDecodable: brandCarsDecodable)
             return Result.success(brandCars)
         } catch {
-            return Result.fail(.castFail)
+            return Result.fail(.cast)
         }
     }
 

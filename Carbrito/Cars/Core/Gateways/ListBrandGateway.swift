@@ -1,3 +1,3 @@
 protocol ListBrandGateway {
-    func allBrands(_ completionHandler: @escaping CompletionHandler<[Brand], BrandError>)
+    func allBrands(_ completionHandler: @escaping CompletionHandler<[Brand], CarsError>)
 }

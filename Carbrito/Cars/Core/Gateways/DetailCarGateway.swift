@@ -1,4 +1,4 @@
 protocol DetailCarGateway {
     func detail(byCode code: String, andYear year: String,
-                _ completionHandler: @escaping CompletionHandler<[Car], CarError>)
+                _ completionHandler: @escaping CompletionHandler<[Car], CarsError>)
 }

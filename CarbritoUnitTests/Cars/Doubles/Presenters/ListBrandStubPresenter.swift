@@ -10,7 +10,7 @@ class ListBrandStubPresenter: ListBrandPresenter {
         didCallPresentBrands = true
     }
 
-    func present(error: BrandError) {
+    func present(error: CarsError) {
         didCallPresentError = true
     }
 

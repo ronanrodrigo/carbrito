@@ -32,8 +32,8 @@ final class ListCarsByBrandNetworkGatewayTests: XCTestCase {
     }
 
     func testAllBrandsWhenFailResponseWithDataThenGenerateFailResult() {
-        var returnedError: BrandCarError?
-        getRequest.setupCompletionHandlerError = AnyError.any
+        var returnedError: CarsError?
+        getRequest.setupCompletionHandlerError = CarsError.other(nil)
 
         gateway.brands(byBrandName: "Fiat") { result in
             switch result {
@@ -43,11 +43,11 @@ final class ListCarsByBrandNetworkGatewayTests: XCTestCase {
         }
 
         XCTAssertNotNil(returnedError)
-        XCTAssertEqual(returnedError!.rawValue, BrandCarError.invalidRequest(nil).rawValue)
+        XCTAssertEqual(returnedError!.rawValue, CarsError.other(nil).rawValue)
     }
 
     func testAllBrandsWhenSuccessResponseWithInvalidDataThenGenerateFailResult() {
-        var returnedError: BrandCarError?
+        var returnedError: CarsError?
         getRequest.setupCompletionHandlerData = loadJson(fromFileName: "Invalid")
 
         gateway.brands(byBrandName: "Fiat") { result in
@@ -58,7 +58,7 @@ final class ListCarsByBrandNetworkGatewayTests: XCTestCase {
         }
 
         XCTAssertNotNil(returnedError)
-        XCTAssertEqual(returnedError!.rawValue, BrandCarError.castFail.rawValue)
+        XCTAssertEqual(returnedError!.rawValue, CarsError.cast.rawValue)
     }
 
 }

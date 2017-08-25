@@ -32,8 +32,8 @@ final class ListBrandNetworkGatewayTests: XCTestCase {
     }
 
     func testAllBrandsWhenFailResponseWithDataThenGenerateFailResult() {
-        var returnedError: BrandError?
-        getRequest.setupCompletionHandlerError = AnyError.any
+        var returnedError: CarsError?
+        getRequest.setupCompletionHandlerError = CarsError.other(nil)
 
         gateway.allBrands { result in
             switch result {
@@ -43,11 +43,11 @@ final class ListBrandNetworkGatewayTests: XCTestCase {
         }
 
         XCTAssertNotNil(returnedError)
-        XCTAssertEqual(returnedError!.rawValue, BrandError.invalidRequest(nil).rawValue)
+        XCTAssertEqual(returnedError!.rawValue, CarsError.other(nil).rawValue)
     }
 
     func testAllBrandsWhenSuccessResponseWithInvalidDataThenGenerateFailResult() {
-        var returnedError: BrandError?
+        var returnedError: CarsError?
         getRequest.setupCompletionHandlerData = loadJson(fromFileName: "Invalid")
 
         gateway.allBrands { result in
@@ -58,7 +58,7 @@ final class ListBrandNetworkGatewayTests: XCTestCase {
         }
 
         XCTAssertNotNil(returnedError)
-        XCTAssertEqual(returnedError!.rawValue, BrandError.castFail.rawValue)
+        XCTAssertEqual(returnedError!.rawValue, CarsError.cast.rawValue)
     }
 
 }

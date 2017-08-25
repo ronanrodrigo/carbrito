@@ -46,8 +46,8 @@ final class DetailCarUsecaseTests: XCTestCase {
     }
 
     func testDetailByCodeAndYearWhenFailThenPresentError() {
-        let error = CarError.castFail
-        detailCarGateway.setupCompletionHandlerResult = Result.fail(CarError.invalidRequest(error))
+        let error = CarsError.cast
+        detailCarGateway.setupCompletionHandlerResult = Result.fail(CarsError.other(error))
 
         usecase.detail(byCode: car.code, andYear: car.year)
 
