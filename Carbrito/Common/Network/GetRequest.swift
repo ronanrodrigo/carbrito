@@ -6,11 +6,17 @@ protocol GetRequestable {
     func get(url: String, completionHandler: @escaping (Data?, CarbritoError?) -> Void)
 }
 
-struct GetRequest: GetRequestable {
+private var getRequestCache: [String: Data] = [:]
+
+class GetRequest: GetRequestable {
 
     private static let reachability = Reachability()
 
-    func get(url: String, completionHandler: @escaping (Data?, CarbritoError?) -> Void) {
+    func get(url urlString: String, completionHandler: @escaping (Data?, CarbritoError?) -> Void) {
+        if let cachedData = getRequestCache[urlString] {
+            completionHandler(cachedData, nil)
+            return
+        }
 
         if GetRequest.reachability?.currentReachabilityStatus == .notReachable {
             completionHandler(nil, CarbritoError.offline)
@@ -18,7 +24,7 @@ struct GetRequest: GetRequestable {
         }
 
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
-        let fullUrl = url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
+        let fullUrl = urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
         guard let url = URL(string: fullUrl) else { return }
         let sessionConfig = URLSessionConfiguration.default
         let session = URLSession(configuration: sessionConfig, delegate: nil, delegateQueue: nil)
@@ -28,6 +34,9 @@ struct GetRequest: GetRequestable {
         let task = session.dataTask(with: request) { data, _, error in
             DispatchQueue.main.async { UIApplication.shared.isNetworkActivityIndicatorVisible = false }
             completionHandler(data, CarbritoError.other(error))
+            if let data = data {
+                getRequestCache[urlString] = data
+            }
         }
 
         task.resume()
