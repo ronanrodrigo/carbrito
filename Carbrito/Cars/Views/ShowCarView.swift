@@ -3,22 +3,16 @@ import UIKit
 final class ShowCarView: CarBritoView {
 
     private var emptyView: EmptyView!
-
     private let nameLabel = ShowCarViewLabelFactory.make(text: "Nome")
     private let carNameLabel = ShowCarViewValueLabelFactory.make()
-
     private let codeLabel = ShowCarViewLabelFactory.make(text: "Código")
     private let carCodeLabel = ShowCarViewValueLabelFactory.make()
-
     private let yearLabel = ShowCarViewLabelFactory.make(text: "Ano")
     private let carYearLabel = ShowCarViewValueLabelFactory.make()
-
     private let brandLabel = ShowCarViewLabelFactory.make(text: "Marca")
     private let carBrandLabel = ShowCarViewValueLabelFactory.make()
-
     private let priceLabel = ShowCarViewLabelFactory.make(text: "Preço")
     private let carPriceLabel = ShowCarViewValueLabelFactory.make()
-
     private let taxLabel = ShowCarViewLabelFactory.make(text: "Taxa")
     private let carTaxLabel = ShowCarViewValueLabelFactory.make()
 
@@ -53,7 +47,7 @@ final class ShowCarView: CarBritoView {
     private(set) lazy var presenter: GenericPresenter<Car> = GenericPresenter(onSuccess: { (cars) in
         self.present(cars: cars)
     }, onError: { (error) in
-        self.present(error: error)
+        self.presents(error: error)
     }, onEmpty: {
         self.presentEmpty()
     })
@@ -92,12 +86,8 @@ final class ShowCarView: CarBritoView {
 
     private func setupLabels() {
         let labels = [
-            [nameLabel, carNameLabel],
-            [codeLabel, carCodeLabel],
-            [yearLabel, carYearLabel],
-            [brandLabel, carBrandLabel],
-            [priceLabel, carPriceLabel],
-            [taxLabel, carTaxLabel]
+            [nameLabel, carNameLabel], [codeLabel, carCodeLabel], [yearLabel, carYearLabel],
+            [brandLabel, carBrandLabel], [priceLabel, carPriceLabel], [taxLabel, carTaxLabel]
         ]
         labels.forEach { labels in
             let labelStack = labelAndValueStack
