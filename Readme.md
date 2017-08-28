@@ -21,7 +21,7 @@
 │   │   ├── Routers     → Routers protocols. Used to navigate to anywhere;
 │   │   └── Usecases    → Usecase from Clean Architecture. Is where all app logic lives;
 │   ├── Factories       → Agnostic to Architecture. Used to symplify D.I. and object constructions;
-│   ├── Controllers     → Just controller. Does not know about UI stufss like events and elements;
+│   ├── Controllers     → Just controller. Does not know about UI stuffs like events and elements;
 │   ├── Gateways        → Concrete implementation of gateways. Ex. knows about network or database;
 │   ├── Routers         → Concrete implementation of routers. Ex. knows about navigation controller;
 │   └── Views           → UI elements and events are placed here;
