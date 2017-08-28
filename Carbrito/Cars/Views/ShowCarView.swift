@@ -46,11 +46,7 @@ final class ShowCarView: CarBritoView {
 
     private(set) lazy var presenter: GenericPresenter<Car> = GenericPresenter(onSuccess: { (cars) in
         self.present(cars: cars)
-    }, onError: { (error) in
-        self.present(error: error)
-    }, onEmpty: {
-        self.presentEmpty()
-    })
+    }, onError: present, onEmpty: presentEmpty)
 
     init(parentView: UIView) {
         super.init(frame: .zero)
