@@ -1,32 +1,16 @@
-struct ListBrandsUsecase {
+struct ListBrandsUsecase: Usecase {
 
+    typealias Entity = Brand
     private let listBrandGateway: ListBrandGateway
-    private let listBrandPresenter: GenericPresenter<Brand>
+    private(set) var presenter: GenericPresenter<Brand>
 
     init(listBrandGateway: ListBrandGateway, listBrandPresenter: GenericPresenter<Brand>) {
         self.listBrandGateway = listBrandGateway
-        self.listBrandPresenter = listBrandPresenter
+        self.presenter = listBrandPresenter
     }
 
     func list() {
-        listBrandGateway.allBrands(allBrandsOnComplete())
+        listBrandGateway.allBrands(onComplete())
     }
 
-    private func allBrandsOnComplete() -> CompletionHandler<[Brand], CarbritoError> {
-        let allBrandsCompletion: CompletionHandler<[Brand], CarbritoError> = { result in
-            switch result {
-            case .success(let brands): self.present(brands: brands)
-            case .fail(let error): self.listBrandPresenter.present(error: error)
-            }
-        }
-        return allBrandsCompletion
-    }
-
-    private func present(brands: [Brand]) {
-        if brands.isEmpty {
-            self.listBrandPresenter.presentEmpty()
-        } else {
-            self.listBrandPresenter.present(entities: brands)
-        }
-    }
 }
