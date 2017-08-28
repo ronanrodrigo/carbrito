@@ -313,16 +313,12 @@
 		3405D3D11F3F76040030F30C /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				34CAC3751F5433D400012847 /* Callbacks */,
+				34A5C9BB1F4AF837001185B8 /* Constants */,
 				344397A91F50BB1A009CF101 /* Entities */,
 				3421EA791F4BA06A00647B1D /* Network */,
-				34FC49D31F4B1A5A00A8AA27 /* Views */,
-				34A5C9BB1F4AF837001185B8 /* Constants */,
-				3437C30E1F4A03D3005F4537 /* CellDescriptor.swift */,
-				3405D3B81F3E7EEB0030F30C /* CompletionHandler.swift */,
-				34B2E5931F3F91E30059E597 /* EmptyPresenter.swift */,
-				3437C30C1F4A006B005F4537 /* GenericDataProvider.swift */,
-				3404AE0E1F489A8F00AFCF62 /* Log.swift */,
-				3405D3B31F3E7E650030F30C /* Result.swift */,
+				34CAC3761F5433E900012847 /* Presenters */,
+				34FC49D31F4B1A5A00A8AA27 /* UIKit */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -371,6 +367,7 @@
 			isa = PBXGroup;
 			children = (
 				343AC3641F50B40800E27023 /* CarbritoError.swift */,
+				3404AE0E1F489A8F00AFCF62 /* Log.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -600,6 +597,23 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		34CAC3751F5433D400012847 /* Callbacks */ = {
+			isa = PBXGroup;
+			children = (
+				3405D3B81F3E7EEB0030F30C /* CompletionHandler.swift */,
+				3405D3B31F3E7E650030F30C /* Result.swift */,
+			);
+			path = Callbacks;
+			sourceTree = "<group>";
+		};
+		34CAC3761F5433E900012847 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				34B2E5931F3F91E30059E597 /* EmptyPresenter.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
 		34E774861F4BAEAF00C1ADFB /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -608,14 +622,16 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
-		34FC49D31F4B1A5A00A8AA27 /* Views */ = {
+		34FC49D31F4B1A5A00A8AA27 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
-				34FC49D41F4B1A6D00A8AA27 /* EmptyView.swift */,
-				34CAC3701F54326700012847 /* CarBritoView.swift */,
 				34CAC3721F5432BF00012847 /* CarBritoTableView.swift */,
+				34CAC3701F54326700012847 /* CarBritoView.swift */,
+				3437C30E1F4A03D3005F4537 /* CellDescriptor.swift */,
+				34FC49D41F4B1A6D00A8AA27 /* EmptyView.swift */,
+				3437C30C1F4A006B005F4537 /* GenericDataProvider.swift */,
 			);
-			path = Views;
+			path = UIKit;
 			sourceTree = "<group>";
 		};
 		7CCF1B5F292DCF4104FC36DF /* Pods */ = {
