@@ -1,12 +1,12 @@
 protocol Usecase {
     associatedtype Entity
     var presenter: GenericPresenter<Entity> { get }
-    func onComplete() -> CompletionHandler<[Entity], CarbritoError>
+    var onComplete: CompletionHandler<[Entity], CarbritoError> { get }
 }
 
 extension Usecase {
 
-    func onComplete() -> CompletionHandler<[Entity], CarbritoError> {
+    var onComplete: CompletionHandler<[Entity], CarbritoError> {
         let completion: CompletionHandler<[Entity], CarbritoError> = { result in
             switch result {
             case .success(let entities): self.present(withEntities: entities)

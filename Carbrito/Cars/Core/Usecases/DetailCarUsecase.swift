@@ -10,7 +10,7 @@ struct DetailCarUsecase: Usecase {
     }
 
     func detail(byCode code: String, andYear year: String) {
-        detailCarGateway.detail(byCode: code, andYear: year, onComplete())
+        detailCarGateway.detail(byCode: code, andYear: year, onComplete)
     }
 
 }
