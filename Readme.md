@@ -20,7 +20,7 @@
 │   │   ├── Presenters  → Presenter protocols. Used to present data from anywhere;
 │   │   ├── Routers     → Routers protocols. Used to navigate to anywhere;
 │   │   └── Usecases    → Usecase from Clean Architecture. Is where all app logic lives;
-│   ├── Factories       → Agnostic to Architecture. Is used to symplify D.I. and object constructions;
+│   ├── Factories       → Agnostic to Architecture. Used to symplify D.I. and object constructions;
 │   ├── Controllers     → Just controller. Does not know about UI stufss like events and elements;
 │   ├── Gateways        → Concrete implementation of gateways. Ex. knows about network or database;
 │   ├── Routers         → Concrete implementation of routers. Ex. knows about navigation controller;
