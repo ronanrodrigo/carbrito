@@ -8,6 +8,8 @@ struct ShowCarViewValueLabelFactory {
         label.font = UIFont.systemFont(ofSize: 16, weight: .medium)
         label.textColor = .primary
         label.textAlignment = .left
+        label.text = " "
+        label.alpha = 0
         return label
     }
 

@@ -116,7 +116,19 @@ final class ShowCarView: CarBritoView {
             self.carBrandLabel.text = car.brand
             self.carPriceLabel.text = self.price(price: car.price)
             self.carTaxLabel.text = "\(car.tax)%"
+            self.presentValues()
         }
+    }
+
+    private func presentValues() {
+        UIView.animate(withDuration: 0.35, animations: {
+            self.carNameLabel.alpha = 1
+            self.carCodeLabel.alpha = 1
+            self.carYearLabel.alpha = 1
+            self.carBrandLabel.alpha = 1
+            self.carPriceLabel.alpha = 1
+            self.carTaxLabel.alpha = 1
+        })
     }
 
     private func price(price: Float) -> String {
