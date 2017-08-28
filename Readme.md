@@ -14,19 +14,19 @@
 ## Structure
 ```
 ┌── <Module Name>
-│   ├── Core            → Itens without third party dependencies;
-│   │   ├── Entities    → Entities from Clean Architecture. Is where all domain logic lives;
-│   │   ├── Gateways    → Gateways protocols. Used to get data from anywhere;
-│   │   ├── Presenters  → Presenter protocols. Used to present data from anywhere;
-│   │   ├── Routers     → Routers protocols. Used to navigate to anywhere;
-│   │   └── Usecases    → Usecase from Clean Architecture. Is where all app logic lives;
-│   ├── Factories       → Agnostic to Architecture. Used to symplify D.I. and object constructions;
-│   ├── Controllers     → Just controller. Does not know about UI stuffs like events and elements;
-│   ├── Gateways        → Concrete implementation of gateways. Ex. knows about network or database;
-│   ├── Routers         → Concrete implementation of routers. Ex. knows about navigation controller;
-│   └── Views           → UI elements and events are placed here;
-├── Common              → Shared stuffs accros modules;
-└── Essentials          → Essential stuffs for the UIAppliction.
+│   ├── Core ───────────→ Itens without third party dependencies;
+│   │   ├── Entities ───→ Entities from Clean Architecture. Is where all domain logic lives;
+│   │   ├── Gateways ───→ Gateways protocols. Used to get data from anywhere;
+│   │   ├── Presenters ─→ Presenter protocols. Used to present data from anywhere;
+│   │   ├── Routers ────→ Routers protocols. Used to navigate to anywhere;
+│   │   └── Usecases ───→ Usecase from Clean Architecture. Is where all app logic lives;
+│   ├── Factories ──────→ Agnostic to Architecture. Used to symplify D.I. and object constructions;
+│   ├── Controllers ────→ Just controller. Does not know about UI stuffs like events and elements;
+│   ├── Gateways ───────→ Concrete implementation of gateways. Ex. knows about network or database;
+│   ├── Routers ────────→ Concrete implementation of routers. Ex. knows about navigation controller;
+│   └── Views ──────────→ UI elements and events are placed here;
+├── Common ─────────────→ Shared stuffs accros modules;
+└── Essentials ─────────→ Essential stuffs for the UIAppliction.
 ```
 
 🐐 Goat in Brazil is called by Cabrito.
