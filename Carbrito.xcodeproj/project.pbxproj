@@ -233,7 +233,6 @@
 		3404AE1F1F48BA5C00AFCF62 /* Factories */ = {
 			isa = PBXGroup;
 			children = (
-				34E774861F4BAEAF00C1ADFB /* Network */,
 				349D06021F49FC0700526ABC /* Controllers */,
 				34A5C9BF1F4AFA2F001185B8 /* Gateways */,
 				349D05FF1F49FBF500526ABC /* Routers */,
@@ -313,6 +312,7 @@
 		3405D3D11F3F76040030F30C /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				34CAC3781F54348C00012847 /* Factories */,
 				34CAC3751F5433D400012847 /* Callbacks */,
 				34A5C9BB1F4AF837001185B8 /* Constants */,
 				344397A91F50BB1A009CF101 /* Entities */,
@@ -612,6 +612,14 @@
 				34B2E5931F3F91E30059E597 /* EmptyPresenter.swift */,
 			);
 			path = Presenters;
+			sourceTree = "<group>";
+		};
+		34CAC3781F54348C00012847 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				34E774861F4BAEAF00C1ADFB /* Network */,
+			);
+			path = Factories;
 			sourceTree = "<group>";
 		};
 		34E774861F4BAEAF00C1ADFB /* Network */ = {
