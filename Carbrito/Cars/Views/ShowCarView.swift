@@ -1,6 +1,6 @@
 import UIKit
 
-final class ShowCarView: UIView {
+final class ShowCarView: CarBritoView {
 
     private var emptyView: EmptyView!
 
@@ -122,16 +122,5 @@ extension ShowCarView: DetailCarPresenter {
         formatter.locale = Locale(identifier: "pt_BR")
         return formatter.string(from: price) ?? ""
     }
-
-    func present(error: CarbritoError) {
-        emptyView.update(messageText: error.localizedDescription)
-        DispatchQueue.main.async {
-            self.emptyView.isHidden = false
-        }
-    }
-
-    func presentEmpty() {
-        emptyView.update(messageText: String.ShowCarView.empty)
-        emptyView.isHidden = false}
 
 }

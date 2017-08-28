@@ -1,13 +1,12 @@
 import UIKit
 
-final class ChooseCarByBrandView: UITableView {
+final class ChooseCarByBrandView: CarBritoTableView {
 
     enum ActionName: String {
         case didSelectBrandCar
     }
 
     private let actions: [ActionName: ((BrandCar) -> Void)]
-    private var emptyView: EmptyView!
 
     private lazy var dataProvider: GenericDataProvider<BrandCar> = {
         let dataProvider = GenericDataProvider<BrandCar>(items: [], cellDescriptor: { item -> CellDescriptor in
@@ -58,16 +57,5 @@ extension ChooseCarByBrandView: ListCarsByBrandPresenter {
     func present(brandCars: [BrandCar]) {
         dataProvider.tableView(self, updateItems: brandCars)
     }
-
-    func present(error: CarbritoError) {
-        emptyView.update(messageText: error.localizedDescription)
-        emptyView.isHidden = false
-    }
-
-    func presentEmpty() {
-        emptyView.update(messageText: String.ChooseCarByBrandView.empty)
-        DispatchQueue.main.async {
-            self.emptyView.isHidden = false}
-        }
 
 }
