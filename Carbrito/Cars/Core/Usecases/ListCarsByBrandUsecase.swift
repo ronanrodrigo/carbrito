@@ -1,9 +1,9 @@
 struct ListCarsByBrandUsecase {
 
     private let listCarsByBrandGateway: ListCarsByBrandGateway
-    private let listCarsByBrandPresenter: ListCarsByBrandPresenter
+    private let listCarsByBrandPresenter: GenericPresenter<BrandCar>
 
-    init(listCarsByBrandGateway: ListCarsByBrandGateway, listCarsByBrandPresenter: ListCarsByBrandPresenter) {
+    init(listCarsByBrandGateway: ListCarsByBrandGateway, listCarsByBrandPresenter: GenericPresenter<BrandCar>) {
         self.listCarsByBrandGateway = listCarsByBrandGateway
         self.listCarsByBrandPresenter = listCarsByBrandPresenter
     }
@@ -26,7 +26,7 @@ struct ListCarsByBrandUsecase {
         if brandCars.isEmpty {
             self.listCarsByBrandPresenter.presentEmpty()
         } else {
-            self.listCarsByBrandPresenter.present(brandCars: brandCars)
+            self.listCarsByBrandPresenter.present(entities: brandCars)
         }
     }
 }

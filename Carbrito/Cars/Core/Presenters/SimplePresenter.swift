@@ -1,0 +1,3 @@
+protocol SimplePresenter {
+    associatedtype Entity
+}

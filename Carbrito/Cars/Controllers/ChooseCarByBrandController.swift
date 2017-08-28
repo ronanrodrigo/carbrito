@@ -5,7 +5,7 @@ final class ChooseCarByBrandController: UIViewController {
     private var mainView: ChooseCarByBrandView!
     private var carsRouter: CarsRouter!
     private lazy var listCarByBrandUsecase: ListCarsByBrandUsecase = ListCarsByBrandUsecaseFactory.make(
-        presenter: self.mainView)
+        presenter: self.mainView.presenter)
 
     init(carsRouter: CarsRouter, brand: Brand) {
         self.carsRouter = carsRouter

@@ -1,9 +1,9 @@
 struct DetailCarUsecase {
 
     private let detailCarGateway: DetailCarGateway
-    private let detailCarPresenter: DetailCarPresenter
+    private let detailCarPresenter: GenericPresenter<Car>
 
-    init(detailCarGateway: DetailCarGateway, detailCarPresenter: DetailCarPresenter) {
+    init(detailCarGateway: DetailCarGateway, detailCarPresenter: GenericPresenter<Car>) {
         self.detailCarGateway = detailCarGateway
         self.detailCarPresenter = detailCarPresenter
     }
@@ -26,7 +26,7 @@ struct DetailCarUsecase {
         if cars.isEmpty {
             self.detailCarPresenter.presentEmpty()
         } else {
-            self.detailCarPresenter.present(cars: cars)
+            self.detailCarPresenter.present(entities: cars)
         }
     }
 }

@@ -1,9 +1,9 @@
 struct ListBrandsUsecase {
 
     private let listBrandGateway: ListBrandGateway
-    private let listBrandPresenter: ListBrandPresenter
+    private let listBrandPresenter: GenericPresenter<Brand>
 
-    init(listBrandGateway: ListBrandGateway, listBrandPresenter: ListBrandPresenter) {
+    init(listBrandGateway: ListBrandGateway, listBrandPresenter: GenericPresenter<Brand>) {
         self.listBrandGateway = listBrandGateway
         self.listBrandPresenter = listBrandPresenter
     }
@@ -26,7 +26,7 @@ struct ListBrandsUsecase {
         if brands.isEmpty {
             self.listBrandPresenter.presentEmpty()
         } else {
-            self.listBrandPresenter.present(brands: brands)
+            self.listBrandPresenter.present(entities: brands)
         }
     }
 }

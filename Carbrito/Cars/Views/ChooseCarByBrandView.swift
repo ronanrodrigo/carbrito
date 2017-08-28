@@ -21,6 +21,14 @@ final class ChooseCarByBrandView: CarBritoTableView {
         return dataProvider
     }()
 
+    private(set) lazy var presenter: GenericPresenter<BrandCar> = GenericPresenter(onSuccess: { (brandCars) in
+        self.dataProvider.tableView(self, updateItems: brandCars)
+    }, onError: { (error) in
+        self.present(error: error)
+    }, onEmpty: {
+        self.presentEmpty()
+    })
+
     init(parentView: UIView, actions: [ActionName: ((BrandCar) -> Void)]) {
         self.actions = actions
         super.init(frame: .zero, style: .plain)
@@ -48,14 +56,6 @@ final class ChooseCarByBrandView: CarBritoTableView {
     private func execute(action: ActionName, brandCar: BrandCar) {
         guard let actionCallback = actions[action] else { return Log.notLinked(action: action.rawValue) }
         actionCallback(brandCar)
-    }
-
-}
-
-extension ChooseCarByBrandView: ListCarsByBrandPresenter {
-
-    func present(brandCars: [BrandCar]) {
-        dataProvider.tableView(self, updateItems: brandCars)
     }
 
 }

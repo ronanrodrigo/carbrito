@@ -3,7 +3,8 @@ import UIKit
 class ShowCarController: UIViewController {
 
     private var mainView: ShowCarView!
-    private lazy var detailCarUsecase: DetailCarUsecase = DetailCarUsecaseFactory.make(presenter: self.mainView)
+    private lazy var detailCarUsecase: DetailCarUsecase =
+        DetailCarUsecaseFactory.make(presenter: self.mainView.presenter)
 
     init(brandCar: BrandCar) {
         super.init(nibName: nil, bundle: nil)

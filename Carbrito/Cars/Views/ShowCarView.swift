@@ -50,6 +50,14 @@ final class ShowCarView: CarBritoView {
         return view
     }
 
+    private(set) lazy var presenter: GenericPresenter<Car> = GenericPresenter(onSuccess: { (cars) in
+        self.present(cars: cars)
+    }, onError: { (error) in
+        self.present(error: error)
+    }, onEmpty: {
+        self.presentEmpty()
+    })
+
     init(parentView: UIView) {
         super.init(frame: .zero)
         setupView(parentView: parentView)
@@ -99,11 +107,7 @@ final class ShowCarView: CarBritoView {
         }
     }
 
-}
-
-extension ShowCarView: DetailCarPresenter {
-
-    func present(cars: [Car]) {
+    private func present(cars: [Car]) {
         DispatchQueue.main.async {
             let car = cars[0]
             self.carNameLabel.text = car.name

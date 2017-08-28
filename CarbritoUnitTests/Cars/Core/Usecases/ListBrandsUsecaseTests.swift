@@ -4,13 +4,26 @@ import XCTest
 class ListBrandsUsecaseTests: XCTestCase {
 
     var gateway: ListBrandStubGateway!
-    var presenter: ListBrandStubPresenter!
     var usecase: ListBrandsUsecase!
+
+    private var didCallPresentEntities = false
+    private var didCallPresentError = false
+    private var didCallPresentEmpty = false
+
+    private lazy var presenter: GenericPresenter<Brand> = GenericPresenter(onSuccess: { _ in
+        self.didCallPresentEntities = true
+    }, onError: { _ in
+        self.didCallPresentError = true
+    }, onEmpty: {
+        self.didCallPresentEmpty = true
+    })
 
     override func setUp() {
         super.setUp()
+        didCallPresentEntities = false
+        didCallPresentError = false
+        didCallPresentEmpty = false
         gateway = ListBrandStubGateway()
-        presenter = ListBrandStubPresenter()
         usecase = ListBrandsUsecase(listBrandGateway: gateway, listBrandPresenter: presenter)
     }
 
@@ -21,9 +34,9 @@ class ListBrandsUsecaseTests: XCTestCase {
         usecase.list()
 
         XCTAssertTrue(gateway.didCallBrands)
-        XCTAssertTrue(presenter.didCallPresentBrands)
-        XCTAssertFalse(presenter.didCallPresentError)
-        XCTAssertFalse(presenter.didCallPresentEmpty)
+        XCTAssertTrue(didCallPresentEntities)
+        XCTAssertFalse(didCallPresentError)
+        XCTAssertFalse(didCallPresentEmpty)
     }
 
     func testListBrandsWhenSuccessWithEmptyListThenPresentBrands() {
@@ -32,9 +45,9 @@ class ListBrandsUsecaseTests: XCTestCase {
         usecase.list()
 
         XCTAssertTrue(gateway.didCallBrands)
-        XCTAssertTrue(presenter.didCallPresentEmpty)
-        XCTAssertFalse(presenter.didCallPresentBrands)
-        XCTAssertFalse(presenter.didCallPresentError)
+        XCTAssertTrue(didCallPresentEmpty)
+        XCTAssertFalse(didCallPresentEntities)
+        XCTAssertFalse(didCallPresentError)
     }
 
     func testListBrandsWhenFailThenPresentError() {
@@ -44,7 +57,7 @@ class ListBrandsUsecaseTests: XCTestCase {
         usecase.list()
 
         XCTAssertTrue(gateway.didCallBrands)
-        XCTAssertTrue(presenter.didCallPresentError)
-        XCTAssertFalse(presenter.didCallPresentBrands)
+        XCTAssertTrue(didCallPresentError)
+        XCTAssertFalse(didCallPresentEntities)
     }
 }

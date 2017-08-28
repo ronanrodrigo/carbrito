@@ -4,14 +4,27 @@ import XCTest
 final class ListCarsByBrandUsecaseTests: XCTestCase {
 
     private var gateway: ListCarsByBrandStubGateway!
-    private var presenter: ListCarsByBrandStubPresenter!
     private var usecase: ListCarsByBrandUsecase!
     private let brandName = "Fiat"
 
+    private var didCallPresentEntities = false
+    private var didCallPresentError = false
+    private var didCallPresentEmpty = false
+
+    private lazy var presenter: GenericPresenter<BrandCar> = GenericPresenter(onSuccess: { _ in
+        self.didCallPresentEntities = true
+    }, onError: { _ in
+        self.didCallPresentError = true
+    }, onEmpty: {
+        self.didCallPresentEmpty = true
+    })
+
     override func setUp() {
         super.setUp()
+        didCallPresentEntities = false
+        didCallPresentError = false
+        didCallPresentEmpty = false
         gateway = ListCarsByBrandStubGateway()
-        presenter = ListCarsByBrandStubPresenter()
         usecase = ListCarsByBrandUsecase(listCarsByBrandGateway: gateway, listCarsByBrandPresenter: presenter)
     }
 
@@ -22,9 +35,9 @@ final class ListCarsByBrandUsecaseTests: XCTestCase {
         usecase.list(byBrandName: brandName)
 
         XCTAssertTrue(gateway.didCallBrandsByName)
-        XCTAssertTrue(presenter.didPresentCars)
-        XCTAssertFalse(presenter.didPresentError)
-        XCTAssertFalse(presenter.didCallPresentEmpty)
+        XCTAssertTrue(didCallPresentEntities)
+        XCTAssertFalse(didCallPresentError)
+        XCTAssertFalse(didCallPresentEmpty)
     }
 
     func testListCarsByBrandNameWhenSuccessWithEmptyListThenPresentEmpty() {
@@ -33,9 +46,9 @@ final class ListCarsByBrandUsecaseTests: XCTestCase {
         usecase.list(byBrandName: brandName)
 
         XCTAssertTrue(gateway.didCallBrandsByName)
-        XCTAssertTrue(presenter.didCallPresentEmpty)
-        XCTAssertFalse(presenter.didPresentCars)
-        XCTAssertFalse(presenter.didPresentError)
+        XCTAssertTrue(didCallPresentEmpty)
+        XCTAssertFalse(didCallPresentEntities)
+        XCTAssertFalse(didCallPresentError)
     }
 
     func testListCarsByBrandNameWhenFailThenPresentCars() {
@@ -45,8 +58,8 @@ final class ListCarsByBrandUsecaseTests: XCTestCase {
         usecase.list(byBrandName: brandName)
 
         XCTAssertTrue(gateway.didCallBrandsByName)
-        XCTAssertTrue(presenter.didPresentError)
-        XCTAssertFalse(presenter.didPresentCars)
+        XCTAssertTrue(didCallPresentError)
+        XCTAssertFalse(didCallPresentEntities)
     }
 
 }
