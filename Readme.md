@@ -13,7 +13,7 @@
 
 ## Structure
 ```
-├── <Module Name>
+┌── <Module Name>
 │   ├── Core // Itens without third party dependencies;
 │   │   ├── Entities // Entities from Clean Architecture. Is where all domain logic lives;
 │   │   ├── Gateways // Gateways protocols. Used to get data from anywhere;
@@ -25,8 +25,8 @@
 │   ├── Gateways // Concrete implementation of gateways. Like network gateway or database gateway;
 │   ├── Routers // Concrete implementation of routers;
 │   └── Views // UI elements and events are placed here;
-├── Common // Shared stuffs accros modules
-└── Essentials // Essential stuffs for the UIAppliction
+├── Common // Shared stuffs accros modules;
+└── Essentials // Essential stuffs for the UIAppliction.
 ```
 
 🐐 Goat in Brazil is called by Cabrito.
