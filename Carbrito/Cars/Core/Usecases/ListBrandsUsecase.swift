@@ -10,7 +10,7 @@ struct ListBrandsUsecase: Usecase {
     }
 
     func list() {
-        listBrandGateway.allBrands(onComplete)
+        listBrandGateway.allBrands(completionHandler)
     }
 
 }

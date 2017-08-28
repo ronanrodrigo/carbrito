@@ -10,7 +10,7 @@ struct ListCarsByBrandUsecase: Usecase {
     }
 
     func list(byBrandName brandName: String) {
-        listCarsByBrandGateway.brands(byBrandName: brandName, onComplete)
+        listCarsByBrandGateway.brands(byBrandName: brandName, completionHandler)
     }
 
 }
