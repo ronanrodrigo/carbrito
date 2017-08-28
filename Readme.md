@@ -29,5 +29,4 @@
 └── Essentials // Essential stuffs for the UIAppliction
 ```
 
-## 🐐
-Goat in Brazil is called by Cabrito.
+🐐 Goat in Brazil is called by Cabrito.
