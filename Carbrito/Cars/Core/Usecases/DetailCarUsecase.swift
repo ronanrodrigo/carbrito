@@ -1,16 +1,16 @@
 struct DetailCarUsecase: Usecase {
 
     typealias Entity = Car
-    private let detailCarGateway: DetailCarGateway
+    private let gateway: DetailCarGateway
     private(set) var presenter: GenericPresenter<Car>
 
-    init(detailCarGateway: DetailCarGateway, detailCarPresenter: GenericPresenter<Car>) {
-        self.detailCarGateway = detailCarGateway
-        self.presenter = detailCarPresenter
+    init(gateway: DetailCarGateway, presenter: GenericPresenter<Car>) {
+        self.gateway = gateway
+        self.presenter = presenter
     }
 
     func detail(byCode code: String, andYear year: String) {
-        detailCarGateway.detail(byCode: code, andYear: year, completionHandler)
+        gateway.detail(byCode: code, andYear: year, completionHandler)
     }
 
 }

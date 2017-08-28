@@ -25,7 +25,7 @@ final class ListCarsByBrandUsecaseTests: XCTestCase {
         didCallPresentError = false
         didCallPresentEmpty = false
         gateway = ListCarsByBrandStubGateway()
-        usecase = ListCarsByBrandUsecase(listCarsByBrandGateway: gateway, listCarsByBrandPresenter: presenter)
+        usecase = ListCarsByBrandUsecase(gateway: gateway, presenter: presenter)
     }
 
     func testListCarsByBrandNameWhenSuccessThenPresentCars() {

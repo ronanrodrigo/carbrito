@@ -24,7 +24,7 @@ class ListBrandsUsecaseTests: XCTestCase {
         didCallPresentError = false
         didCallPresentEmpty = false
         gateway = ListBrandStubGateway()
-        usecase = ListBrandsUsecase(listBrandGateway: gateway, listBrandPresenter: presenter)
+        usecase = ListBrandsUsecase(gateway: gateway, presenter: presenter)
     }
 
     func testListBrandsWhenSuccessThenPresentBrands() {

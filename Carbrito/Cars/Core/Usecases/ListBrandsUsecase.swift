@@ -1,16 +1,16 @@
 struct ListBrandsUsecase: Usecase {
 
     typealias Entity = Brand
-    private let listBrandGateway: ListBrandGateway
+    private let gateway: ListBrandGateway
     private(set) var presenter: GenericPresenter<Brand>
 
-    init(listBrandGateway: ListBrandGateway, listBrandPresenter: GenericPresenter<Brand>) {
-        self.listBrandGateway = listBrandGateway
-        self.presenter = listBrandPresenter
+    init(gateway: ListBrandGateway, presenter: GenericPresenter<Brand>) {
+        self.gateway = gateway
+        self.presenter = presenter
     }
 
     func list() {
-        listBrandGateway.allBrands(completionHandler)
+        gateway.allBrands(completionHandler)
     }
 
 }
