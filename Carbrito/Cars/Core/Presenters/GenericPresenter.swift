@@ -1,6 +1,5 @@
-class GenericPresenter<T>: SimplePresenter {
+class GenericPresenter<Entity> {
 
-    typealias Entity = T
     private let onSuccess: ([Entity]) -> Void
     private let onError: (CarbritoError) -> Void
     private let onEmpty: () -> Void
