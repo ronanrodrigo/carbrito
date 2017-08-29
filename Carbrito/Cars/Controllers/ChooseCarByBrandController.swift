@@ -10,7 +10,8 @@ final class ChooseCarByBrandController: UIViewController {
     init(carsRouter: CarsRouter, brand: Brand) {
         self.carsRouter = carsRouter
         super.init(nibName: nil, bundle: nil)
-        mainView = ChooseCarByBrandView(parentView: view, actions: [.didSelectBrandCar: didSelectBrandCar])
+        let actions = [ChooseCarByBrandView.ActionName.didSelectBrandCar: didSelectBrandCar]
+        mainView = ChooseCarByBrandView(parentView: view, actions: actions)
         listCarByBrandUsecase.list(byBrandName: brand.name)
         title = String.Navigation.Title.chooseCarBrand
     }

@@ -10,8 +10,8 @@ final class CreateCarController: UIViewController {
     init() {
         super.init(nibName: nil, bundle: nil)
         title = String.Carbrito.title
-        mainView = CarFormView(parentView: view, actions: [.selectBrand: selectBrand, .selectCar: selectCar,
-                                                           .showCar: showCar])
+        let actions = [CarFormView.ActionName.selectBrand: selectBrand, .selectCar: selectCar, .showCar: showCar]
+        mainView = CarFormView(parentView: view, actions: actions)
     }
 
     required init?(coder aDecoder: NSCoder) {
