@@ -10,19 +10,19 @@ private var getRequestCache: [String: Data] = [:]
 
 final class GetRequest: GetRequestable {
 
-    private static let reachability = Reachability()
+    private let reachability = Reachability()!
 
     func get(url urlString: String, completionHandler: @escaping (Data?, CarbritoError?) -> Void) {
         if let cachedData = getRequestCache[urlString] {
-            completionHandler(cachedData, nil)
-            return
+            return completionHandler(cachedData, nil)
+        } else if reachability.currentReachabilityStatus == .notReachable {
+            return completionHandler(nil, CarbritoError.offline)
         }
 
-        if GetRequest.reachability?.currentReachabilityStatus == .notReachable {
-            completionHandler(nil, CarbritoError.offline)
-            return
-        }
+        makeRequest(url: urlString, completionHandler: completionHandler)
+    }
 
+    private func makeRequest(url urlString: String, completionHandler: @escaping (Data?, CarbritoError?) -> Void) {
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
         let fullUrl = urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
         guard let url = URL(string: fullUrl) else { return }
