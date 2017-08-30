@@ -2,13 +2,8 @@ import UIKit
 
 final class ChooseCarByBrandView: UITableView, CarbritoView {
 
+    private let actions: [ChooseCarAction: ((BrandCar) -> Void)]
     var emptyView: EmptyView!
-
-    enum ActionName: String {
-        case didSelectBrandCar
-    }
-
-    private let actions: [ActionName: ((BrandCar) -> Void)]
 
     private lazy var dataProvider: GenericDataProvider<BrandCar> = {
         let dataProvider = GenericDataProvider<BrandCar>(items: [], cellDescriptor: { item -> CellDescriptor in
@@ -25,7 +20,7 @@ final class ChooseCarByBrandView: UITableView, CarbritoView {
         self.dataProvider.tableView(self, updateItems: brandCars)
     }, presentError, presentEmpty)
 
-    init(parentView: UIView, actions: [ActionName: ((BrandCar) -> Void)]) {
+    init(parentView: UIView, actions: [ChooseCarAction: ((BrandCar) -> Void)]) {
         self.actions = actions
         super.init(frame: .zero, style: .plain)
         setupView(parentView: parentView)
@@ -37,7 +32,7 @@ final class ChooseCarByBrandView: UITableView, CarbritoView {
         fatalError(Log.initCoder(from: CarFormView.self))
     }
 
-    private func execute(action: ActionName, brandCar: BrandCar) {
+    private func execute(action: ChooseCarAction, brandCar: BrandCar) {
         guard let actionCallback = actions[action] else { return Log.notLinked(action: action.rawValue) }
         actionCallback(brandCar)
     }

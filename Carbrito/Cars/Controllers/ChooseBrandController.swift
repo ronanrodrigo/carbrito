@@ -9,7 +9,7 @@ final class ChooseBrandController: UIViewController {
     init(carsRouter: CarsRouter) {
         self.carsRouter = carsRouter
         super.init(nibName: nil, bundle: nil)
-        let actions = [ChooseBrandView.ChooseBrandAction.didSelectBrand: didSelectBrand]
+        let actions = [ChooseBrandAction.didSelectBrand: didSelectBrand]
         mainView = ChooseBrandView(parentView: view, actions: actions)
         listBrandUsecase.list()
         title = String.Navigation.Title.chooseBrand
