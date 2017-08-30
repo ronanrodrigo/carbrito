@@ -21,9 +21,9 @@ final class ChooseCarByBrandView: CarBritoTableView {
         return dataProvider
     }()
 
-    private(set) lazy var presenter: GenericPresenter<BrandCar> = GenericPresenter(onSuccess: { (brandCars) in
+    private(set) lazy var presenter: GenericPresenter<BrandCar> = GenericPresenterFactory<BrandCar>.make({ brandCars in
         self.dataProvider.tableView(self, updateItems: brandCars)
-    }, onError: present, onEmpty: presentEmpty)
+    }, presentError, presentEmpty)
 
     init(parentView: UIView, actions: [ActionName: ((BrandCar) -> Void)]) {
         self.actions = actions
