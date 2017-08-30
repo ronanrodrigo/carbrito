@@ -14,9 +14,10 @@ platform :ios do
   desc 'Runs all the tests'
   lane :test do |options|
     should_open_coverage_report = options[:show_coverage] ? true : false
-    scan scheme: app_name, device: 'iPhone 7 Plus', clean: true
+    scan scheme: app_name, device: 'iPhone SE', clean: true
     slather_output = slather(
       proj: "#{app_name}.xcodeproj",
+      workspace: "#{app_name}.xcworkspace",
       scheme: app_name,
       output_directory: 'Coverage',
       show: should_open_coverage_report,
