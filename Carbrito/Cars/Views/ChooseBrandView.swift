@@ -2,22 +2,15 @@ import UIKit
 
 final class ChooseBrandView: UITableView, CarbritoView {
 
+    private let actions: [ChooseBrandAction: ((Brand) -> Void)]
     var emptyView: EmptyView!
-
-    enum ActionName: String {
-        case didSelectBrand
-    }
-
-    private let actions: [ActionName: ((Brand) -> Void)]
 
     private lazy var dataProvider: GenericDataProvider<Brand> = {
         let dataProvider = GenericDataProvider<Brand>(items: [], cellDescriptor: { item -> CellDescriptor in
             return CellDescriptor(identifier: String(describing: UITableViewCell.self)) { (cell: UITableViewCell) in
                 cell.textLabel?.text = item.name
             }
-        }, didSelectItem: { brand in
-            self.execute(action: .didSelectBrand, brand: brand)
-        })
+        }) { self.execute(action: .didSelectBrand, brand: $0) }
         return dataProvider
     }()
 
@@ -25,7 +18,7 @@ final class ChooseBrandView: UITableView, CarbritoView {
          self.dataProvider.tableView(self, updateItems: brands)
     }, presentError, presentEmpty)
 
-    init(parentView: UIView, actions: [ActionName: ((Brand) -> Void)]) {
+    init(parentView: UIView, actions: [ChooseBrandAction: ((Brand) -> Void)]) {
         self.actions = actions
         super.init(frame: .zero, style: .plain)
         setupView(parentView: parentView)
@@ -37,7 +30,7 @@ final class ChooseBrandView: UITableView, CarbritoView {
         fatalError(Log.initCoder(from: CarFormView.self))
     }
 
-    private func execute(action: ActionName, brand: Brand) {
+    private func execute(action: ChooseBrandAction, brand: Brand) {
         guard let actionCallback = actions[action] else { return Log.notLinked(action: action.rawValue) }
         actionCallback(brand)
     }

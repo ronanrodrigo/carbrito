@@ -52,6 +52,7 @@
 		3469A3481F3BFF67004A0934 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3469A3471F3BFF67004A0934 /* Assets.xcassets */; };
 		3469A34B1F3BFF67004A0934 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3469A3491F3BFF67004A0934 /* LaunchScreen.storyboard */; };
 		3492386A1F566243007ADBD3 /* GenerateResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349238691F566243007ADBD3 /* GenerateResult.swift */; };
+		3492386E1F56721D007ADBD3 /* ChooseBrandAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3492386D1F56721D007ADBD3 /* ChooseBrandAction.swift */; };
 		349D05FC1F49FB4500526ABC /* RootNavigationViewControllerRouterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349D05FB1F49FB4500526ABC /* RootNavigationViewControllerRouterFactory.swift */; };
 		349D06041F49FC1400526ABC /* CreateCarControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349D06031F49FC1400526ABC /* CreateCarControllerFactory.swift */; };
 		349D06061F49FD8200526ABC /* ChooseBrandController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349D06051F49FD8200526ABC /* ChooseBrandController.swift */; };
@@ -147,6 +148,7 @@
 		3469A3571F3C004B004A0934 /* CarbritoUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarbritoUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3469A35B1F3C004B004A0934 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		349238691F566243007ADBD3 /* GenerateResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateResult.swift; sourceTree = "<group>"; };
+		3492386D1F56721D007ADBD3 /* ChooseBrandAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseBrandAction.swift; sourceTree = "<group>"; };
 		349D05FB1F49FB4500526ABC /* RootNavigationViewControllerRouterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootNavigationViewControllerRouterFactory.swift; sourceTree = "<group>"; };
 		349D06031F49FC1400526ABC /* CreateCarControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCarControllerFactory.swift; sourceTree = "<group>"; };
 		349D06051F49FD8200526ABC /* ChooseBrandController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseBrandController.swift; sourceTree = "<group>"; };
@@ -269,6 +271,7 @@
 				34C893C31F3C01750023D3E9 /* BrandDecodableEntity.swift */,
 				34B3F5011F3F8BC40067A5B3 /* Car.swift */,
 				3417A9221F3C1E15009EC015 /* CarDecodableEntity.swift */,
+				3492386D1F56721D007ADBD3 /* ChooseBrandAction.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -897,6 +900,7 @@
 				34E774881F4BAEC800C1ADFB /* GetRequestFactory.swift in Sources */,
 				34E774851F4BA8F700C1ADFB /* DetailCarNetworkGateway.swift in Sources */,
 				3405D3B61F3E7E910030F30C /* Brand.swift in Sources */,
+				3492386E1F56721D007ADBD3 /* ChooseBrandAction.swift in Sources */,
 				34B3F5021F3F8BC40067A5B3 /* Car.swift in Sources */,
 				3404AE1C1F48B1EE00AFCF62 /* CarsNavigationViewControllerRouter.swift in Sources */,
 				34663DB61F462A3600715D01 /* CarFormView.swift in Sources */,

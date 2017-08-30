@@ -17,9 +17,7 @@ final class ChooseCarByBrandView: UITableView, CarbritoView {
                 cell.detailTextLabel?.text = "\(item.year) / \(item.code)"
             }
             return CellDescriptor(identifier: String(describing: SubtitleTableViewCell.self), configure: setupCell)
-        }, didSelectItem: { brandCar in
-            self.execute(action: .didSelectBrandCar, brandCar: brandCar)
-        })
+        }) { self.execute(action: .didSelectBrandCar, brandCar: $0) }
         return dataProvider
     }()
 
