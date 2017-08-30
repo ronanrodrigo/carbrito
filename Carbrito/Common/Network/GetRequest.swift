@@ -8,7 +8,7 @@ protocol GetRequestable {
 
 private var getRequestCache: [String: Data] = [:]
 
-class GetRequest: GetRequestable {
+final class GetRequest: GetRequestable {
 
     private static let reachability = Reachability()
 

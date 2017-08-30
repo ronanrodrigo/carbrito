@@ -1,4 +1,4 @@
-class GenericPresenter<Entity> {
+final class GenericPresenter<Entity> {
 
     private let onSuccess: ([Entity]) -> Void
     private let onError: (CarbritoError) -> Void
