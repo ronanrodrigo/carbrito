@@ -106,29 +106,20 @@ final class CarFormView: UIView {
 
     func update(toState state: FormState) {
         switch state {
-        case .nothingSelected: nothingSelectedState()
-        case .brandSelected(let brand): brandSelectedState(brand: brand)
-        case .brandAndCarSelected(let brand, let brandCar): brandAndCarState(brand: brand, brandCar: brandCar)
+        case .nothingSelected:
+            chooseBrandButton.setTitle(String.CarForm.chooseBrand.uppercased(), for: .normal)
+            chooseCarButton.isEnabled = false
+            chooseCarButton.setTitle(String.CarForm.chooseCar.uppercased(), for: .normal)
+        case .brandSelected(let brand):
+            chooseBrandButton.setTitle(brand.name.uppercased(), for: .normal)
+            chooseCarButton.setTitle(String.CarForm.chooseCar.uppercased(), for: .normal)
+            chooseCarButton.isEnabled = true
+            showCarButton.isEnabled = false
+        case .brandAndCarSelected(let brand, let brandCar):
+            chooseBrandButton.setTitle(brand.name.uppercased(), for: .normal)
+            chooseCarButton.setTitle(brandCar.name.uppercased(), for: .normal)
+            showCarButton.isEnabled = true
         }
-    }
-
-    private func nothingSelectedState() {
-        chooseBrandButton.setTitle(String.CarForm.chooseBrand.uppercased(), for: .normal)
-        chooseCarButton.isEnabled = false
-        chooseCarButton.setTitle(String.CarForm.chooseCar.uppercased(), for: .normal)
-    }
-
-    private func brandSelectedState(brand: Brand) {
-        chooseBrandButton.setTitle(brand.name.uppercased(), for: .normal)
-        chooseCarButton.setTitle(String.CarForm.chooseCar.uppercased(), for: .normal)
-        chooseCarButton.isEnabled = true
-        showCarButton.isEnabled = false
-    }
-
-    private func brandAndCarState(brand: Brand, brandCar: BrandCar) {
-        chooseBrandButton.setTitle(brand.name.uppercased(), for: .normal)
-        chooseCarButton.setTitle(brandCar.name.uppercased(), for: .normal)
-        showCarButton.isEnabled = true
     }
 
 }
