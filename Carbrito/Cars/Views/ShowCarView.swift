@@ -3,17 +3,17 @@ import UIKit
 final class ShowCarView: CarBritoView {
 
     private var emptyView: EmptyView!
-    private let nameLabel = ShowCarViewLabelFactory.make(text: "Nome")
+    private let nameLabel = ShowCarViewLabelFactory.make(text: String.ShowCarView.Label.name)
     private let carNameLabel = ShowCarViewValueLabelFactory.make()
-    private let codeLabel = ShowCarViewLabelFactory.make(text: "Código")
+    private let codeLabel = ShowCarViewLabelFactory.make(text: String.ShowCarView.Label.code)
     private let carCodeLabel = ShowCarViewValueLabelFactory.make()
-    private let yearLabel = ShowCarViewLabelFactory.make(text: "Ano")
+    private let yearLabel = ShowCarViewLabelFactory.make(text: String.ShowCarView.Label.year)
     private let carYearLabel = ShowCarViewValueLabelFactory.make()
-    private let brandLabel = ShowCarViewLabelFactory.make(text: "Marca")
+    private let brandLabel = ShowCarViewLabelFactory.make(text: String.ShowCarView.Label.brand)
     private let carBrandLabel = ShowCarViewValueLabelFactory.make()
-    private let priceLabel = ShowCarViewLabelFactory.make(text: "Preço")
+    private let priceLabel = ShowCarViewLabelFactory.make(text: String.ShowCarView.Label.price)
     private let carPriceLabel = ShowCarViewValueLabelFactory.make()
-    private let taxLabel = ShowCarViewLabelFactory.make(text: "Taxa")
+    private let taxLabel = ShowCarViewLabelFactory.make(text: String.ShowCarView.Label.tax)
     private let carTaxLabel = ShowCarViewValueLabelFactory.make()
 
     private let itemsStackView: UIStackView = {

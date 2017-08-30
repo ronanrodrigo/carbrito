@@ -20,6 +20,14 @@ extension String {
 
     struct ShowCarView {
         static let empty = "Não foi possível mostrar o carro"
+        struct Label { //swiftlint:disable:this nesting
+            static let name = "Nome"
+            static let code = "Código"
+            static let year = "Ano"
+            static let brand = "Marca"
+            static let price = "Preço"
+            static let tax = "Taxa"
+        }
     }
 
     struct Navigation {
