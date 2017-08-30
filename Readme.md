@@ -29,4 +29,17 @@
 └── Essentials ─────────→ Essential stuffs for the UIAppliction.
 ```
 
+## Main flow
+```
+┌→ View ─────────→ Controller ─────────→ Usecase ─────────→ Gateway?/Presenter? ┐
+| View: Where user interaction are fired. Ex. Button tapped;                    |
+| Controller: Call usecase to execute user interaction;                         |
+| Usecase: Business logic;                                                      |
+| Gateway: Optional, used to get data from anywhere. Ex. Make a HTTP request.   |
+|          Generaly injected in usecase;                                        |
+| Presenter: Optional, used to present data to anywhere. Ex. Update view;       |
+|            Generaly injected in usecase;                                      |
+└─────────────←──────────────────←───────────────←────────────────←─────────────┘
+```
+
 🐐 Goat in Brazil is called by Cabrito.
