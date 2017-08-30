@@ -10,7 +10,7 @@ final class CreateCarController: UIViewController {
     init() {
         super.init(nibName: nil, bundle: nil)
         title = String.Carbrito.title
-        let actions = [CarFormView.ActionName.selectBrand: selectBrand, .selectCar: selectCar, .showCar: showCar]
+        let actions = [CarFormAction.selectBrand: selectBrand, .selectCar: selectCar, .showCar: showCar]
         mainView = CarFormView(parentView: view, actions: actions)
     }
 

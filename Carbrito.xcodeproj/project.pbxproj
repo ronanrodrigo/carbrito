@@ -54,6 +54,8 @@
 		3492386A1F566243007ADBD3 /* GenerateResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349238691F566243007ADBD3 /* GenerateResult.swift */; };
 		3492386E1F56721D007ADBD3 /* ChooseBrandAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3492386D1F56721D007ADBD3 /* ChooseBrandAction.swift */; };
 		349238701F56726F007ADBD3 /* ChooseCarAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3492386F1F56726F007ADBD3 /* ChooseCarAction.swift */; };
+		349238721F5672EC007ADBD3 /* CarFormAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349238711F5672EC007ADBD3 /* CarFormAction.swift */; };
+		349238741F56731D007ADBD3 /* CarFormState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349238731F56731D007ADBD3 /* CarFormState.swift */; };
 		349D05FC1F49FB4500526ABC /* RootNavigationViewControllerRouterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349D05FB1F49FB4500526ABC /* RootNavigationViewControllerRouterFactory.swift */; };
 		349D06041F49FC1400526ABC /* CreateCarControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349D06031F49FC1400526ABC /* CreateCarControllerFactory.swift */; };
 		349D06061F49FD8200526ABC /* ChooseBrandController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349D06051F49FD8200526ABC /* ChooseBrandController.swift */; };
@@ -151,6 +153,8 @@
 		349238691F566243007ADBD3 /* GenerateResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateResult.swift; sourceTree = "<group>"; };
 		3492386D1F56721D007ADBD3 /* ChooseBrandAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseBrandAction.swift; sourceTree = "<group>"; };
 		3492386F1F56726F007ADBD3 /* ChooseCarAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseCarAction.swift; sourceTree = "<group>"; };
+		349238711F5672EC007ADBD3 /* CarFormAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarFormAction.swift; sourceTree = "<group>"; };
+		349238731F56731D007ADBD3 /* CarFormState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarFormState.swift; sourceTree = "<group>"; };
 		349D05FB1F49FB4500526ABC /* RootNavigationViewControllerRouterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootNavigationViewControllerRouterFactory.swift; sourceTree = "<group>"; };
 		349D06031F49FC1400526ABC /* CreateCarControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCarControllerFactory.swift; sourceTree = "<group>"; };
 		349D06051F49FD8200526ABC /* ChooseBrandController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseBrandController.swift; sourceTree = "<group>"; };
@@ -273,8 +277,6 @@
 				34C893C31F3C01750023D3E9 /* BrandDecodableEntity.swift */,
 				34B3F5011F3F8BC40067A5B3 /* Car.swift */,
 				3417A9221F3C1E15009EC015 /* CarDecodableEntity.swift */,
-				3492386D1F56721D007ADBD3 /* ChooseBrandAction.swift */,
-				3492386F1F56726F007ADBD3 /* ChooseCarAction.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -384,6 +386,7 @@
 		34663DB41F4629C500715D01 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				349238751F567331007ADBD3 /* StatesAndActions */,
 				34663DB51F462A3600715D01 /* CarFormView.swift */,
 				349D06071F49FDD700526ABC /* ChooseBrandView.swift */,
 				344721531F4B006D009BF58B /* ChooseCarByBrandView.swift */,
@@ -441,6 +444,17 @@
 				34C893BF1F3C01190023D3E9 /* Essentials */,
 			);
 			path = CarbritoUnitTests;
+			sourceTree = "<group>";
+		};
+		349238751F567331007ADBD3 /* StatesAndActions */ = {
+			isa = PBXGroup;
+			children = (
+				3492386D1F56721D007ADBD3 /* ChooseBrandAction.swift */,
+				3492386F1F56726F007ADBD3 /* ChooseCarAction.swift */,
+				349238711F5672EC007ADBD3 /* CarFormAction.swift */,
+				349238731F56731D007ADBD3 /* CarFormState.swift */,
+			);
+			path = StatesAndActions;
 			sourceTree = "<group>";
 		};
 		349D05FF1F49FBF500526ABC /* Routers */ = {
@@ -874,6 +888,7 @@
 				349238701F56726F007ADBD3 /* ChooseCarAction.swift in Sources */,
 				349D06061F49FD8200526ABC /* ChooseBrandController.swift in Sources */,
 				34C811491F4E617E0088ACC5 /* ShowCarViewValueLabelFactory.swift in Sources */,
+				349238741F56731D007ADBD3 /* CarFormState.swift in Sources */,
 				3421EA781F4B9E4400647B1D /* ListBrandNetworkGateway.swift in Sources */,
 				3421EA7B1F4BA08600647B1D /* GetRequest.swift in Sources */,
 				3405D3E71F3F80480030F30C /* BrandCar.swift in Sources */,
@@ -893,6 +908,7 @@
 				3457FA2B1F4B0C9D00E4747F /* ShowCarView.swift in Sources */,
 				3457FA2D1F4B169000E4747F /* DetailCarUsecaseFactory.swift in Sources */,
 				3457FA231F4B01AE00E4747F /* ListCarsByBrandUsecaseFactory.swift in Sources */,
+				349238721F5672EC007ADBD3 /* CarFormAction.swift in Sources */,
 				34CAC3711F54326700012847 /* CarBritoView.swift in Sources */,
 				34C8114B1F4E65800088ACC5 /* ShowCarViewLabelFactory.swift in Sources */,
 				3457FA251F4B01C700E4747F /* ListCarsByBrandGatewayFactory.swift in Sources */,

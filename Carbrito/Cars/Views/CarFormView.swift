@@ -2,15 +2,7 @@ import UIKit
 
 final class CarFormView: UIView {
 
-    enum ActionName: String {
-        case selectBrand, selectCar, showCar
-    }
-
-    enum FormState {
-        case nothingSelected, brandSelected(Brand), brandAndCarSelected(Brand, BrandCar)
-    }
-
-    private let actions: [ActionName: (() -> Void)]
+    private let actions: [CarFormAction: (() -> Void)]
 
     private let formItemsStackView: UIStackView = {
         let stack = UIStackView()
@@ -42,7 +34,7 @@ final class CarFormView: UIView {
         return button
     }()
 
-    init(parentView: UIView, actions: [ActionName: (() -> Void)]) {
+    init(parentView: UIView, actions: [CarFormAction: (() -> Void)]) {
         self.actions = actions
         super.init(frame: .zero)
         setupView(parentView: parentView)
@@ -87,7 +79,7 @@ final class CarFormView: UIView {
         formItemsStackView.addArrangedSubview(showCarButton)
     }
 
-    private func execute(action: ActionName) {
+    private func execute(action: CarFormAction) {
         guard let actionCallback = actions[action] else { return Log.notLinked(action: action.rawValue) }
         actionCallback()
     }
@@ -104,7 +96,7 @@ final class CarFormView: UIView {
         execute(action: .showCar)
     }
 
-    func update(toState state: FormState) {
+    func update(toState state: CarFormState) {
         switch state {
         case .nothingSelected:
             chooseBrandButton.setTitle(String.CarForm.chooseBrand.uppercased(), for: .normal)
