@@ -1,6 +1,8 @@
 import UIKit
 
-final class ChooseCarByBrandView: CarBritoTableView {
+final class ChooseCarByBrandView: UITableView, CarbritoView {
+
+    var emptyView: EmptyView!
 
     enum ActionName: String {
         case didSelectBrandCar
@@ -29,24 +31,12 @@ final class ChooseCarByBrandView: CarBritoTableView {
         self.actions = actions
         super.init(frame: .zero, style: .plain)
         setupView(parentView: parentView)
-        emptyView = EmptyView(parentView: parentView)
         delegate = dataProvider
         dataSource = dataProvider
     }
 
     required init?(coder aDecoder: NSCoder) {
         fatalError(Log.initCoder(from: CarFormView.self))
-    }
-
-    private func setupView(parentView: UIView) {
-        backgroundColor = .white
-        parentView.addSubview(self)
-        translatesAutoresizingMaskIntoConstraints = false
-        let safeArea = parentView.safeAreaLayoutGuide
-        topAnchor.constraint(equalTo: safeArea.topAnchor).isActive = true
-        trailingAnchor.constraint(equalTo: parentView.trailingAnchor).isActive = true
-        bottomAnchor.constraint(equalTo: safeArea.bottomAnchor).isActive = true
-        leadingAnchor.constraint(equalTo: parentView.leadingAnchor).isActive = true
     }
 
     private func execute(action: ActionName, brandCar: BrandCar) {

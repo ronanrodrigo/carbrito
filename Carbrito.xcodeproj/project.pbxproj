@@ -74,7 +74,6 @@
 		34C893D31F3C01B90023D3E9 /* BrandDecodableEntityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C893CF1F3C01B10023D3E9 /* BrandDecodableEntityTests.swift */; };
 		34C893D41F3C01C70023D3E9 /* Brands.json in Resources */ = {isa = PBXBuildFile; fileRef = 34C893D21F3C01B10023D3E9 /* Brands.json */; };
 		34CAC3711F54326700012847 /* CarBritoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CAC3701F54326700012847 /* CarBritoView.swift */; };
-		34CAC3731F5432BF00012847 /* CarBritoTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CAC3721F5432BF00012847 /* CarBritoTableView.swift */; };
 		34CAC37C1F54375500012847 /* GenericPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CAC37B1F54375500012847 /* GenericPresenter.swift */; };
 		34CAC37E1F54477D00012847 /* Usecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CAC37D1F54477D00012847 /* Usecase.swift */; };
 		34D167811F56435D002FD220 /* GenericPresenterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D167801F56435D002FD220 /* GenericPresenterFactory.swift */; };
@@ -169,7 +168,6 @@
 		34C893CF1F3C01B10023D3E9 /* BrandDecodableEntityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandDecodableEntityTests.swift; sourceTree = "<group>"; };
 		34C893D21F3C01B10023D3E9 /* Brands.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Brands.json; sourceTree = "<group>"; };
 		34CAC3701F54326700012847 /* CarBritoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarBritoView.swift; sourceTree = "<group>"; };
-		34CAC3721F5432BF00012847 /* CarBritoTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarBritoTableView.swift; sourceTree = "<group>"; };
 		34CAC37B1F54375500012847 /* GenericPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericPresenter.swift; sourceTree = "<group>"; };
 		34CAC37D1F54477D00012847 /* Usecase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usecase.swift; sourceTree = "<group>"; };
 		34D167801F56435D002FD220 /* GenericPresenterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericPresenterFactory.swift; sourceTree = "<group>"; };
@@ -613,7 +611,6 @@
 		34FC49D31F4B1A5A00A8AA27 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
-				34CAC3721F5432BF00012847 /* CarBritoTableView.swift */,
 				34CAC3701F54326700012847 /* CarBritoView.swift */,
 				3437C30E1F4A03D3005F4537 /* CellDescriptor.swift */,
 				34FC49D41F4B1A6D00A8AA27 /* EmptyView.swift */,
@@ -884,7 +881,6 @@
 				3405D3B91F3E7EEB0030F30C /* CompletionHandler.swift in Sources */,
 				3457FA2B1F4B0C9D00E4747F /* ShowCarView.swift in Sources */,
 				3457FA2D1F4B169000E4747F /* DetailCarUsecaseFactory.swift in Sources */,
-				34CAC3731F5432BF00012847 /* CarBritoTableView.swift in Sources */,
 				3457FA231F4B01AE00E4747F /* ListCarsByBrandUsecaseFactory.swift in Sources */,
 				34CAC3711F54326700012847 /* CarBritoView.swift in Sources */,
 				34C8114B1F4E65800088ACC5 /* ShowCarViewLabelFactory.swift in Sources */,
