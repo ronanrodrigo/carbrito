@@ -11,13 +11,12 @@ struct ListBrandNetworkGateway: ListBrandGateway {
 
     func allBrands(_ completionHandler: @escaping CompletionHandler<[Brand], CarbritoError>) {
         getRequest.get(url: url) { data, error in
-            let result = GenerateResultHandler<BrandDecodableEntity, Brand>(self.generateStruct).generate(data: data,
-                                                                                                          error: error)
+            let result = GenerateResult<BrandDecodableEntity, Brand>(self.mapBrand).generate(data, error)
             completionHandler(result)
         }
     }
 
-    private func generateStruct(brandsDecodable: [BrandDecodableEntity]) -> [Brand] {
+    private func mapBrand(brandsDecodable: [BrandDecodableEntity]) -> [Brand] {
         return brandsDecodable.map({ Brand(name: $0.name) })
     }
 

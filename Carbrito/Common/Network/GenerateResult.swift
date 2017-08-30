@@ -1,6 +1,6 @@
 import Foundation
 
-class GenerateResultHandler<DecodableEntity: Decodable, Entity> {
+class GenerateResult<DecodableEntity: Decodable, Entity> {
 
     private let structGenerator: ([DecodableEntity]) -> [Entity]
 
@@ -8,7 +8,7 @@ class GenerateResultHandler<DecodableEntity: Decodable, Entity> {
         self.structGenerator = structGenerator
     }
 
-    func generate(data: Data?, error: CarbritoError?) -> Result<[Entity], CarbritoError> {
+    func generate(_ data: Data?, _ error: CarbritoError?) -> Result<[Entity], CarbritoError> {
         if let data = data {
             do {
                 let carsDecodable = try JSONDecoder().decode([DecodableEntity].self, from: data)
